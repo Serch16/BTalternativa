@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package net.daw.control;
 
 import java.io.IOException;
@@ -17,8 +14,10 @@ import net.daw.helper.Conexion;
 
 /**
  *
- * @author rafa
+ * @author rafael aznar
+ * 
  */
+
 public class ControlJsp extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -34,68 +33,61 @@ public class ControlJsp extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
-        //cabecera de la respuesta HTTP
+        //HTTP headers
         response.setHeader("page language", "java");
         response.setHeader("contentType", "text/html");
         response.setHeader("pageEncoding", "UTF-8");
         response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
-        //carga de parámetros
+        //parameter loading
         String op = request.getParameter("op");
         String ob = request.getParameter("ob");
         String mode = request.getParameter("mode");
-        //gestión de la seguridad mediante modificación de la petición
+        //load default values
         if (op == null) {
             op = "inicio";
         }
         if (ob == null) {
             ob = "usuario";
         }
+        if (mode == null) {
+            mode = "wrappered";
+        }
+        //security check
         if (request.getSession().getAttribute("usuarioBean") == null) {
             ob = "usuario";
             if (!op.equals("inicio") && !op.equals("login02")) {
                 op = "login01";
+                mode = "wrappered";
             }
         }
-        //servimos la página jsp        
-        if (mode != null) {
-            //servimos el jsp aislado
-            response.setContentType("text/html; charset=UTF-8");
-            getServletContext().getRequestDispatcher("/jsp/" + ob + "/" + op + ".jsp").forward(request, response);
-        } else {
-            //procesamos la autenticación
-            if (ob.equalsIgnoreCase("usuario")) {
-                if (op.equalsIgnoreCase("login02")) {
-                    UsuarioBean oUsuario = new UsuarioBean();
-
-                    String login = request.getParameter("login");
-                    String pass = request.getParameter("password");
-
-                    if (!login.equals("") && !pass.equals("")) {
-                        oUsuario.setLogin(login);
-                        oUsuario.setPassword(pass);
-                        UsuarioDao oUsuarioDao = new UsuarioDao(Conexion.getConection());
-                        oUsuario = oUsuarioDao.getFromLogin(oUsuario);
-                        if (oUsuario.getId() != 0) {
-                            //rellena el tipo de usuario
-                            oUsuario = oUsuarioDao.type(oUsuario);
-                            request.getSession().setAttribute("usuarioBean", oUsuario);
-                        }
-//                        if (oUsuario.getId() != 0) {
-//                            oUsuario = oUsuarioDao.get(oUsuario);
-//                            if (oUsuario.getLogin().equals(login) && oUsuario.getPassword().equals(pass)) {
-//                                request.getSession().setAttribute("usuarioBean", oUsuario);
-//                            }
-//                        }
+        //login & logout management
+        if (ob.equalsIgnoreCase("usuario")) {
+            if (op.equalsIgnoreCase("login02")) {
+                UsuarioBean oUsuario = new UsuarioBean();
+                String login = request.getParameter("login");
+                String pass = request.getParameter("password");
+                if (!login.equals("") && !pass.equals("")) {
+                    oUsuario.setLogin(login);
+                    oUsuario.setPassword(pass);
+                    UsuarioDao oUsuarioDao = new UsuarioDao(Conexion.getConection());
+                    oUsuario = oUsuarioDao.getFromLogin(oUsuario);
+                    if (oUsuario.getId() != 0) {                        
+                        oUsuario = oUsuarioDao.type(oUsuario); //fill user level
+                        request.getSession().setAttribute("usuarioBean", oUsuario);
                     }
                 }
-                if (op.equalsIgnoreCase("logout")) {
-                    request.getSession().invalidate();
-                }
             }
-            //servimos el jsp dentro de index.jsp
+            if (op.equalsIgnoreCase("logout")) {
+                request.getSession().invalidate();
+            }
+        }
+        //delivering jsp page
+        if (mode == "wrappered") {
             request.setAttribute("contenido", "jsp/" + ob + "/" + op + ".jsp");
             getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-
+        } else {
+            response.setContentType("text/html; charset=UTF-8");
+            getServletContext().getRequestDispatcher("/jsp/" + ob + "/" + op + ".jsp").forward(request, response);
         }
     }
 
