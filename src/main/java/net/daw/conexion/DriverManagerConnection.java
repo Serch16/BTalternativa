@@ -15,7 +15,6 @@ public class DriverManagerConnection implements GenericConnection {
     public Connection crearConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Conexion oConexion = new Conexion();
             Connection connection = DriverManager.getConnection("jdbc:mysql://" + Conexion.getDatabaseHost() + ":" + Conexion.getDatabasePort() + "/" + Conexion.getDatabaseName(), Conexion.getDatabaseLogin(), Conexion.getDatabasePassword());
             return connection;
         } catch (ClassNotFoundException | SQLException ex) {
