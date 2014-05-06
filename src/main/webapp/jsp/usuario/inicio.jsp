@@ -1,74 +1,38 @@
+<div class="row-fluid">
+    <div class="span12">
+        <h3>Bienvenidos a la bolsa de trabajo de</h3>
+        <img id="logolargo" src="img/logolargo.png">
+        <h5>Versión (v.01) de 17/1/2014</h5>
+    </div>
+</div>
+
 <div class="hero-unit">
-    <h1>Bienvenidos a ajax yield 2014</h1>
-    <h3>Versión (v.01) de 17/1/2014</h3>
-    <h5>Desarrollo de aplicaciones web. CPIFP Ausiàs March. Curso 2013-2014.</h5>    
+
 </div>
 <div class="row-fluid">
     <div class="span8">
         <div class="row-fluid">
-            <div class="span6">
-                <h3>¿Qué es ajax stock?</h3>
-                <p>Es una aplicación didáctica para aprender a organizar y desarrollar 
-                    aplicaciones AJAX. Se trata de un proyecto que  
-                    construimos durante la segunda evaluación de los módulos DES-DEC 
-                    del ciclo formativo DAW. Está pensado para soportar mantenimientos 
-                    CRUDL (create remove update delete list).</p>
-            </div>
-            <div class="span6">
-                <h3>¿Para qué sirve?</h3>
-                <p>Se trata de una aplicación de carácter didáctico. 
-                    Se ha estructurado siguiendo un modelo MVC que permita a los alumnos 
-                    conocer un referente para diseñar en un futuro sus proyectos.                    
+            <div class="span12">
+                <h3>¿Qué es la Bolsa de Trabajo?</h3>
+                <p>Como Centro Integrado de Formación Profesional, el C.I.P.F.P. Ausiàs March, 
+                    imparte enseñanzas regladas de formación profesional inicial (ciclos formativos); 
+                    así como algunas acciones formativas correspondientes a subsistema de formación 
+                    profesional para el empleo referidas al Catálogo Nacional de Cualificaciones 
+                    Profesionales (certificados de profesionalidad). Estas enseñanzas se realizan en 
+                    la modalidad presencial y, además, en algunos ciclos formativos , en la modalidad 
+                    semipresencial. Para las familias de Informática, Administración, Comercio y Sanidad.</p>
+                <p>Dos son los grandes objetivos que pretenden alcanzarse con ello:
+                <ul>
+                    <li>En primer lugar la cualificación y recualificación de las personas en la permanente 
+                        construcción de su itinerario de formación a lo largo de la vida.</li>
+                    <li>En segundo lugar la articulación de un "espacio de cooperación, diálogo y gestión
+                        conjunta" entre el sistema de formación profesional y el entorno productivo sectorial.</li>
+                </ul>
                 </p>
-            </div>    
-        </div>
-        <div class="row-fluid">    
-            <div class="span6">
-                <h3>¿Quién la ha desarrollado?</h3>
-                <p>La han desarrollado los alumnos de DAW del CPIFP Ausiàs March de Valencia (Spain).
-                    El profesor del módulo es Rafael Aznar.
-                    Puedes contactar en raznar at ausasmarch dot net.</p>
-            </div> 
-            <div class="span6">
-                <h3>¿Qué licencia tiene?</h3>
-                <p>La he liberado con licencia <a href="http://www.gnu.org/licenses/fdl-1.3.html">GNU Free Documentation License 1.3</a></p>
+                <p>Nuestra bolsa de trabajo NO tiene como fin la SELECCIÓN DE PERSONAL sino ejercer como canal 
+                    transmisor de información laboral: PONER EN CONTACTO OFERTA Y DEMANDA DE EMPLEO. Por ello, 
+                    Bolsa de Trabajo tiene a la disposición de las empresas trabajadores jóvenes, con una amplia formación 
+                    y capacidades adaptadas a sus necesidades.</p>  
             </div>
-
         </div>
     </div>
-    <div class="span4">
-        <h3>¿Cuáles son sus características?</h3>
-        <ul>
-            <li>Es un desarrollo didáctico</li>
-            <li>Estructura de servidor MVC por niveles sin frameworks</li> 
-            <li>Servidor escrito en Java (servlets y jsp)</li>  
-            <li>Dos controladores, uno para servir jsp y otro para servir json</li>  
-            <li>Cliente AJAX con Javascript y JQuery</li>              
-            <li>Cliente desarrollado sobre Bootstrap responsivo</li>
-            <li>Acceso a datos (base de datos MySQL) mediante clases de negocio y DAO</li>
-            <li>Mantenimientos paginados</li>
-            <li>Ajax Stock soporta Relaciones 1:M</li>
-            <li>Ajax Stock soporta Relaciones M:M</li>
-        </ul>
-    </div>
-</div>
-<div class="row-fluid">
-    <div class="span12">
-        <h3>Alumnos que han participado en el proyecto</h3>
-        BENITO SORIA, PEDRO JOSÉ -
-        BONET CEREZUELA, JAVIER -
-        CREGO TAPIA, ÁLVARO -
-        ESLAVA BARRERA, JORGE -
-        GIMENO GILABERT, ENRIQUE -
-        GRANCHA BONORA, JOSÉ -
-        MARTÍN MOLINA, CRISTINA -
-        MARTÍN TÁRRAGA, SERGIO -
-        MEMBRILLAS BELENGUER, EDUARDO -
-        NAVARRO PERIS, ANTONIO -
-        ORTEGA ORTEGA, DIANA -
-        PÉREZ GODESART, JUAN -
-        RODRÍGUEZ SERRA, DANIEL -
-        SEGOVIA LEÓN, JACOBO -
-        TAMARIT MARTÍNEZ, SALVADOR 
-    </div>
-</div>

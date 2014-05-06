@@ -10,27 +10,27 @@
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>CIPFP Ausiàs March | Bolsa de trabajo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
         </style>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link rel="stylesheet" href="css/baseBT.css">
+        <link rel="shortcut icon" href="img/favicon.ico"/>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css"/>
+        <title>CIPFP Ausiàs March | Bolsa de trabajo</title>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
         <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
         <script src="./js/vendor/jquery.validate.min.js"></script>
-
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </a> 
-                    <a class="brand" href="jsp"><img id="logoinstituto" src="img/favicon.ico"> CIPFP Ausiàs March</a>                   
+                    <a class="brand" href="jsp"><img id="logoinstituto" src="img/solologo.png"> CIPFP Ausiàs March</a>                   
                     <div class="nav-collapse collapse">
                         <%if (user != null) {%>
                         <jsp:include page="jsp/menuSuperior.jsp" />   
