@@ -5,12 +5,8 @@
         <h5>Versión (v.01) de 17/1/2014</h5>
     </div>
 </div>
-
-<div class="hero-unit">
-
-</div>
 <div class="row-fluid">
-    <div class="span8">
+    <div class="span12">
         <div class="row-fluid">
             <div class="span12">
                 <h3>¿Qué es la Bolsa de Trabajo?</h3>
@@ -35,4 +31,37 @@
                     y capacidades adaptadas a sus necesidades.</p>  
             </div>
         </div>
+        <div class="row-fluid">
+            <div class="span6">
+                <h3>Responsable</h3>
+                <p>La responsable del departamento de Bolsa de Trabajo para el presente curso escolar es Mercedez Sanz, 
+                    cuyo correo es bolsa@ausiasmarch.net y está disponible en el siguiente horario:</p>
+            </div>
+            <div class="span6">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>10-12h</td>
+                            <td>10-10:45h</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+</div>
+<div class="hero-unit">
+
+</div>
