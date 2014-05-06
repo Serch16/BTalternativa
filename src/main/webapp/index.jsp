@@ -83,10 +83,29 @@
                     out.print("</div>");
                 %>    
                 <div class="row-fluid">
-                    <div class="span12"><hr><footer><p>&copy; Rafael Aznar (2013)</p></footer></div>   
+                    <div class="span12"><hr><footer><p>&copy; Sergio Martín (2014)</p></footer></div>   
                 </div>
             </div>
-        </div>                    
+        </div> 
+
+
+        <!--Código HTML de la política de cookies -->
+
+        <!--La URL incluida es la parte que se ha de modificar -->
+
+        <div class="cookiesms" id="cookie1">
+            Esta web utiliza cookies, puedes ver nuestra  <a href="tu-url-donde-explicas-la-politica-de-cookies">la política de cookies, aquí</a> 
+            Si continuas navegando estás aceptándola
+            <button onclick="controlcookies()">Aceptar</button>
+            <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies + </div>
+        </div>
+        <script type="text/javascript">
+            if (localStorage.controlcookie > 0) {
+                document.getElementById('cookie1').style.bottom = '-50px';
+            }
+        </script>
+
+        <!-- Fin del código de cookies --->    
 
         <!-- carga de javascript -->
 
@@ -483,6 +502,18 @@
             });
 
         </script>
+
+        <!-- SCRIPT CONTROL DE COOKIES -->
+        <script type="text/javascript">
+            function controlcookies() {
+                // si variable no existe se crea (al clicar en Aceptar)
+                localStorage.controlcookie = (localStorage.controlcookie || 0);
+
+                localStorage.controlcookie++; // incrementamos cuenta de la cookie
+                cookie1.style.display = 'none'; // Esconde la política de cookies
+            }
+        </script>
+
     </body>
 </html>
 
