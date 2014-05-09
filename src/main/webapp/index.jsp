@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
                     </a> 
-                    <a class="brand" href="jsp"><img id="logoinstituto" src="img/solologo.png"> CIPFP Ausiàs March</a>                   
+                    <!--<a class="brand" href="jsp"><img id="logoinstituto" src="img/solologo.png"> CIPFP Ausiàs March</a>     -->              
                     <div class="nav-collapse collapse">
                         <%if (user != null) {%>
                         <jsp:include page="jsp/menuSuperior.jsp" />   
@@ -90,9 +90,6 @@
 
 
         <!--Código HTML de la política de cookies -->
-
-        <!--La URL incluida es la parte que se ha de modificar -->
-
         <div class="cookiesms" id="cookie1">
             <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
                 consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
@@ -107,12 +104,9 @@
             if (localStorage.controlcookie > 0) {
                 document.getElementById('cookie1').style.bottom = '-92px';
             }
-        </script>
-
-        <!-- Fin del código de cookies --->    
+        </script><!-- Fin del código de cookies --->    
 
         <!-- carga de javascript -->
-
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/vendor/bootstrap-transition.js"></script>

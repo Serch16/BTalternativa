@@ -17,6 +17,8 @@
     Estás logueado como <%=usuario%> / <%=user.getTipoUsuario()%>&nbsp;&nbsp;&nbsp;&nbsp;
     <a class="navbar-link" href="jsp?ob=usuario&op=logout">(Salir)</a>
     <%} else {%>
+    <a class="navbar-link" href="jsp">Inicio</a>
+     | 
     <a class="navbar-link" href="jsp?op=login01&ob=usuario">Acceder</a>
     <%}%>
 </p>
