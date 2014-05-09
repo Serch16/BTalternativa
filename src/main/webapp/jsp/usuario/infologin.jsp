@@ -11,6 +11,8 @@
     <%
         String us = user.getLogin();
         String usuario = us.substring(0, 1).toUpperCase() + us.substring(1);
+        //String us = user.getNombre();
+        //String usuario = us.substring(0, 1).toUpperCase() + us.substring(1);
     %>
     Estás logueado como <%=usuario%> / <%=user.getTipoUsuario()%>&nbsp;&nbsp;&nbsp;&nbsp;
     <a class="navbar-link" href="jsp?ob=usuario&op=logout">(Salir)</a>

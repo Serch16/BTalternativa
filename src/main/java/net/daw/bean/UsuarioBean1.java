@@ -8,19 +8,18 @@ package net.daw.bean;
  *
  * @author rafa
  */
-public class UsuarioBean {
+public class UsuarioBean1 {
 
     private Integer id = 0;
-    private String nombre = "";
     private String login = "";
     private String password = "";
     private Enum tipoUsuario = null;
 
-    public UsuarioBean() {
+    public UsuarioBean1() {
 
     }
 
-    public UsuarioBean(Integer id) {
+    public UsuarioBean1(Integer id) {
         this.id = id;
     }
 
@@ -78,19 +77,5 @@ public class UsuarioBean {
      */
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    /**
-     * @return the nombre
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * @param nombre the nombre to set
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 }

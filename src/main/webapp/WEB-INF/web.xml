@@ -24,4 +24,13 @@
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
+    <security-role>
+        <role-name>Empresa</role-name>
+    </security-role>
+    <security-role>
+        <role-name>Alumno</role-name>
+    </security-role>
+    <security-role>
+        <role-name>Profesor</role-name>
+    </security-role>
 </web-app>

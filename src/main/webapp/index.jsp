@@ -94,14 +94,18 @@
         <!--La URL incluida es la parte que se ha de modificar -->
 
         <div class="cookiesms" id="cookie1">
-            Esta web utiliza cookies, puedes ver nuestra  <a href="tu-url-donde-explicas-la-politica-de-cookies">la política de cookies, aquí</a> 
-            Si continuas navegando estás aceptándola
-            <button onclick="controlcookies()">Aceptar</button>
-            <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies + </div>
+            <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
+                consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
+                cambiar la configuración, en nuestra 
+                <a href="url-politica-de-cookies">Política de cookies</a>
+                <br/>
+                <button onclick="controlcookies()">Aceptar</button>
+            </p>
+            <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Uso de cookies </div>
         </div>
         <script type="text/javascript">
             if (localStorage.controlcookie > 0) {
-                document.getElementById('cookie1').style.bottom = '-50px';
+                document.getElementById('cookie1').style.bottom = '-92px';
             }
         </script>
 

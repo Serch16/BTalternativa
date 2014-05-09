@@ -58,28 +58,22 @@
     <div class="row-fluid">
         <div class="span12">
             <h2>¿Cómo funciona?</h2>
+            <p>Lorem ipsu dolor baby Lorem ipsu dolor baby, Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby
+                Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby, Lorem ipsu dolor baby.
+                Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby.
+                Lorem ipsu dolor baby
+                Lorem ipsu dolor babyLorem ipsu dolor babyLorem ipsu dolor baby.</p>
         </div>
         <div class="row-fluid">
-            <div class="span9">
-                <p>Lorem ipsu dolor baby Lorem ipsu dolor baby, Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby
-                    Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby, Lorem ipsu dolor baby.
-                    Lorem ipsu dolor baby Lorem ipsu dolor baby Lorem ipsu dolor baby.
-                    Lorem ipsu dolor baby
-                    Lorem ipsu dolor babyLorem ipsu dolor babyLorem ipsu dolor baby.</p>
+            <div class="span6">
+                <h3>Alta empresa</h3>
+                <a href="jsp?op=register01&ob=registro"><button>Regístrate</button></a>
             </div>
-            <div class="span3">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <h3>Alta empresa</h3>
-                        <a href="jsp?op=register01&ob=registro"><button>Regístrate</button></a>
-                    </div>
-                    <div class="span12">
-                        <h3>Alta alumno</h3>
-                        <a href="jsp?op=register02&ob=registro"><button>Regístrate</button></a>
-                    </div>
-                </div>
+            <div class="span6">
+                <h3>Alta alumno</h3>
+                <a href="jsp?op=register02&ob=registro"><button>Regístrate</button></a>
             </div>
-        </div> 
+        </div>
     </div>
 </div>
 <div class="row-fluid">

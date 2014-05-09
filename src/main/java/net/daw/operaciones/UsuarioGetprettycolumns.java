@@ -10,16 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/**
- *
- * @author Alvaro
- */
 public class UsuarioGetprettycolumns implements GenericOperation {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
-            String data = "{\"data\": [\"id\", \"login\", \"password\"]}";
+            String data = "{\"data\": [\"Id.\", \"Nombre\", \"Usuario\", \"Contraseña\"]}";
             return data;
         } catch (Exception e) {
             throw new ServletException("UsuarioGetpagesJson: View Error: " + e.getMessage());
