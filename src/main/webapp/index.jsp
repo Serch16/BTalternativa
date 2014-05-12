@@ -40,28 +40,21 @@
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span>
-                    </a> 
-                    <!--<a class="brand" href="jsp"><img id="logoinstituto" src="img/solologo.png"> CIPFP Ausiàs March</a>     -->              
-                    <div class="nav-collapse collapse">
-                        <%if (user != null) {%>
-                        <jsp:include page="jsp/menuSuperior.jsp" />   
-                        <% }%>
-                        <jsp:include page="jsp/usuario/infologin.jsp" />                        
-                    </div>
+                <!--<a class="brand" href="jsp"><img id="logoinstituto" src="img/solologo.png"> CIPFP Ausiàs March</a>     -->              
+                <div class="nav pull-right acc">
+                    <%if (user != null) {%>
+                    <jsp:include page="jsp/menuSuperior.jsp" />   
+                    <% }%>
+                    <jsp:include page="jsp/usuario/infologin.jsp" />                        
                 </div>
-            </div>
+            </div>   
         </div>
 
         <div class="container-fluid">
             <div class="row-fluid">
                 <%
                     if (user != null) {
-                        out.print("<div class=\"span2\">");
+                        out.print("<div class=\"span12\">");
                 %>
                 <jsp:include page="jsp/menuLateral.jsp" />
                 <%
@@ -70,7 +63,8 @@
                 %>
                 <%
                     if (user != null) {
-                        out.print("<div class=\"span10\">");
+                        out.print("<div class=\"row-fluid\">");
+                        out.print("<div class=\"span12\">");
                         out.print("<div id=\"indexContenido\"></div>");
                     } else {
                         out.print("<div class=\"span12\">");
@@ -80,13 +74,13 @@
                     <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
                 </div>
                 <%
-                    out.print("</div>");
+                    out.print("</div></div>");
                 %>    
                 <div class="row-fluid">
                     <div class="span12"><hr><footer><p>&copy; Sergio Martín (2014)</p></footer></div>   
                 </div>
             </div>
-        </div> 
+        </div>
 
 
         <!--Código HTML de la política de cookies -->
