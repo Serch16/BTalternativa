@@ -4,13 +4,13 @@
  */
 package net.daw.dao;
 
+import net.daw.bean.AdministradorBean;
 import net.daw.bean.AlumnoBean;
 import net.daw.bean.EmpresaBean;
 import net.daw.bean.ProfesorBean;
 import net.daw.bean.UsuarioBean;
 import net.daw.helper.Conexion;
 import net.daw.helper.Enum;
-
 
 public class UsuarioDao extends GenericDaoImplementation<UsuarioBean> {
 
@@ -30,7 +30,7 @@ public class UsuarioDao extends GenericDaoImplementation<UsuarioBean> {
                 oUsuario.setPassword(oMysql.getOne("usuario", "password", oUsuario.getId()));
                 if (!pass.equals(oUsuario.getPassword())) {
                     oUsuario.setId(0);
-                } 
+                }
             }
             oMysql.desconexion();
             return oUsuario;
@@ -56,7 +56,13 @@ public class UsuarioDao extends GenericDaoImplementation<UsuarioBean> {
                     ProfesorBean oProfesorBean = oProfesorDao.getFromId_usuario(oUsuarioBean);
                     oUsuarioBean.setTipoUsuario(Enum.TipoUsuario.Profesor);
                 } catch (Exception e3) {
-                    throw new Exception("UsuarioDao.type: Error: " + e3.getMessage());
+                    try {
+                        AdministradorDao oAdministradorDao = new AdministradorDao(enumTipoConexion);
+                        AdministradorBean oAdministradorBean = oAdministradorDao.getFromId_usuario(oUsuarioBean);
+                        oUsuarioBean.setTipoUsuario(Enum.TipoUsuario.Administrador);
+                    } catch (Exception e4) {
+                        throw new Exception("UsuarioDao.type: Error: " + e4.getMessage());
+                    }
                 }
             }
         } finally {
@@ -64,7 +70,7 @@ public class UsuarioDao extends GenericDaoImplementation<UsuarioBean> {
         }
         return oUsuarioBean;
     }
- 
+
     @Override
     public UsuarioBean get(UsuarioBean oUsuarioBean) throws Exception {
         if (oUsuarioBean.getId() > 0) {
@@ -87,5 +93,4 @@ public class UsuarioDao extends GenericDaoImplementation<UsuarioBean> {
         return oUsuarioBean;
     }
 
-    
 }
