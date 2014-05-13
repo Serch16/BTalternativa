@@ -29,8 +29,8 @@
                     <fieldset>
                         <select  id="rpp" name="nrpp" value="select" class="span12">                        
                             <option>5</option>
-                            <option>10</option>
-                            <option selected>20</option>
+                            <option selected>10</option>
+                            <option>20</option>
                             <option>50</option>
                             <option>100</option>
                         </select>               

@@ -1,9 +1,3 @@
-<div class="row-fluid">
-    <div class="span12">
-        <img id="logolargo" src="img/logolargo.png">
-    </div>
-</div>
-<br/>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
     <ul class="nav nav-tabs">
         <li class="active"><a href="#inicio" data-toggle="tab">Información</a></li>
@@ -16,6 +10,11 @@
             <div class="row-fluid">
                 <div class="span1"></div>
                 <div class="span10">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <img id="logolargo" src="img/logolargo.png">
+                        </div>
+                    </div>
                     <h3>¿Qué es la Bolsa de Trabajo?</h3>
                 </div>
                 <div class="span1"></div>
@@ -62,8 +61,8 @@
                     <h2>¿Cómo funciona?</h2>
                     <p>Tanto si eres un alumno de CIPFP Ausiàs March como una empresa, deberás de facilitarnos todos tus 
                         datos a través del formulario destinado a cada usuario. Estos datos serán comprobados por nuestro
-                     personal encargado de la bolsa de trabajo. Cuando haya sido verificada la información, recibirás en tu 
-                     correo electónico que nos facilitaste tu contraseña (tu usuario será tu correo electrónico).</p>
+                        personal encargado de la bolsa de trabajo. Cuando haya sido verificada la información, recibirás en tu 
+                        correo electónico que nos facilitaste tu contraseña (tu usuario será tu correo electrónico).</p>
                 </div>
             </div>
             <div class="span1"></div>

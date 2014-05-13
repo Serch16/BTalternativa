@@ -5,6 +5,10 @@
     width: 14px;
 }
 
+#solologo {
+    width: 20px;
+}
+
 /* CSS para la animación y localización de los DIV de cookies */
 
 @keyframes desaparecer
