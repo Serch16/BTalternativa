@@ -1,6 +1,36 @@
 <%@page import="net.daw.bean.UsuarioBean"%>
 <%UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean"); %>
 
+<%
+    if (oUsuario.getTipoUsuario().toString() == "Administrador") {
+%>
+<div class="masthead">
+    <h3 class="muted">Administrador del sistema</h3>
+<div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a id="lnkUsuario" href="#">Usuario</a></li>
+                    <li><a id="lnkProfesor" href="#">Profesor</a></li>
+                    <li><a id="lnkAlumno" href="#">Alumno</a></li>
+                    <li><a id="lnkEmpresa" href="#">Empresa</a></li>
+                    <li><a id="lnkOferta" href="#">Oferta</a></li>
+                    <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
+                    <li><a href="#about">Orientación laboral</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+                    <li><a id="lnkLogout" href="jsp?ob=usuario&op=logout">Cerrar sesión</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+</div>
+<%
+} else if ((oUsuario.getTipoUsuario().toString() == "Alumno") || (oUsuario.getTipoUsuario().toString() == "Empresa")) {
+%>
 
 <!-- Menú navegación interior -->
 <div class="navbar navbar-inverse">
@@ -33,7 +63,9 @@
         </div>
     </div>
 </div>
-
+<%
+    }
+%>
 
 <!--
 

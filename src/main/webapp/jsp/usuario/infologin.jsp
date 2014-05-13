@@ -9,7 +9,8 @@
         //String us = user.getNombre();
         //String usuario = us.substring(0, 1).toUpperCase() + us.substring(1);
 %>
-    Estás logueado como <%=usuario%> / <%=user.getTipoUsuario()%>
+<div class="nav"><p class="navbar-text pull-right">Estás logueado como <%=usuario%></p></div>
+<div class="nav"><p class="navbar-text pull-right">Rol: <%=user.getTipoUsuario()%></p></div>
     <%} else {%>
     
 <ul class="nav">

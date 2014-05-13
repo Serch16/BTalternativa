@@ -14,10 +14,6 @@ import net.daw.bean.EmpresaBean;
 import net.daw.dao.EmpresaDao;
 import net.daw.helper.Conexion;
 
-/**
- *
- * @author AntonioNP
- */
 public class EmpresaGet implements GenericOperation {
 
     @Override

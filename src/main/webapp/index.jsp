@@ -14,10 +14,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
+            //body {
+              //  padding-top: 60px;
+                //padding-bottom: 40px;
+            //}
         </style>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
@@ -49,39 +49,50 @@
                 </div>
             </div>   
         </div>
+        <div id="wrap">
 
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <%
-                    if (user != null) {
-                        out.print("<div class=\"span12\">");
-                %>
-                <jsp:include page="jsp/menuLateral.jsp" />
-                <%
-                        out.print("</div>");
-                    }
-                %>
-                <%
-                    if (user != null) {
-                        out.print("<div class=\"row-fluid\">");
-                        out.print("<div class=\"span12\">");
-                        out.print("<div id=\"indexContenido\"></div>");
-                    } else {
-                        out.print("<div class=\"span12\">");
-                    }
-                %>
-                <div id="indexContenidoJsp">
-                    <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
-                </div>
-                <%
-                    out.print("</div></div>");
-                %>    
+            <div class="container-fluid">
                 <div class="row-fluid">
-                    <div class="span12"><hr><footer><p>&copy; Sergio Martín (2014)</p></footer></div>   
+                    <%
+                        if (user != null) {
+                            out.print("<div class=\"span12\">");
+                    %>
+                    <jsp:include page="jsp/menuLateral.jsp" />
+                    <%
+                            out.print("</div>");
+                        }
+                    %>
+                    <%
+                        if (user != null) {
+                            out.print("<div class=\"row-fluid\">");
+                            out.print("<div class=\"span12\">");
+                            out.print("<div id=\"indexContenido\"></div>");
+                        } else {
+                            out.print("<div class=\"span12\">");
+                        }
+                    %>
+                    <div id="indexContenidoJsp">
+                        <jsp:include page='<%=(String) request.getAttribute("contenido")%>' />                
+                    </div>
+                    <%
+                        out.print("</div></div>");
+                    %>
                 </div>
             </div>
         </div>
 
+                    <div id="footer">
+                        <div class="container">
+                            <div class="row-fluid">
+                                <ul class="inline">
+                                    <li>&copy; Sergio Martín (2014)</li>
+                                    <li><a>Reglas de uso</a></li>
+                                    <li><a>Política de cookies</a></li>
+                                    <li><a>Ayuda</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
         <!--Código HTML de la política de cookies -->
         <div class="cookiesms" id="cookie1">
@@ -94,6 +105,8 @@
             </p>
             <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Uso de cookies </div>
         </div>
+
+
         <script type="text/javascript">
             if (localStorage.controlcookie > 0) {
                 document.getElementById('cookie1').style.bottom = '-92px';
@@ -150,7 +163,7 @@
                     $('#indexContenido').empty().append(usuarioView.getEmptyList());
 
                     var usuarioControl = control_usuario_list('<%=request.getContextPath()%>');
-                    usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, null);
+                    usuarioControl.inicia(usuarioView, 1, null, null, 20, null, null, null, null);
                     return false;
                 });
 
