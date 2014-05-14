@@ -11,7 +11,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta name="description" content="">
+        <meta name="description" content="Bolsa de trabajo del CIPFP Ausiàs March es 
+              una bolsa de empleo online que publica ofertas de empleo para los alumnos-candidatos del propio centro.">
+        <meta name="Keywords" content="trabajo, empleo, ofertas de trabajo, bolsa de trabajo, bolsa de empleo, trabajar, 
+              ofertas de trabajo, ofertas de empleo, portal de empleo, publicar ofertas de trabajo, CIPFP Ausias March, 
+              Centro Integrado Publico Formacion Profesional Ausias March" />
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
@@ -104,7 +108,7 @@
     </div>
 
     <!-- Código HTML de la política de cookies -->
-    <div class="cookiesms  hidden-phone hidden-tablet" id="cookie1">
+    <div class="cookiesms  hidden-phone" id="cookie1">
         <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
             consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
             cambiar la configuración, en nuestra 
