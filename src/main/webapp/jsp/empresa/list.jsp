@@ -1,7 +1,3 @@
-<%-- 
-    Document   : list.jsp
-    Author     : AntonioNP
---%>
 <%@page import="net.daw.helper.Conexion"%>
 <%@page import="net.daw.dao.EmpresaDao"%>
 <%@page import="java.util.ArrayList"%>
@@ -37,11 +33,11 @@
                 </form>
             </div>          <!-- // Registros por página -->
             <!-- Creación de usuario -->
-            <div class="well sidebar-nav">
+            <div class="well sidebar-nav hidden-phone">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>
             </div>          <!-- // Creación de usuario -->
             <!-- Filtro -->
-            <div class="well sidebar-nav">
+            <div class="well sidebar-nav hidden-phone hidden-tablet">
                 <legend>Filtro</legend> 
                 <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                     <fieldset>
@@ -82,11 +78,11 @@
         <div class="span9">
             <div class="row-fluid">
                 <!-- Paginación -->
-                <div class="span2"></div>
+                <div class="span2 hidden-phone hidden-tablet"></div>
                 <div class="span8">
                     <div id="pagination"></div>
                 </div>
-                <div class="span2"></div>           <!-- // Paginación -->
+                <div class="span2 hidden-phone hidden-tablet"></div>           <!-- // Paginación -->
             </div>
             <div id="datos"></div>
             <div id="datos2"></div>

@@ -89,7 +89,7 @@
             </div>
         </div>
     </div>
-
+    
     <div id="footer">
         <div class="container">
             <div class="row-fluid">
@@ -103,8 +103,8 @@
         </div>
     </div>
 
-    <!--Código HTML de la política de cookies -->
-    <div class="cookiesms" id="cookie1">
+    <!-- Código HTML de la política de cookies -->
+    <div class="cookiesms  hidden-phone hidden-tablet" id="cookie1">
         <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
             consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
             cambiar la configuración, en nuestra 

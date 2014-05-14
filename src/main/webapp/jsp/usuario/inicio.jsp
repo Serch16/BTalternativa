@@ -17,10 +17,10 @@
                     </div>
                     <h3>¿Qué es la Bolsa de Trabajo?</h3>
                 </div>
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
             </div>
             <div class="row-fluid">
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
                 <div class="span6">
                     <p>Como Centro Integrado de Formación Profesional, el CIPFP Ausiàs March, 
                         imparte enseñanzas regladas de formación profesional inicial (ciclos formativos); 
@@ -40,17 +40,17 @@
                 <div class="span4">
                     <img src="img/ies1.jpg">
                 </div>
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
             </div>
             <div class="row-fluid">
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
                 <div class="span10">
                     <p>Nuestra bolsa de trabajo NO tiene como fin la SELECCIÓN DE PERSONAL sino ejercer como canal 
                         transmisor de información laboral: PONER EN CONTACTO OFERTA Y DEMANDA DE EMPLEO. Por ello, 
                         Bolsa de Trabajo tiene a la disposición de las empresas trabajadores jóvenes, con una amplia formación 
                         y capacidades adaptadas a sus necesidades.</p>  
                 </div>
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
             </div>
         </div>
 
@@ -83,14 +83,14 @@
 
         <div class="tab-pane" id="responsable">
             <div class="row-fluid">
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
                 <div class="span10">
                     <h3>Responsable</h3>
                 </div>
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
             </div>
             <div class="row-fluid">
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
                 <div class="span5">
                     <p>La responsable del departamento de Bolsa de Trabajo para el presente curso escolar es Mercedez Sanz, 
                         cuyo correo es bolsa@ausiasmarch.net y está disponible en el siguiente horario:</p>
@@ -117,7 +117,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="span1"></div>
+                <div class="span1 hidden-phone hidden-tablet"></div>
             </div>
         </div>
         <div class="tab-pane" id="horarios">
