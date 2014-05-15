@@ -1,3 +1,9 @@
+<!-- Estás en... -->
+<ul class="breadcrumb">
+    Estás en:
+    <li class="active">Incio</li>
+</ul>           <!-- // Estás en... -->
+<div class="row-fluid">
 <div class="tabbable"> <!-- Only required for left/right tabs -->
     <ul class="nav nav-tabs">
         <li class="active"><a href="#inicio" data-toggle="tab">Información</a></li>
@@ -66,19 +72,6 @@
                 </div>
             </div>
             <div class="span1"></div>
-            <div class="hero-unit">
-
-                <div class="row-fluid">
-                    <div class="span6">
-                        <h3>Alta empresa</h3>
-                        <a href="jsp?op=register01&ob=registro"><button>Regístrate</button></a>
-                    </div>
-                    <div class="span6">
-                        <h3>Alta alumno</h3>
-                        <a href="jsp?op=register02&ob=registro"><button>Regístrate</button></a>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="tab-pane" id="responsable">

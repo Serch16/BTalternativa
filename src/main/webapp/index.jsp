@@ -49,12 +49,12 @@
                                     <div class="nav-collapse collapse">
                                         <ul class="nav">
                                             <li><a class="navbar-link" href="jsp">Inicio</a></li>
-                                            <li><a id="lnkOferta" href="#">Ofertas de trabajo</a></li>
+                                            <li><a id="lnkOferta" href="jsp?ob=oferta&op=list">Ofertas de trabajo</a></li>
                                             <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
                                             <li><a href="#about">Orientación laboral</a></li>
                                         </ul>
                                         <ul class="nav pull-right">
-                                            <li><a id="lnkRegistro" href="#">Regístrate</a></li>
+                                            <li><a href="jsp?ob=usuario&op=al·um·no">Regístrate</a></li>
                                             <li class="divider-vertical"></li>
                                             <li><a class="navbar-link" href="jsp?op=login01&ob=usuario">Acceder</a></li>
                                         </ul>

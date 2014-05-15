@@ -11,6 +11,7 @@
 <div id="<%=strNombreMantenimiento%>_list">
     <!-- Estás en... -->
     <ul class="breadcrumb">
+    Estás en:
         <li><a href="#">Administración</a> <span class="divider">/</span></li>
         <li class="active">Empresa</li>
     </ul>           <!-- // Estás en... -->

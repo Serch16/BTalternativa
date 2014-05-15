@@ -1,4 +1,3 @@
-
 package net.daw.control;
 
 import java.io.IOException;
@@ -11,12 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import net.daw.bean.UsuarioBean;
 import net.daw.dao.UsuarioDao;
 import net.daw.helper.Conexion;
-
-/**
- *
- * @author rafael aznar
- * 
- */
 
 public class ControlJsp extends HttpServlet {
 
@@ -55,7 +48,7 @@ public class ControlJsp extends HttpServlet {
         //security check
         if (request.getSession().getAttribute("usuarioBean") == null) {
             ob = "usuario";
-            if (!op.equals("inicio") && !op.equals("login02")) {
+            if (!op.equals("inicio") && !op.equals("login02") && !op.equals("al·um·no") && !op.equals("empresa")) {
                 op = "login01";
                 mode = "wrappered";
             }
