@@ -2,7 +2,9 @@
 <%@page import="net.daw.dao.OfertaDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Iterator"%>
+<%@page import="net.daw.bean.UsuarioBean"%>
 <%
+    UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean");
     OfertaDao oOfertaDao = new OfertaDao(Conexion.getConection());
     ArrayList<String> alColumnsNames = (ArrayList<String>) oOfertaDao.getColumnsNames();
     Iterator<String> oIterador = alColumnsNames.listIterator();
@@ -32,10 +34,16 @@
                     </fieldset>
                 </form>
             </div>          <!-- // Registros por página -->
-            <!-- Creación de usuario -->
+            <!-- Creación de oferta -->
+            <%
+                if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") |(oUsuario.getTipoUsuario().toString() == "Empresa")) {
+            %>
             <div class="well sidebar-nav hidden-phone">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>
-            </div>          <!-- // Creación de usuario -->
+            </div>
+            <%
+                }
+            %>          <!-- // Creación de oferta -->
             <!-- Filtro -->
             <div class="well sidebar-nav hidden-phone hidden-tablet">
                 <legend>Filtro</legend> 

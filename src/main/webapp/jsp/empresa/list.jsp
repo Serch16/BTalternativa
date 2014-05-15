@@ -32,10 +32,10 @@
                     </fieldset>
                 </form>
             </div>          <!-- // Registros por página -->
-            <!-- Creación de usuario -->
+            <!-- Creación de empresa -->
             <div class="well sidebar-nav hidden-phone">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>
-            </div>          <!-- // Creación de usuario -->
+            </div>          <!-- // Creación de empresa -->
             <!-- Filtro -->
             <div class="well sidebar-nav hidden-phone hidden-tablet">
                 <legend>Filtro</legend> 

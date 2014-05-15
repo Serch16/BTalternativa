@@ -16,7 +16,7 @@ var objeto = function(clase, ContextPath) {
         getPrettyFieldNamesAcciones: function() {
             $.when(ajaxCallSync(urlDatos + '&op=getprettycolumns', 'GET', '')).done(function(data) {
                 prettyFieldNames = data['data'];
-                prettyFieldNames.push("acciones");
+                prettyFieldNames.push("Acciones");
 
             });
             return prettyFieldNames;
@@ -156,7 +156,7 @@ var vista = function(objeto, ContextPath) {
 
                 $.each(objeto.getPrettyFieldNamesAcciones(), function(index, value) {
                     tabla += '<th>' + value;
-                    if (value === "acciones") {
+                    if (value === "Acciones") {
                         tabla += '</th>';
                     } else {
                         tabla += '<a class="orderAsc' + index + '" href="#"><i class="icon-arrow-up"></i></a>';

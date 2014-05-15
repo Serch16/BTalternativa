@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 var control_alumno_list = function(path) {
     //contexto privado
 
@@ -97,9 +91,9 @@ var control_alumno_list = function(path) {
             });
 
             var usuarioControl = control_usuario_list(path);
-            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchTipodocumento, null, null, null);
+            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchOferta, null, null, null);
 
-            function callbackSearchTipodocumento(id) {
+            function callbackSearchOferta(id) {
                 $(prefijo_div + '#modal02').modal('hide');
                 $(prefijo_div + '#modal02').data('modal', null);
                 $(prefijo_div + '#id_usuario').val($(this).attr('id'));
@@ -446,4 +440,3 @@ var control_alumno_list = function(path) {
         }
     };
 };
-

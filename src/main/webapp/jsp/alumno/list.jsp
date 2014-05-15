@@ -1,8 +1,3 @@
-<%-- 
-    Document   : form
-    Created on : Jan 24, 2013, 12:02:17 AM
-    Author     : Sergio
---%>
 <%@page import="net.daw.helper.Conexion"%>
 <%@page import="net.daw.dao.AlumnoDao"%>
 <%@page import="java.util.ArrayList"%>
