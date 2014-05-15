@@ -1,36 +1,31 @@
-<%-- 
-    Document   : form
-    Created on : Jan 21, 2013, 10:24:17 AM
-    Author     : Jose
---%>
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
     <div class="control-group">
-        <label class="control-label" for="inputId">Id:</label>
+        <label class="control-label" for="inputId">ID:</label>
         <div class="controls">
-            <input type="text" id="id" name="id" placeholder="id"/>
+            <input type="text" id="id" name="id" placeholder=""/>
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputLogin">Login:</label>
+        <label class="control-label"  for="inputLogin">Usuario:</label>
         <div class="controls">
-            <input type="text" id="login" name="login" size="15" placeholder="login" />
+            <input type="text" id="login" name="login" size="15" placeholder="correo electrónico" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputPassword">Password:</label>
+        <label class="control-label"  for="inputPassword">Contraseña:</label>
         <div class="controls">
-            <input type="password" id="password" name="password" size="15" placeholder="password" />
+            <input type="password" id="password" name="password" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputPasswordRepite">Repite Password:</label>
+        <label class="control-label"  for="inputPasswordRepite">Repite Contraseña:</label>
         <div class="controls">
-            <input type="password" id="passwordRepite" name="passwordRepite" size="15" placeholder="repitePassword" />
+            <input type="password" id="passwordRepite" name="passwordRepite" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <div class="controls">
-            <button type="submit" id="submitForm" class="btn submitForm">Submit</button>
+            <button type="submit" id="submitForm" class="btn submitForm">Introducir</button>
         </div>
     </div>
 </form>

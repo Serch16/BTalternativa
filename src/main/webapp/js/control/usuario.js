@@ -50,10 +50,11 @@ var control_usuario_list = function(path) {
             rules: {
                 login: {
                     required: true,
-                    maxlength: 20
+                    maxlength: 40
                 },
                 password: {
                     required: true,
+                    minlength: 8,
                     maxlength: 25
                 },
                 passwordRepite: {
@@ -65,7 +66,7 @@ var control_usuario_list = function(path) {
             messages: {
                 login: {
                     required: "Introduce un login",
-                    maxlength: "Tiene que ser menos de 20 caracteres"
+                    maxlength: "Tiene que ser menos de 40 caracteres"
                 },
                 password: {
                     required: "Introduce una contraseña",

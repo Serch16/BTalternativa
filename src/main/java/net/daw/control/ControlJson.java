@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.control;
 
 import com.google.gson.Gson;
@@ -16,10 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import net.daw.operaciones.GenericOperation;
 
-/**
- *
- * @author rafa
- */
 public class ControlJson extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

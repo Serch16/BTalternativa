@@ -1,25 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.bean;
 
-/**
- *
- * @author Pedro Benito
- */
 public class ProfesorBean {
 
     private Integer id = 0;
     private Integer id_usuario = 0;
     private String nombre = "";
-    private String ape1 = "";
-    private String ape2 = "";
-    private String sexo = "";
-    private String telefono = "";
-    private String email = "";
-    private String dni = "";
+    private String apellido = "";
+    private String correo = "";
 
     public ProfesorBean() {
     }
@@ -71,87 +58,30 @@ public class ProfesorBean {
     }
 
     /**
-     * @return the ape1
+     * @return the apellido
      */
-    public String getApe1() {
-        return ape1;
+    public String getApellido() {
+        return apellido;
     }
 
     /**
-     * @param ape1 the ape1 to set
+     * @param apellido the apellido to set
      */
-    public void setApe1(String ape1) {
-        this.ape1 = ape1;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     /**
-     * @return the ape2
+     * @return the correo
      */
-    public String getApe2() {
-        return ape2;
+    public String getCorreo() {
+        return correo;
     }
 
     /**
-     * @param ape2 the ape2 to set
+     * @param correo the correo to set
      */
-    public void setApe2(String ape2) {
-        this.ape2 = ape2;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
-
-    /**
-     * @return the sexo
-     */
-    public String getSexo() {
-        return sexo;
-    }
-
-    /**
-     * @param sexo the sexo to set
-     */
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    /**
-     * @return the telefono
-     */
-    public String getTelefono() {
-        return telefono;
-    }
-
-    /**
-     * @param telefono the telefono to set
-     */
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    /**
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * @return the dni
-     */
-    public String getDni() {
-        return dni;
-    }
-
-    /**
-     * @param dni the dni to set
-     */
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
 }

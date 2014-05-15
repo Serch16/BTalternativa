@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import com.google.gson.Gson;
@@ -13,11 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import net.daw.dao.ProfesorDao;
 import net.daw.helper.Conexion;
 
-
-/**
- *
- * @author Pedro Benito
- */
 public class ProfesorGetcolumns implements GenericOperation {
 
     @Override

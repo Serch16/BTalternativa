@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import com.google.gson.Gson;
@@ -14,12 +10,6 @@ import net.daw.bean.UsuarioBean;
 import net.daw.dao.UsuarioDao;
 import net.daw.helper.Conexion;
 
-
-
-/**
- *
- * @author Alvaro
- */
 public class UsuarioRemove implements GenericOperation {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {

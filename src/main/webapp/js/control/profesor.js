@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 var control_profesor_list = function(path) {
     //contexto privado
 
@@ -119,41 +113,18 @@ var control_profesor_list = function(path) {
                     maxlength: 6,
                     digits: true
                 },
-                dni: {
-                    required: true,
-                    maxlength: 9,
-                    caracteresespeciales: true,
-                    nifES: true
-
-                },
                 nombre: {
                     required: true,
                     minlength: 3,
                     maxlength: 50,
                     caracteresespeciales: true
                 },
-                ape1: {
+                apellido: {
                     required: true,
                     maxlength: 50,
                     caracteresespeciales: true
                 },
-                ape2: {
-                    maxlength: 50
-                },
-                sexo: {
-                    required: true,
-                    maxlength: 6,
-                    caracteresespeciales: true
-
-                },
-                telefono: {
-                    caracteresespeciales: true,
-                    required: true,
-                    maxlength: 9,
-                    minlength: 9,
-                    number: true
-                },
-                email: {
+                correo: {
                     required: true,
                     maxlength: 150,
                     email: true
@@ -164,34 +135,17 @@ var control_profesor_list = function(path) {
                     required: "Debes de registrarte con login y password",
                     maxlength: "Máximo 6 dígitos"
                 },
-                dni: {
-                    required: "Introduce tu DNI"
-                },
                 nombre: {
                     required: "Introduce tu nombre",
                     maxlength: "Máximo 50 letras",
                     minlength: "Cómo mínimo 3 letras"
                 },
-                ape1: {
+                apellido: {
                     required: "Introduce tu primer apellido",
                     maxlength: "Máximo 50 carácteres",
                     minlength: "Cómo mínimo 3 letras"
                 },
-                ape2: {
-                    maxlength: "Máximo 50 carácteres",
-                    minlength: "Cómo mínimo 3 letras"
-                },
-                sexo: {
-                    required: "Introduce tu sexo",
-                    maxlength: "Hombre o mujer"
-                },
-                telefono: {
-                    required: "Introduce tu número de telefono",
-                    maxlength: "Máximo 9 dígitos",
-                    minlength: "Cómo mínimo 9 dígitos",
-                    number: "Por favor, introduce tu número"
-                },
-                email: {
+                correo: {
                     required: "Introduce tu correo electrónico",
                     maxlength: "Máximo 150 carácteres",
                     email: "Por favor, introduce un email válido"

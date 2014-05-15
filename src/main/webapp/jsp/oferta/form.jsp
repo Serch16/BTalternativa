@@ -1,5 +1,4 @@
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
-    <h2>Entrada</h2>
     <div class="control-group">
         <label class="control-label" for="inputId">ID:</label>
         <div class="controls">
