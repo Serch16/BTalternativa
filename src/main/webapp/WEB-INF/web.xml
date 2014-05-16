@@ -2,11 +2,11 @@
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>ControlJson</servlet-name>
-        <servlet-class>net.daw.control.ControlJson</servlet-class>
+        <servlet-class>es.imeon.control.ControlJson</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ControlJsp</servlet-name>
-        <servlet-class>net.daw.control.ControlJsp</servlet-class>
+        <servlet-class>es.imeon.control.ControlJsp</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ControlJson</servlet-name>
@@ -18,7 +18,7 @@
     </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            15
         </session-timeout>
     </session-config>
     <welcome-file-list>
@@ -32,5 +32,8 @@
     </security-role>
     <security-role>
         <role-name>Profesor</role-name>
+    </security-role>
+    <security-role>
+        <role-name>Administrador</role-name>
     </security-role>
 </web-app>
