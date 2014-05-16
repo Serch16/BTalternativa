@@ -81,6 +81,7 @@
                         out.print("<div class=\"span12\">");
                         out.print("<div id=\"indexContenido\"></div>");
                     } else {
+                        out.print("<div class=\"row-fluid\">");
                         out.print("<div class=\"span12\">");
                     }
                 %>
@@ -92,155 +93,154 @@
                 %>
             </div>
         </div>
-    </div>
-    
-    <div id="footer">
-        <div class="container">
-            <div class="row-fluid">
-                <ul class="inline">
-                    <li>&copy; Sergio Martín (2014)</li>
-                    <li><a>Reglas de uso</a></li>
-                    <li><a>Política de cookies</a></li>
-                    <li><a>Ayuda</a></li>
-                </ul>
+
+        <div id="footer">
+            <div class="container">
+                <div class="row-fluid">
+                    <ul class="inline">
+                        <li>&copy; Sergio Martín (2014)</li>
+                        <li><a>Reglas de uso</a></li>
+                        <li><a>Política de cookies</a></li>
+                        <li><a>Ayuda</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Código HTML de la política de cookies -->
-    <div class="cookiesms  hidden-phone" id="cookie1">
-        <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
-            consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
-            cambiar la configuración, en nuestra 
-            <a href="url-politica-de-cookies">Política de cookies</a>
-            <br/>
-            <button onclick="controlcookies()">Aceptar</button>
-        </p>
-        <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Uso de cookies </div>
-    </div>
+        <!-- Código HTML de la política de cookies -->
+        <div class="cookiesms  hidden-phone" id="cookie1">
+            <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
+                consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
+                cambiar la configuración, en nuestra 
+                <a href="url-politica-de-cookies">Política de cookies</a>
+                <br/>
+                <button onclick="controlcookies()">Aceptar</button>
+            </p>
+            <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Uso de cookies </div>
+        </div>
 
 
-    <script type="text/javascript">
-        if (localStorage.controlcookie > 0) {
-            document.getElementById('cookie1').style.bottom = '-92px';
-        }
-    </script><!-- Fin del código de cookies --->    
+        <script type="text/javascript">
+            if (localStorage.controlcookie > 0) {
+                document.getElementById('cookie1').style.bottom = '-92px';
+            }
+        </script><!-- Fin del código de cookies --->    
 
-    <!-- carga de javascript -->
-    <script src="js/vendor/bootstrap.min.js"></script>
+        <!-- carga de javascript -->
+        <script src="js/vendor/bootstrap.min.js"></script>
 
-    <script src="js/vendor/bootstrap-transition.js"></script>
-    <script src="js/vendor/bootstrap-alert.js"></script>
-    <script src="js/vendor/bootstrap-modal.js"></script>
-    <script src="js/vendor/bootstrap-dropdown.js"></script>
-    <script src="js/vendor/bootstrap-scrollspy.js"></script>
-    <script src="js/vendor/bootstrap-tab.js"></script>
-    <script src="js/vendor/bootstrap-tooltip.js"></script>
-    <script src="js/vendor/bootstrap-popover.js"></script>
-    <script src="js/vendor/bootstrap-button.js"></script>
-    <script src="js/vendor/bootstrap-collapse.js"></script>
-    <script src="js/vendor/bootstrap-carousel.js"></script>
-    <script src="js/vendor/bootstrap-typeahead.js"></script>    
+        <script src="js/vendor/bootstrap-transition.js"></script>
+        <script src="js/vendor/bootstrap-alert.js"></script>
+        <script src="js/vendor/bootstrap-modal.js"></script>
+        <script src="js/vendor/bootstrap-dropdown.js"></script>
+        <script src="js/vendor/bootstrap-scrollspy.js"></script>
+        <script src="js/vendor/bootstrap-tab.js"></script>
+        <script src="js/vendor/bootstrap-tooltip.js"></script>
+        <script src="js/vendor/bootstrap-popover.js"></script>
+        <script src="js/vendor/bootstrap-button.js"></script>
+        <script src="js/vendor/bootstrap-collapse.js"></script>
+        <script src="js/vendor/bootstrap-carousel.js"></script>
+        <script src="js/vendor/bootstrap-typeahead.js"></script>    
 
-    <script src="js/util.js" charset="UTF-8"></script>
-    <script src="js/main.js" charset="UTF-8"></script>
+        <script src="js/util.js" charset="UTF-8"></script>
+        <script src="js/main.js" charset="UTF-8"></script>
 
-    <script src="js/control/alumno.js" charset="UTF-8"></script>
-    <script src="js/control/empresa.js" charset="UTF-8"></script>
-    <script src="js/control/profesor.js" charset="UTF-8"></script>
-    <script src="js/control/usuario.js" charset="UTF-8"></script>
-    <script src="js/control/oferta.js" charset="UTF-8"></script>
+        <script src="js/control/alumno.js" charset="UTF-8"></script>
+        <script src="js/control/empresa.js" charset="UTF-8"></script>
+        <script src="js/control/profesor.js" charset="UTF-8"></script>
+        <script src="js/control/usuario.js" charset="UTF-8"></script>
+        <script src="js/control/oferta.js" charset="UTF-8"></script>
 
-    <script>
-        $(document).ready(function() {
-            inicializacion();
-            $('#lnkRegistro').unbind('click');
-            $('#lnkRegistro').click(function() {
-                var registro = objeto('registro', '<%=request.getContextPath()%>');
-                var registroView = vista(registro, '<%=request.getContextPath()%>');
+        <script>
+            $(document).ready(function() {
+                inicializacion();
+                $('#lnkRegistro').unbind('click');
+                $('#lnkRegistro').click(function() {
+                    var registro = objeto('registro', '<%=request.getContextPath()%>');
+                    var registroView = vista(registro, '<%=request.getContextPath()%>');
 
-                $('#indexContenidoJsp').empty();
+                    $('#indexContenidoJsp').empty();
+                });
+
+                $('#lnkAlumno').unbind('click');
+                $('#lnkAlumno').click(function() {
+                    var alumno = objeto('alumno', '<%=request.getContextPath()%>');
+                    var alumnoView = vista(alumno, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(alumnoView.getEmptyList());
+
+                    var alumnoControl = control_alumno_list('<%=request.getContextPath()%>');
+                    alumnoControl.inicia(alumnoView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+
+                $('#lnkUsuario').unbind('click');
+                $('#lnkUsuario').click(function() {
+                    var usuario = objeto('usuario', '<%=request.getContextPath()%>');
+                    var usuarioView = vista(usuario, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(usuarioView.getEmptyList());
+
+                    var usuarioControl = control_usuario_list('<%=request.getContextPath()%>');
+                    usuarioControl.inicia(usuarioView, 1, null, null, 20, null, null, null, null);
+                    return false;
+                });
+
+                $('#lnkEmpresa').unbind('click');
+                $('#lnkEmpresa').click(function() {
+                    var empresa = objeto('empresa', '<%=request.getContextPath()%>');
+                    var empresaView = vista(empresa, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(empresaView.getEmptyList());
+
+                    var empresaControl = control_empresa_list('<%=request.getContextPath()%>');
+                    empresaControl.inicia(empresaView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+
+                $('#lnkProfesor').unbind('click');
+                $('#lnkProfesor').click(function() {
+                    var profesor = objeto('profesor', '<%=request.getContextPath()%>');
+                    var profesorView = vista(profesor, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(profesorView.getEmptyList());
+
+                    var profesorControl = control_profesor_list('<%=request.getContextPath()%>');
+                    profesorControl.inicia(profesorView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+
+                $('#lnkOferta').unbind('click');
+                $('#lnkOferta').click(function() {
+                    var oferta = objeto('oferta', '<%=request.getContextPath()%>');
+                    var ofertaView = vista(oferta, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(ofertaView.getEmptyList());
+
+                    var ofertaControl = control_oferta_list('<%=request.getContextPath()%>');
+                    ofertaControl.inicia(ofertaView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+
             });
-            
-            $('#lnkAlumno').unbind('click');
-            $('#lnkAlumno').click(function() {
-                var alumno = objeto('alumno', '<%=request.getContextPath()%>');
-                var alumnoView = vista(alumno, '<%=request.getContextPath()%>');
+        </script>
 
-                $('#indexContenidoJsp').empty();
-                $('#indexContenido').empty().append(alumnoView.getEmptyList());
+        <!-- SCRIPT CONTROL DE COOKIES -->
+        <script type="text/javascript">
+            function controlcookies() {
+                // si variable no existe se crea (al clicar en Aceptar)
+                localStorage.controlcookie = (localStorage.controlcookie || 0);
 
-                var alumnoControl = control_alumno_list('<%=request.getContextPath()%>');
-                alumnoControl.inicia(alumnoView, 1, null, null, 10, null, null, null, null);
-                return false;
-            });
+                localStorage.controlcookie++; // incrementamos cuenta de la cookie
+                cookie1.style.display = 'none'; // Esconde la política de cookies
+            }
+        </script>
 
-            $('#lnkUsuario').unbind('click');
-            $('#lnkUsuario').click(function() {
-                var usuario = objeto('usuario', '<%=request.getContextPath()%>');
-                var usuarioView = vista(usuario, '<%=request.getContextPath()%>');
-
-                $('#indexContenidoJsp').empty();
-                $('#indexContenido').empty().append(usuarioView.getEmptyList());
-
-                var usuarioControl = control_usuario_list('<%=request.getContextPath()%>');
-                usuarioControl.inicia(usuarioView, 1, null, null, 20, null, null, null, null);
-                return false;
-            });
-
-            $('#lnkEmpresa').unbind('click');
-            $('#lnkEmpresa').click(function() {
-                var empresa = objeto('empresa', '<%=request.getContextPath()%>');
-                var empresaView = vista(empresa, '<%=request.getContextPath()%>');
-
-                $('#indexContenidoJsp').empty();
-                $('#indexContenido').empty().append(empresaView.getEmptyList());
-
-                var empresaControl = control_empresa_list('<%=request.getContextPath()%>');
-                empresaControl.inicia(empresaView, 1, null, null, 10, null, null, null, null);
-                return false;
-            });
-
-            $('#lnkProfesor').unbind('click');
-            $('#lnkProfesor').click(function() {
-                var profesor = objeto('profesor', '<%=request.getContextPath()%>');
-                var profesorView = vista(profesor, '<%=request.getContextPath()%>');
-
-                $('#indexContenidoJsp').empty();
-                $('#indexContenido').empty().append(profesorView.getEmptyList());
-
-                var profesorControl = control_profesor_list('<%=request.getContextPath()%>');
-                profesorControl.inicia(profesorView, 1, null, null, 10, null, null, null, null);
-                return false;
-            });
-
-            $('#lnkOferta').unbind('click');
-            $('#lnkOferta').click(function() {
-                var oferta = objeto('oferta', '<%=request.getContextPath()%>');
-                var ofertaView = vista(oferta, '<%=request.getContextPath()%>');
-
-                $('#indexContenidoJsp').empty();
-                $('#indexContenido').empty().append(ofertaView.getEmptyList());
-
-                var ofertaControl = control_oferta_list('<%=request.getContextPath()%>');
-                ofertaControl.inicia(ofertaView, 1, null, null, 10, null, null, null, null);
-                return false;
-            });
-
-        });
-    </script>
-
-    <!-- SCRIPT CONTROL DE COOKIES -->
-    <script type="text/javascript">
-        function controlcookies() {
-            // si variable no existe se crea (al clicar en Aceptar)
-            localStorage.controlcookie = (localStorage.controlcookie || 0);
-
-            localStorage.controlcookie++; // incrementamos cuenta de la cookie
-            cookie1.style.display = 'none'; // Esconde la política de cookies
-        }
-    </script>
-
-</body>
+    </body>
 </html>
 
