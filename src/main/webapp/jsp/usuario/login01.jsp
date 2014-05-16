@@ -6,18 +6,18 @@
         <div class="control-group">
             <label class="control-label" for="inputLogin">Usuario:</label>
             <div class="controls">
-                <input type="text" id="inputLogin" autofocus="autofocus" placeholder="Nombre de usuario" name="login">
+                <input type="text" id="inputLogin" autofocus="autofocus" placeholder="correo electrónico" name="login">
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="inputPassword">Password:</label>
+            <label class="control-label" for="inputPassword">Contraseña:</label>
             <div class="controls">
-                <input type="password" id="inputPassword" placeholder="Password" name="password">
+                <input type="password" id="inputPassword" placeholder="" name="password">
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
-                <button id="entrarBTN" type="submit" class="btn">Entrar</button>
+                <button id="entrarBTN" type="submit" class="btn">Acceder</button>
             </div>
         </div>
     </form>
