@@ -135,14 +135,39 @@
                 <div class="control-group">
                     <label class="control-label" for="inputFamilia">Familia profesional:</label>
                     <div class="controls">
-                        <input type="text" id="inputFamilia" placeholder="">
+                        <select>
+                            <option value="Administración">Administración</option>
+                            <option value="Comercio">Comercio</option>
+                            <option value="Informática">Informática</option>
+                            <option value="Sanidad">Sanidad</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="control-group">
                     <label class="control-label" for="inputCiclo">Ciclo formativo:</label>
                     <div class="controls">
-                        <input type="text" id="inputCiclo" placeholder="">
+                        <select>
+                            <option value="Gestión Administrativa (GM)">Gestión Administrativa (Grado Medio)</option>
+                            <option value="Administración y Finanzas (GS)">Administración y Finanzas (Grado Superior)</option>
+                            <option value="Secretariado (GS)">Secretariado (Gradu Superior)</option>
+                            <option value="Comercio y Marketing (GM)">Comercio y Marketing (Grado Medio)</option>
+                            <option value="Comercio Internacional (GS)">Comercio Internacional (Grado Superior)</option>
+                            <option value="Gestión Comercial y Marketing (GS)">Gestión Comercial y Marketing (Grado Superior)</option>
+                            <option value="Servicios al Consumidor (GS)">Servicios al Consumidor (Grado Superior)</option>
+                            <option value="Sistemas Microinformáticos y Redes (GM)">Sistemas Microinformáticos y Redes (Grado Medio)</option>
+                            <option value="Administración de Sistemas Informáticos y Redes (GS)">Administración de Sistemas Informáticos y Redes (Grado Superior)</option>
+                            <option value="Desarrollo de Aplicaciones Web (GS)">Desarrollo de Aplicaciones Web (Grado Superior)</option>
+                            <option value="Cuidados auxiliares de enfermería (GM)">Cuidados auxiliares de enfermería (Grado Medio)</option>
+                            <option value="Farmacia y Parafarmacia (GM)">Farmacia y Parafarmacia (Grado Medio)</option>
+                            <option value="Documentación Sanitaria (GS)">Documentación Sanitaria (Grado Superior)</option>
+                            <option value="Laboratorio de Diagnóstico Clínico (GS)">Laboratorio de Diagnóstico Clínico (Grado Superior)</option>
+                            <option value="Ortoprotésica (GS)">Ortoprotésica (Grado Superior)</option>
+                            <option value="Prótesis Dental (GS)">Prótesis Dental (Grado Superior)</option>
+                            <option value="Radioterapia (GS)">Radioterapia (Grado Superior)</option>
+                            <option value="Higiene Bucodental (GS)">Higiene Bucodental (Grado Superior)</option>
+                            <option value="Imagen para el Diagnóstico (GS)">Imagen para el Diagnóstico (Grado Superior)</option>
+                        </select>
                     </div>
                 </div>
                 <div class="control-group">
