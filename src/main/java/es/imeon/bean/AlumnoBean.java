@@ -10,7 +10,6 @@ public class AlumnoBean {
     private String nombre = "";
     private String apellido1 = "";
     private String apellido2 = "";
-    private String numexpediente = "";
     private String email = "";
     private Date fechanto;
     private String paisnto = "";
@@ -115,20 +114,6 @@ public class AlumnoBean {
      */
     public void setApellido2(String apellido2) {
         this.apellido2 = apellido2;
-    }
-
-    /**
-     * @return the numexpediente
-     */
-    public String getNumexpediente() {
-        return numexpediente;
-    }
-
-    /**
-     * @param numexpediente the numexpediente to set
-     */
-    public void setNumexpediente(String numexpediente) {
-        this.numexpediente = numexpediente;
     }
 
     /**
