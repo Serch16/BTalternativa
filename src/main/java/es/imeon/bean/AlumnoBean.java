@@ -1,5 +1,7 @@
 package es.imeon.bean;
 
+import java.util.Date;
+
 public class AlumnoBean {
 
     private Integer id = 0;
@@ -10,7 +12,7 @@ public class AlumnoBean {
     private String apellido2 = "";
     private String numexpediente = "";
     private String email = "";
-    private String fechanto = "";
+    private Date fechanto;
     private String paisnto = "";
     private String genero = "";
     private String domicilio = "";
@@ -141,20 +143,6 @@ public class AlumnoBean {
      */
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    /**
-     * @return the fechanto
-     */
-    public String getFechanto() {
-        return fechanto;
-    }
-
-    /**
-     * @param fechanto the fechanto to set
-     */
-    public void setFechanto(String fechanto) {
-        this.fechanto = fechanto;
     }
 
     /**
@@ -309,5 +297,19 @@ public class AlumnoBean {
      */
     public void setCicloform(String cicloform) {
         this.cicloform = cicloform;
+    }
+
+    /**
+     * @return the fechanto
+     */
+    public Date getFechanto() {
+        return fechanto;
+    }
+
+    /**
+     * @param fechanto the fechanto to set
+     */
+    public void setFechanto(Date fechanto) {
+        this.fechanto = fechanto;
     }
 }
