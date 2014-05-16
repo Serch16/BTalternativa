@@ -1,8 +1,5 @@
 package es.imeon.operaciones;
-
 /*
-package net.daw.operaciones;
-
 import com.google.gson.Gson;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,8 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import net.daw.bean.AdministradorBean;
-import net.daw.dao.AdministradorDao;
-import net.daw.helper.Conexion;
+import es.imeon.dao.AdministradorDao;
+import es.imeon.helper.Conexion;
 
 public class AdministradorRemove implements GenericOperation {
     @Override
