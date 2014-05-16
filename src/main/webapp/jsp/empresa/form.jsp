@@ -1,8 +1,3 @@
-<%-- 
-    Document   : form
-    Created on : Jan 21, 2013, 10:24:17 AM
-    Author     : AntonioNP
---%>
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
     <h2>Empresa</h2>
     <div class="control-group">

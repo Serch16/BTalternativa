@@ -1,4 +1,4 @@
-<%@page import="net.daw.bean.UsuarioBean"%>
+<%@page import="es.imeon.bean.UsuarioBean"%>
 <%UsuarioBean user = (UsuarioBean) request.getSession().getAttribute("usuarioBean");%>      
 
 <p class="navbar-text pull-right">           
@@ -6,8 +6,6 @@
     <%
         String us = user.getLogin();
         String usuario = us.substring(0, 1).toUpperCase() + us.substring(1);
-        //String us = user.getNombre();
-        //String usuario = us.substring(0, 1).toUpperCase() + us.substring(1);
 %>
 <div class="nav"><p class="navbar-text pull-right">Estás logueado como <%=usuario%></p></div>
 <div class="nav"><p class="navbar-text pull-right">Rol: <%=user.getTipoUsuario()%></p></div>

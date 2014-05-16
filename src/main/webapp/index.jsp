@@ -1,4 +1,4 @@
-<%@page import="net.daw.bean.UsuarioBean"%>
+<%@page import="es.imeon.bean.UsuarioBean"%>
 <%UsuarioBean user = (UsuarioBean) request.getSession().getAttribute("usuarioBean");%>
 
 <!DOCTYPE html>
@@ -243,4 +243,3 @@
 
     </body>
 </html>
-

@@ -1,8 +1,8 @@
-<%@page import="net.daw.helper.Conexion"%>
-<%@page import="net.daw.dao.OfertaDao"%>
+<%@page import="es.imeon.helper.Conexion"%>
+<%@page import="es.imeon.dao.OfertaDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="net.daw.bean.UsuarioBean"%>
+<%@page import="es.imeon.bean.UsuarioBean"%>
 <%
     UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean");
     OfertaDao oOfertaDao = new OfertaDao(Conexion.getConection());

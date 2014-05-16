@@ -1,5 +1,5 @@
-<%@page import="net.daw.helper.Conexion"%>
-<%@page import="net.daw.dao.ProfesorDao"%>
+<%@page import="es.imeon.helper.Conexion"%>
+<%@page import="es.imeon.dao.ProfesorDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Iterator"%>
 <%

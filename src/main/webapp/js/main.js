@@ -314,5 +314,3 @@ var vista = function(objeto, ContextPath) {
     };
 
 };
-
-

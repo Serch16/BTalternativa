@@ -280,4 +280,3 @@ var control_usuario_list = function(path) {
         }
     };
 };
-

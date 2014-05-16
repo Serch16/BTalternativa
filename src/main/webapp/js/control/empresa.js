@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 var control_empresa_list = function(path) {
     //contexto privado
 
@@ -86,8 +80,8 @@ var control_empresa_list = function(path) {
             return false;
         });
 
-////        //clave ajena usuario
-//        cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
+//        //clave ajena usuario
+//                cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
 //        $(prefijo_div + '#id_usuario_button').unbind('click');
 //        $(prefijo_div + '#id_usuario_button').click(function() {
 //            loadForeign('usuario', '#modal02', control_usuario_list, callbackSearchHilo);
@@ -100,6 +94,7 @@ var control_empresa_list = function(path) {
 //            }
 //            return false;
 //        });
+    
         // Validación del formulario.
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
@@ -439,4 +434,3 @@ var control_empresa_list = function(path) {
         }
     };
 };
-

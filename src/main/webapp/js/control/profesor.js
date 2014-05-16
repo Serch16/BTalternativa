@@ -336,4 +336,3 @@ var control_profesor_list = function(path) {
         }
     };
 };
-

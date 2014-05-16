@@ -1,6 +1,5 @@
-<%@page import="net.daw.bean.UsuarioBean"%>
+<%@page import="es.imeon.bean.UsuarioBean"%>
 <%UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean"); %>
-
 <%
     if (oUsuario.getTipoUsuario().toString() == "Administrador") {
 %>
