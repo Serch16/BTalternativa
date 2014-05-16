@@ -200,7 +200,7 @@ var control_alumno_list = function(path) {
                     digits: "Número de expediente incorrecto"
                 },
                 dni: {
-                    required: "Introduce tu nombre"
+                    required: "Introduce tu DNI"
                 },
                 nombre: {
                     required: "Introduce tu nombre",

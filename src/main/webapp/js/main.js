@@ -214,7 +214,7 @@ var vista = function(objeto, ContextPath) {
                 });
                 tabla += "</table>";
             } else {
-                tabla = "<div class=\"alert alert-info\"><h4>Ha habido un problema con la base de datos</h4><br/>El probema puede ser:<ul><li>La tabla está vacia.</li><li>Tu busqueda no tubo resultados.</li></ul></div>";
+                tabla = "<div class=\"alert alert-info\"><h4>Ha habido un problema con la base de datos</h4><br/>El probema puede ser:<ul><li>La tabla está vacia.</li><li>Tu búsqueda no tubo resultados.</li></ul></div>";
             }
 
             return tabla;
@@ -293,7 +293,7 @@ var vista = function(objeto, ContextPath) {
         },
         getRegistersInfo: function(filter, filteroperator, filtervalue, systemfilter, systemfilteroperator, systemfiltervalue) {
             regs = this.getObject().getRegisters(filter, filteroperator, filtervalue, systemfilter, systemfilteroperator, systemfiltervalue);
-            return "<p>Mostrando una consulta de " + regs + " registros.</p>";
+            return "<p>Mostrando " + regs + " registros.</p>";
         },
         getOrderInfo: function(order, ordervalue) {
             if (order) {

@@ -1,9 +1,5 @@
 package es.imeon.helper;
 
-/**
- *
- * @author rafa
- */
 public class FilterBean {
 
     private String filter;
