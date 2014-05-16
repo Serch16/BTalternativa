@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import javax.servlet.ServletException;
@@ -27,10 +22,10 @@ public class EmpresaGet implements GenericOperation {
                 EmpresaBean oEmpresa = new EmpresaBean();
                 oEmpresa.setId(Integer.parseInt(request.getParameter("id")));
                 oEmpresaDAO.get(oEmpresa);
-                //      GsonBuilder gsonBuilder = new GsonBuilder();
-                //       gsonBuilder.setDateFormat("dd/MM/yyyy");
-                //       Gson gson = gsonBuilder.create();
-                //       data = gson.toJson(oEmpresa);
+//                GsonBuilder gsonBuilder = new GsonBuilder();
+//                gsonBuilder.setDateFormat("dd/MM/yyyy");
+//                Gson gson = gsonBuilder.create();
+//                data = gson.toJson(oEmpresa);
                 data = new Gson().toJson(oEmpresa);
             }
             return data;

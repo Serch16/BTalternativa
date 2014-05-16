@@ -23,5 +23,4 @@ public class ProfesorGetcolumns implements GenericOperation {
             throw new ServletException("ProfesorGetcolumnsJson: View Error: " + e.getMessage());
         }
     }
-
 }

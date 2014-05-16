@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import java.util.ArrayList;
@@ -13,11 +9,6 @@ import net.daw.dao.AlumnoDao;
 import net.daw.helper.Conexion;
 import net.daw.helper.FilterBean;
 
-
-/**
- *
- * @author rafa
- */
 public class AlumnoGetpages implements GenericOperation {
 
     @Override

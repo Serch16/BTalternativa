@@ -23,5 +23,4 @@ public class UsuarioGetcolumns implements GenericOperation {
             throw new ServletException("UsuarioGetcolumnsJson: View Error: " + e.getMessage());
         }
     }
-
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import com.google.gson.Gson;
@@ -15,10 +10,6 @@ import net.daw.bean.EmpresaBean;
 import net.daw.dao.EmpresaDao;
 import net.daw.helper.Conexion;
 
-/**
- *
- * @author AntonioNP
- */
 public class EmpresaRemove implements GenericOperation {
 
     @Override

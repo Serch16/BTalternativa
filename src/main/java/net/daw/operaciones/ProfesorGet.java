@@ -1,13 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
-
-/**
- *
- * @author Pedro Benito
- */
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +8,6 @@ import com.google.gson.GsonBuilder;
 import net.daw.bean.ProfesorBean;
 import net.daw.dao.ProfesorDao;
 import net.daw.helper.Conexion;
-
 
 public class ProfesorGet implements GenericOperation {
 

@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+//import com.google.gson.GsonBuilder;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -17,10 +12,6 @@ import net.daw.dao.EmpresaDao;
 import net.daw.helper.Conexion;
 import net.daw.helper.EncodingUtil;
 
-/**
- *
- * @author AntonioNP
- */
 public class EmpresaSave implements GenericOperation {
 
     @Override

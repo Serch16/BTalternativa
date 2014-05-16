@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import com.google.gson.Gson;
@@ -18,10 +13,6 @@ import net.daw.dao.EmpresaDao;
 import net.daw.helper.Conexion;
 import net.daw.helper.FilterBean;
 
-/**
- *
- * @author AntonioNP
- */
 public class EmpresaGetpage implements GenericOperation {
 
     @Override
@@ -78,11 +69,11 @@ public class EmpresaGetpage implements GenericOperation {
             }
             EmpresaDao oEmpresaDAO = new EmpresaDao(Conexion.getConection());
             List<EmpresaBean> oEmpresas = oEmpresaDAO.getPage(rpp, page, alFilter, hmOrder);
-       //     GsonBuilder gsonBuilder = new GsonBuilder();
-            //     gsonBuilder.setDateFormat("dd/MM/yyyy");
-            //    Gson gson = gsonBuilder.create();
-            //     data = gson.toJson(oEmpresas);
-            //    data = "{\"list\":" + data + "}";
+//            GsonBuilder gsonBuilder = new GsonBuilder();
+//            gsonBuilder.setDateFormat("dd/MM/yyyy");
+//            Gson gson = gsonBuilder.create();
+//            data = gson.toJson(oEmpresas);
+//            data = "{\"list\":" + data + "}";
             data = new Gson().toJson(oEmpresas);
             data = "{\"list\":" + data + "}";
             return data;

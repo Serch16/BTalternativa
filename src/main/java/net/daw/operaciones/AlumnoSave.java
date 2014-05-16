@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.daw.operaciones;
 
 import com.google.gson.Gson;
@@ -16,10 +12,6 @@ import net.daw.dao.AlumnoDao;
 import net.daw.helper.Conexion;
 import net.daw.helper.EncodingUtil;
 
-/**
- *
- * @author rafa
- */
 public class AlumnoSave implements GenericOperation {
 
     @Override

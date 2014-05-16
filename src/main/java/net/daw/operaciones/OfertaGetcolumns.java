@@ -24,4 +24,3 @@ public class OfertaGetcolumns implements GenericOperation {
         }
     }
 }
-
