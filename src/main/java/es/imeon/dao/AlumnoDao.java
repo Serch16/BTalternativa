@@ -1,17 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package es.imeon.dao;
 
 import es.imeon.bean.AlumnoBean;
 import es.imeon.bean.UsuarioBean;
 import es.imeon.helper.Conexion;
 
-/**
- *
- * @author Sergio
- */
 public class AlumnoDao extends GenericDaoImplementation<AlumnoBean> {
 
     public AlumnoDao(Conexion.Tipo_conexion tipoConexion) throws Exception {

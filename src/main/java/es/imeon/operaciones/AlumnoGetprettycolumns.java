@@ -9,9 +9,10 @@ public class AlumnoGetprettycolumns implements GenericOperation {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
-            String data = "{\"data\": [\"ID\", \"ID Usuario\", \"DNI\", \"Núm. Exp.\", \"Nombre\", \"P. Ape\", "
-                    + "\"S. Ape\", \"Sexo\", \"Domicilio\", \"Cod. Postal\", \"Población\", \"Provincia\", "
-                    + "\"Teléfono\", \"Em@il\", \"Validado\"]}";
+            String data = "{\"data\": [\"ID\", \"ID Usuario\", \"DNI\", \"Nombre\", \"P. Ape\", "
+                    + "\"S. Ape\", \"Em@il\", \"Fecha Nto.\", \"País Nto.\", \"Género\", \"Domicilio\", "
+                    + "\"Cod. Postal\", \"Localidad\", \"Provincia\", "
+                    + "\"Teléfono\", \"Otro Telf.\", \"Expediente\", \"Familia\", \"Ciclo\"]}";
             return data;
         } catch (Exception e) {
             throw new ServletException("AlumnoGetpagesJson: View Error: " + e.getMessage());

@@ -5,18 +5,24 @@ public class AlumnoBean {
     private Integer id = 0;
     private Integer id_usuario = 0;
     private String dni = "";
-    private String numexpediente = "";
     private String nombre = "";
-    private String ape1 = "";
-    private String ape2 = "";
-    private String sexo = "";
+    private String apellido1 = "";
+    private String apellido2 = "";
+    private String numexpediente = "";
+    private String email = "";
+    private String fechanto = "";
+    private String paisnto = "";
+    private String genero = "";
     private String domicilio = "";
     private String codpostal = "";
-    private String poblacion = "";
+    private String localidad = "";
     private String provincia = "";
     private String telefono = "";
-    private String email = "";
-    private String validado = "";
+    private String telefono2 = "";
+    private String expediente = "";
+    private String famprofe = "";
+    private String cicloform = "";
+    
 
     public AlumnoBean() {
     }
@@ -54,17 +60,17 @@ public class AlumnoBean {
     }
 
     /**
-     * @return the numexpediente
+     * @return the dni
      */
-    public String getNumexpediente() {
-        return numexpediente;
+    public String getDni() {
+        return dni;
     }
 
     /**
-     * @param numexpediente the numexpediente to set
+     * @param dni the dni to set
      */
-    public void setNumexpediente(String numexpediente) {
-        this.numexpediente = numexpediente;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     /**
@@ -82,45 +88,101 @@ public class AlumnoBean {
     }
 
     /**
-     * @return the ape1
+     * @return the apellido1
      */
-    public String getApe1() {
-        return ape1;
+    public String getApellido1() {
+        return apellido1;
     }
 
     /**
-     * @param ape1 the ape1 to set
+     * @param apellido1 the apellido1 to set
      */
-    public void setApe1(String ape1) {
-        this.ape1 = ape1;
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
     }
 
     /**
-     * @return the ape2
+     * @return the apellido2
      */
-    public String getApe2() {
-        return ape2;
+    public String getApellido2() {
+        return apellido2;
     }
 
     /**
-     * @param ape2 the ape2 to set
+     * @param apellido2 the apellido2 to set
      */
-    public void setApe2(String ape2) {
-        this.ape2 = ape2;
+    public void setApellido2(String apellido2) {
+        this.apellido2 = apellido2;
     }
 
     /**
-     * @return the sexo
+     * @return the numexpediente
      */
-    public String getSexo() {
-        return sexo;
+    public String getNumexpediente() {
+        return numexpediente;
     }
 
     /**
-     * @param sexo the sexo to set
+     * @param numexpediente the numexpediente to set
      */
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setNumexpediente(String numexpediente) {
+        this.numexpediente = numexpediente;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * @return the fechanto
+     */
+    public String getFechanto() {
+        return fechanto;
+    }
+
+    /**
+     * @param fechanto the fechanto to set
+     */
+    public void setFechanto(String fechanto) {
+        this.fechanto = fechanto;
+    }
+
+    /**
+     * @return the paisnto
+     */
+    public String getPaisnto() {
+        return paisnto;
+    }
+
+    /**
+     * @param paisnto the paisnto to set
+     */
+    public void setPaisnto(String paisnto) {
+        this.paisnto = paisnto;
+    }
+
+    /**
+     * @return the genero
+     */
+    public String getGenero() {
+        return genero;
+    }
+
+    /**
+     * @param genero the genero to set
+     */
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     /**
@@ -152,17 +214,17 @@ public class AlumnoBean {
     }
 
     /**
-     * @return the poblacion
+     * @return the localidad
      */
-    public String getPoblacion() {
-        return poblacion;
+    public String getLocalidad() {
+        return localidad;
     }
 
     /**
-     * @param poblacion the poblacion to set
+     * @param localidad the localidad to set
      */
-    public void setPoblacion(String poblacion) {
-        this.poblacion = poblacion;
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
     }
 
     /**
@@ -194,44 +256,58 @@ public class AlumnoBean {
     }
 
     /**
-     * @return the email
+     * @return the telefono2
      */
-    public String getEmail() {
-        return email;
+    public String getTelefono2() {
+        return telefono2;
     }
 
     /**
-     * @param email the email to set
+     * @param telefono2 the telefono2 to set
      */
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTelefono2(String telefono2) {
+        this.telefono2 = telefono2;
     }
 
     /**
-     * @return the validado
+     * @return the expediente
      */
-    public String getValidado() {
-        return validado;
+    public String getExpediente() {
+        return expediente;
     }
 
     /**
-     * @param validado the validado to set
+     * @param expediente the expediente to set
      */
-    public void setValidado(String validado) {
-        this.validado = validado;
+    public void setExpediente(String expediente) {
+        this.expediente = expediente;
     }
 
     /**
-     * @return the dni
+     * @return the famprofe
      */
-    public String getDni() {
-        return dni;
+    public String getFamprofe() {
+        return famprofe;
     }
 
     /**
-     * @param dni the dni to set
+     * @param famprofe the famprofe to set
      */
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setFamprofe(String famprofe) {
+        this.famprofe = famprofe;
+    }
+
+    /**
+     * @return the cicloform
+     */
+    public String getCicloform() {
+        return cicloform;
+    }
+
+    /**
+     * @param cicloform the cicloform to set
+     */
+    public void setCicloform(String cicloform) {
+        this.cicloform = cicloform;
     }
 }

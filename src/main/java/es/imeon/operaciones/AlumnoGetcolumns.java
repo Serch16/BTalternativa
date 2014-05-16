@@ -23,5 +23,4 @@ public class AlumnoGetcolumns implements GenericOperation {
             throw new ServletException("AlumnoGetcolumnsJson: View Error: " + e.getMessage());
         }
     }
-
 }
