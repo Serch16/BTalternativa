@@ -99,7 +99,7 @@
                 <div class="row-fluid">
                     <ul class="inline">
                         <li>&copy; Sergio Martín (2014)</li>
-                        <li><a>Reglas de uso</a></li>
+                        <li><a>Términos y condiciones de uso de la página web</a></li>
                         <li><a>Política de cookies</a></li>
                         <li><a>Ayuda</a></li>
                     </ul>

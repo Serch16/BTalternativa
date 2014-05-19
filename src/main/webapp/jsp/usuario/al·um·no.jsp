@@ -173,7 +173,9 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="checkbox">
-                            <input type="checkbox"> He leído y acepto las <a>Reglas de uso</a>.
+                            <input type="checkbox"> He leído y acepto la <a>Política de privacidad</a> y los
+                            <a>Términos y condiciones de uso de la página web</a>.
+                            
                         </label>
                         <br/>
                         <button type="submit" class="btn" value="send">Crear mi cuenta</button>
