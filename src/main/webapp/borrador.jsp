@@ -4,6 +4,10 @@
     Author     : Sergio
 --%>
 <p>
+    Le informamos que este sitio web instala cookies y de terceros al visitar sus páginas. 
+    Si continúa navegando, consideramos que acepta su uso.
+</p>
+<p>
 ¿Qué son las cookies?
 Una cookie es un fichero que se descarga en su ordenador al acceder a determinadas 
 páginas web. Las cookies permiten a una página web, entre otras cosas, almacenar 
@@ -13,6 +17,9 @@ pueden utilizarse para reconocer al usuario.
 </p>
 <p>
     ¿Qué tipos de cookies utiliza esta página web?
+    Cookies técnicas: Son aquellas que permiten al usuario la navegación a través de una 
+    página web, plataforma o aplicación y la utilización de las diferentes opciones o 
+    servicios que en ella existan.
     Cookies de análisis: Son aquellas que bien tratadas por nosotros o por terceros, 
     nos permiten cuantificar el número de usuarios y así realizar la medición y análisis 
     estadístico de la utilización que hacen los usuarios del servicio ofertado. Para 
@@ -26,12 +33,23 @@ pueden utilizarse para reconocer al usuario.
     con su perfil de navegación.
 </p>
 <p>
+    ¿Quién utiliza y tiene acceso a la información de las cookies que instalamos?
+    Sólo el propietario de este sitio web, el CIPFP Ausiàs March e iMeón S.L., la empresa 
+    que presta al propietario el servicio de mantenimiento y análisis del sitio, utilizan 
+    y tienen acceso a las cookies del mismo. Los terceros que hayan almacenado cookies en 
+    su ordenador tendrán acceso a ellas.
+</p>
+<p>
     Puede usted permitir, bloquear o elimitar las cookies instaladas en su equipo mediante 
-    la configuración de las opciones del navegador instaldo en su ordenador.
+    la configuración de las opciones del navegador instaldo en su ordenador. La mayoría de 
+    los navegadores aceptan la utilización de cookies de forma automática, pero usted puede 
+    configurar su navegador para no aceptarlas o para que el navegador le avise cuando un 
+    servicio quiera guardar una cookier. Puede hacerlo consultando:
     
-    Para más información sobre Navegador A pulse aquí.
-    Para más información sobre Navegador B pulse aquí.
-    Para más información sobre Navegador C pulse aquí.
-    Para más información sobre Navegador D pulse aquí.
-    Para más información sobre Navegador E pulse aquí.
+    Para más información sobre Navegador Internet Explorer pulse aquí.
+    Para más información sobre Navegador Chrome pulse aquí.
+    Para más información sobre Navegador Firefox pulse aquí.
+    Para más información sobre Navegador Safari pulse aquí.
+    Para más información sobre Navegador iOS(Safari) pulse aquí.
+    Para más información sobre Navegador Android pulse aquí.
 </p>

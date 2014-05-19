@@ -6,11 +6,12 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" lang="es-ES">
     <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="Sergio Martín"/>
         <meta name="description" content="Bolsa de trabajo del CIPFP Ausiàs March es 
               una bolsa de empleo online que publica ofertas de empleo para los alumnos-candidatos del propio centro.">
         <meta name="Keywords" content="trabajo, empleo, ofertas de trabajo, bolsa de trabajo, bolsa de empleo, trabajar, 

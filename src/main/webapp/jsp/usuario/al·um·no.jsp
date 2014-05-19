@@ -6,7 +6,7 @@
 </ul>           <!-- // Estás en... -->
 <div class="row-fluid">
     <div class="span4"><img src="img/alumnos.jpg"></div>
-    <div class="span8">
+    <div class="span5">
         <form class="form-horizontal" action="mailto:sergio_spiky@hotmail.com" method="POST">
             <fieldset>
                 <legend>Datos de acceso</legend>
@@ -173,9 +173,8 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="checkbox">
-                            <input type="checkbox"> He leído y acepto la <a>Política de privacidad</a> y los
-                            <a>Términos y condiciones de uso de la página web</a>.
-                            
+                            <input type="checkbox"> He leído y acepto los
+                            <a>Términos y condiciones de uso de la página web</a> y la <a>Política de privacidad</a>.
                         </label>
                         <br/>
                         <button type="submit" class="btn" value="send">Crear mi cuenta</button>
@@ -184,4 +183,5 @@
             </fieldset>
         </form>
     </div>
+    <div class="span3"></div>
 </div>
