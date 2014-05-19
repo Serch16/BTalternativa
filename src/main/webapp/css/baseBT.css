@@ -44,12 +44,12 @@
     display: none;
 }
 .cookiesms{	
-    width:100%;
+    width:99%;
     height:80px;
     margin:0 auto;
     padding-left:1%;
     padding-top:5px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     clear:both;
     font-weight: strong;
     color: #FFF;
@@ -66,7 +66,10 @@
     box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
     z-index:999999999;
 }
-
+.cerrarCookies{
+    right: 1%;
+    position: absolute;
+}
 .cookiesms:hover{
     bottom:0px;
 }

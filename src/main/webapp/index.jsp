@@ -108,15 +108,23 @@
         </div>
 
         <!-- Código HTML de la política de cookies -->
-        <div class="cookiesms  hidden-phone" id="cookie1">
-            <p>Utilizamos cookies propias para mejorar nuestros servicios. Si continúa navegando, 
-                consideramos que acepta su uso. Puede obtener más información, o bien conocer cómo 
-                cambiar la configuración, en nuestra 
-                <a href="url-politica-de-cookies">Política de cookies</a>
-                <br/>
-                <button onclick="controlcookies()">Aceptar</button>
-            </p>
-            <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Uso de cookies </div>
+        <div class="cookiesms hidden-phone" id="cookie1">
+            <div class="row-fluid">
+                <div class="span11">
+                    <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle 
+                        publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. 
+                        Si continua navegando, consideramos que acepta su uso. Puede cambiar la configuración u 
+                        obtener más información 
+                        <a href="url-politica-de-cookies">aquí</a>.
+                    </p>
+                    <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">
+                        Política de cookies
+                    </div>
+                </div>
+                <div class="span1">
+                    <button type="button" class="close cerrarCookies" aria-hidden="true" onclick="controlcookies()">×</button>
+                </div>
+            </div>
         </div>
 
 
