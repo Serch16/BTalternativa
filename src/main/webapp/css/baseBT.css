@@ -1,14 +1,20 @@
 /* ==========================================================================
    APP custom styles. Sergio Martín Tárraga
    ========================================================================== */
-#logoinstituto {
+#logoinstituto{
     width: 14px;
 }
 
-#solologo {
+#solologo{
     width: 20px;
 }
 
+.descanso{
+    background-color: #F62231;
+}
+tr > td, th {
+    text-align: center !important;
+}
 /* CSS para la animación y localización de los DIV de cookies */
 
 @keyframes desaparecer

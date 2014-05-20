@@ -9,7 +9,7 @@
 <html class="no-js" lang="es-ES">
     <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
+        <meta charset="iso-8859-1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="author" content="Sergio Martín"/>
         <meta name="description" content="Bolsa de trabajo del CIPFP Ausiàs March es 
@@ -50,14 +50,14 @@
                                     <div class="nav-collapse collapse">
                                         <ul class="nav">
                                             <li><a class="navbar-link" href="jsp">Inicio</a></li>
-                                            <li><a id="lnkOferta" href="jsp?ob=oferta&op=list">Ofertas de trabajo</a></li>
+                                            <li><a id="lnkOferta" href="jsp?ob=oferta&amp;op=list">Ofertas de trabajo</a></li>
                                             <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
                                             <li><a href="#about">Orientación laboral</a></li>
                                         </ul>
                                         <ul class="nav pull-right">
-                                            <li><a href="jsp?ob=usuario&op=al·um·no">Regístrate</a></li>
+                                            <li><a href="jsp?ob=usuario&amp;op=al·um·no">Regístrate</a></li>
                                             <li class="divider-vertical"></li>
-                                            <li><a class="navbar-link" href="jsp?op=login01&ob=usuario">Acceder</a></li>
+                                            <li><a class="navbar-link" href="jsp?op=login01&amp;ob=usuario">Acceder</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
             if (localStorage.controlcookie > 0) {
                 document.getElementById('cookie1').style.bottom = '-92px';
             }
-        </script><!-- Fin del código de cookies --->    
+        </script><!-- Fin del código de cookies -->    
 
         <!-- carga de javascript -->
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -163,14 +163,6 @@
         <script>
             $(document).ready(function() {
                 inicializacion();
-                $('#lnkRegistro').unbind('click');
-                $('#lnkRegistro').click(function() {
-                    var registro = objeto('registro', '<%=request.getContextPath()%>');
-                    var registroView = vista(registro, '<%=request.getContextPath()%>');
-
-                    $('#indexContenidoJsp').empty();
-                });
-
                 $('#lnkAlumno').unbind('click');
                 $('#lnkAlumno').click(function() {
                     var alumno = objeto('alumno', '<%=request.getContextPath()%>');
@@ -238,7 +230,6 @@
 
             });
         </script>
-
         <!-- SCRIPT CONTROL DE COOKIES -->
         <script type="text/javascript">
             function controlcookies() {
@@ -249,6 +240,6 @@
                 cookie1.style.display = 'none'; // Esconde la política de cookies
             }
         </script>
-
+        
     </body>
 </html>
