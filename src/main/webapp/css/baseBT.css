@@ -54,6 +54,11 @@ tr > td, th {
 .filtro{
     background-color: #DDDADA;
 }
+img#center-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* CSS para la animación y localización de los DIV de cookies */
 @keyframes desaparecer

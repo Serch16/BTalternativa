@@ -183,5 +183,5 @@
             </fieldset>
         </form>
     </div>
-    <div class="span3"><img src="img/banner2.png"></div>
+    <div class="span3 hidden-phone"><img src="img/banner2.png"></div>
 </div>

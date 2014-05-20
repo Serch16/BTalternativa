@@ -20,7 +20,7 @@
                     <div class="span12">
                         <div class="row-fluid">
                             <div class="span12">
-                                <img id="logolargo" src="img/logolargo.png" alt="CIPFP AUSIÀS MARCH">
+                                <img id="logolargo center-block" src="img/logolargo.png" alt="CIPFP AUSIÀS MARCH">
                             </div>
                         </div>
                         <h3>¿Qué es la Bolsa de Trabajo?</h3>
