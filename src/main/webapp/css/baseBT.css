@@ -35,6 +35,9 @@ tr > td, th {
 .navbar-inverse .nav-collapse .nav>li>a{
     color: #fff;
 }
+.navbar-inverse .nav-collapse .nav>li>a:hover{
+    color: red;
+}
 
 /* Opciones listado */
 #crear{
@@ -49,7 +52,7 @@ tr > td, th {
     border: 2px solid #DE0E1D;
 }
 .filtro{
-    background-color: #FF737D;
+    background-color: #DDDADA;
 }
 
 /* CSS para la animación y localización de los DIV de cookies */

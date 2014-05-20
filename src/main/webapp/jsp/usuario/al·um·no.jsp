@@ -5,7 +5,7 @@
     <li class="active">Alumnos</li>
 </ul>           <!-- // Estás en... -->
 <div class="row-fluid">
-    <div class="span4"><img src="img/alumnos.jpg"></div>
+    <div class="span4"><img src="img/registroalumnos.png"></div>
     <div class="span5">
         <form class="form-horizontal" action="mailto:sergio_spiky@hotmail.com" method="POST">
             <fieldset>
