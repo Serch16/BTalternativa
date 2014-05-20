@@ -12,7 +12,7 @@
     <!-- Estás en... -->
     <ul class="breadcrumb">
     Estás en:
-        <li><a href="#">Administración</a> <span class="divider">/</span></li>
+        <li><a href="#">Administración</a><span class="divider">/</span></li>
         <li class="active">Empresa</li>
     </ul>           <!-- // Estás en... -->
     <div class="row-fluids">
@@ -34,11 +34,11 @@
                 </form>
             </div>          <!-- // Registros por página -->
             <!-- Creación de empresa -->
-            <div class="well sidebar-nav hidden-phone">
+            <div class="well sidebar-nav hidden-phone creacion">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>
             </div>          <!-- // Creación de empresa -->
             <!-- Filtro -->
-            <div class="well sidebar-nav hidden-phone hidden-tablet">
+            <div class="filtro well sidebar-nav hidden-phone hidden-tablet">
                 <legend>Filtro</legend> 
                 <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                     <fieldset>

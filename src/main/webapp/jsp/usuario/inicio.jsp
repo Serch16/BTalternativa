@@ -4,6 +4,10 @@
     <li class="active">Incio</li>
 </ul>           <!-- // Estás en... -->
 <div class="row-fluid">
+    <div class="span12 visible-phone"><img src="img/banner1_hor.png" alt="banner publicitario proyecto (móvil)"></div>
+</div>
+<div class="row-fluid">
+    <div class="span10">
     <div class="tabbable"> <!-- Only required for left/right tabs -->
         <ul class="nav nav-tabs">
             <li class="active"><a href="#inicio" data-toggle="tab">Información</a></li>
@@ -13,8 +17,7 @@
         <div class="tab-content">
             <div class="tab-pane active" id="inicio">
                 <div class="row-fluid">
-                    <div class="span1"></div>
-                    <div class="span10">
+                    <div class="span12">
                         <div class="row-fluid">
                             <div class="span12">
                                 <img id="logolargo" src="img/logolargo.png" alt="CIPFP AUSIÀS MARCH">
@@ -22,11 +25,9 @@
                         </div>
                         <h3>¿Qué es la Bolsa de Trabajo?</h3>
                     </div>
-                    <div class="span1 hidden-phone hidden-tablet"></div>
                 </div>
                 <div class="row-fluid">
-                    <div class="span1 hidden-phone hidden-tablet"></div>
-                    <div class="span6">
+                    <div class="span7">
                         <p>Como Centro Integrado de Formación Profesional, el CIPFP Ausiàs March, 
                             imparte enseñanzas regladas de formación profesional inicial (ciclos formativos); 
                             así como algunas acciones formativas correspondientes a subsistema de formación 
@@ -42,27 +43,24 @@
                                 conjunta" entre el sistema de formación profesional y el entorno productivo sectorial.</li>
                         </ul>
                     </div>
-                    <div class="span4">
+                    <div class="span5">
                         <img src="img/ies1.jpg" alt="Foto del los aularios">
                     </div>
-                    <div class="span1 hidden-phone hidden-tablet"></div>
                 </div>
                 <div class="row-fluid">
-                    <div class="span1 hidden-phone hidden-tablet"></div>
-                    <div class="span10">
+                    <div class="span12">
+                        <br/>
                         <p>Nuestra bolsa de trabajo NO tiene como fin la SELECCIÓN DE PERSONAL sino ejercer como canal 
                             transmisor de información laboral: PONER EN CONTACTO OFERTA Y DEMANDA DE EMPLEO. Por ello, 
                             Bolsa de Trabajo tiene a la disposición de las empresas trabajadores jóvenes, con una amplia formación 
                             y capacidades adaptadas a sus necesidades.</p>  
                     </div>
-                    <div class="span1 hidden-phone hidden-tablet"></div>
                 </div>
             </div>
 
             <div class="tab-pane" id="comofunciona">
-                <div class="span1"></div>
                 <div class="row-fluid">
-                    <div class="span10">
+                    <div class="span12">
                         <h2>¿Cómo funciona?</h2>
                         <p>Tanto si eres un alumno de CIPFP Ausiàs March como una empresa, deberás de facilitarnos todos tus 
                             datos a través del formulario destinado a cada usuario. Estos datos serán comprobados por nuestro
@@ -70,24 +68,20 @@
                             correo electónico que nos facilitaste tu contraseña (tu usuario será tu correo electrónico).</p>
                     </div>
                 </div>
-                <div class="span1"></div>
             </div>
 
             <div class="tab-pane" id="responsable">
                 <div class="row-fluid">
-                    <div class="span1 hidden-phone hidden-tablet"></div>
-                    <div class="span10">
+                    <div class="span12">
                         <h3>Responsable</h3>
                     </div>
-                    <div class="span1 hidden-phone hidden-tablet"></div>
                 </div>
                 <div class="row-fluid">
-                    <div class="span1 hidden-phone hidden-tablet"></div>
-                    <div class="span5">
+                    <div class="span6">
                         <p>La responsable del departamento de Bolsa de Trabajo para el presente curso escolar es Mercedez Sanz, 
                             cuyo correo es bolsa@ausiasmarch.net y está disponible en el siguiente horario:</p>
                     </div>
-                    <div class="span5">
+                    <div class="span6">
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -109,14 +103,11 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="span1 hidden-phone hidden-tablet"></div>
                 </div>
                 <div class="row-fluid">
-                    <div class="span1 hidden-phone hidden-tablet"></div>
-                    <div class="span10">
+                    <div class="span12">
                         <h3>Horarios</h3>
                     </div>
-                    <div class="span1 hidden-phone hidden-tablet"></div>
                 </div>
                 <div class="row-fluid">
                     <div class="span12">
@@ -306,4 +297,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="span2 hidden-phone hidden-tablet"></div>
                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="span2 hidden-phone"><img src="img/banner1.png" alt="banner publicitario del proyecto"></div>
+</div>

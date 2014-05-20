@@ -12,7 +12,7 @@
     <!-- Estás en... -->
     <ul class="breadcrumb">
     Estás en:
-        <li><a href="#">Administración</a> <span class="divider">/</span></li>
+        <li><a href="#">Administración</a><span class="divider">/</span></li>
         <li class="active">Profesor</li>
     </ul>           <!-- // Estás en... -->
     <div class="row-fluids">
@@ -30,12 +30,12 @@
                     </fieldset>
                 </form>
             </div>          <!-- // Registros por página -->
-            <!-- Creación de usuario -->
-            <div class="well sidebar-nav">
+            <!-- Creación de profesor -->
+            <div class="well sidebar-nav creacion">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>
-            </div>          <!-- // Creación de usuario -->
+            </div>          <!-- // Creación de profesor -->
             <!-- Filtro -->
-            <div class="well sidebar-nav">
+            <div class="filtro well sidebar-nav">
                 <legend>Filtro</legend> 
                 <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                     <fieldset>

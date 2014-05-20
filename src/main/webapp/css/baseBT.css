@@ -1,22 +1,58 @@
 /* ==========================================================================
    APP custom styles. Sergio Martín Tárraga
    ========================================================================== */
+body{
+    text-align: justify;
+}
 #logoinstituto{
     width: 14px;
 }
-
 #solologo{
     width: 20px;
 }
-
 .descanso{
     background-color: #F62231;
 }
 tr > td, th {
     text-align: center !important;
 }
-/* CSS para la animación y localización de los DIV de cookies */
+/* CIPFP Ausiàs March */
+.muted{
+    color: #555252;
+}
+/* Menú de navegación */
+.navbar-inverse .navbar-inner {
+    background-color: #282828;
+    border-color: #555252;
+}
+.navbar-inverse .nav>li>a{
+    color: #fff;
+}
+/* Estás en */
+.breadcrumb {
+    background-color: #EFEDED;
+}
+.navbar-inverse .nav-collapse .nav>li>a{
+    color: #fff;
+}
 
+/* Opciones listado */
+#crear{
+    background-color: #F62231;
+    background-image: linear-gradient(to bottom, #DE0E1D, #F62231);
+    color: #fff;
+}
+.creacion{
+    background-color: #EFEDED;
+}
+.well{
+    border: 2px solid #DE0E1D;
+}
+.filtro{
+    background-color: #FF737D;
+}
+
+/* CSS para la animación y localización de los DIV de cookies */
 @keyframes desaparecer
 {
     0%		{bottom: 0px;}
@@ -101,5 +137,3 @@ tr > td, th {
     -moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
     box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
 }
-
-/* Fin del CSS para cookies */

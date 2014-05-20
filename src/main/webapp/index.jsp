@@ -98,6 +98,16 @@
         <div id="footer">
             <div class="container">
                 <div class="row-fluid">
+                    <div class="row-fluid">
+                    <ul class="inline">
+                        <li>CIPFP Ausiàs March</li>
+                        <li>C/Angel de Villena s/n, 46013 (Valencia)</li>
+                        <li>Teléfono: 961205930</li>
+                        <li>Fax: 961205931</li>
+                        <li>Correo: info@ausiasmarch.net</li>
+                        <li>Código: 46021711</li>
+                    </ul>
+                </div>
                     <ul class="inline">
                         <li>&copy; Sergio Martín (2014)</li>
                         <li><a>Términos y condiciones de uso de la página web</a></li>

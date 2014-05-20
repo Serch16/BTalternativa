@@ -14,7 +14,7 @@
     <!-- Estás en... -->
     <ul class="breadcrumb">
     Estás en:
-        <li><a href="#">Administración</a> <span class="divider">/</span></li>
+        <li><a href="#">Administración</a><span class="divider">/</span></li>
         <li class="active">Oferta</li>
     </ul>           <!-- // Estás en... -->
     <div class="row-fluids">
@@ -39,14 +39,14 @@
             <%
                 if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") |(oUsuario.getTipoUsuario().toString() == "Empresa")) {
             %>
-            <div class="well sidebar-nav hidden-phone">
+            <div class="well sidebar-nav hidden-phone creacion">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>
             </div>
             <%
                 }
             %>          <!-- // Creación de oferta -->
             <!-- Filtro -->
-            <div class="well sidebar-nav hidden-phone hidden-tablet">
+            <div class="filtro well sidebar-nav hidden-phone hidden-tablet">
                 <legend>Filtro</legend> 
                 <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                     <fieldset>
