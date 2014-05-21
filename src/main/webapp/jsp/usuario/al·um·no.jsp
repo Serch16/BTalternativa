@@ -1,8 +1,9 @@
 <!-- Estás en... -->
 <ul class="breadcrumb">
     Estás en:
-    <li><a href="jsp?ob=registro&op=alumno">Registro</a><span class="divider">/</span></li>
+    <li><a href="jsp?ob=registro&op=al·um·no">Registro</a><span class="divider">/</span></li>
     <li class="active">Alumnos</li>
+    <li class="pull-right"><a href="jsp?ob=registro&op=em·pre·sa">Soy una empresa</a></li>
 </ul>           <!-- // Estás en... -->
 <div class="row-fluid">
     <div class="span4"><img src="img/registroalumnos.png" class="center-block" alt="Registro de alumnos"></div>
@@ -174,7 +175,7 @@
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox"> He leído y acepto los
-                            <a>Términos y condiciones de uso de la página web</a> y la <a href="jsp?ob=usuario&amp;op=cookies">Política de privacidad</a>.
+                            <a href="jsp?ob=usuario&amp;op=cookies">Términos y condiciones de uso de la página web</a> y la <a href="jsp?ob=usuario&amp;op=cookies">Política de privacidad</a>.
                         </label>
                         <br/>
                         <button type="submit" class="btn" value="send">Crear mi cuenta</button>

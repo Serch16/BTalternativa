@@ -51,8 +51,8 @@
                                         <ul class="nav">
                                             <li><a class="navbar-link" href="jsp">Inicio</a></li>
                                             <li><a href="jsp?ob=usuario&amp;op=of)er·ta">Ofertas de trabajo</a></li>
-                                            <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
-                                            <li><a href="#about">Orientación laboral</a></li>
+                                            <li><a href="jsp?ob=usuario&amp;op=empleopub$">Empleo público</a></li>
+                                            <li><a href="jsp?ob=usuario&amp;op=0rilab·oral">Orientación laboral</a></li>
                                         </ul>
                                         <ul class="nav pull-right">
                                             <li><a href="jsp?ob=usuario&amp;op=al·um·no">Regístrate</a></li>
@@ -111,7 +111,7 @@
                     <div class="row-fluid">
                         <ul class="inline">
                             <li>&copy; Sergio Martín (2014)</li>
-                            <li><a>Términos y condiciones de uso de la página web</a></li>
+                            <li><a href="jsp?ob=usuario&amp;op=cookies">Términos y condiciones de uso de la página web</a></li>
                             <li><a href="jsp?ob=usuario&amp;op=cookies">Política de cookies</a></li>
                         </ul>
                     </div>

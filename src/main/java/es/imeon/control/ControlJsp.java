@@ -42,14 +42,15 @@ public class ControlJsp extends HttpServlet {
         if (ob == null) {
             ob = "usuario";
         }
-        if (mode == null) {
+        if (mode == null) { 
             mode = "wrappered";
         }
         //security check
         if (request.getSession().getAttribute("usuarioBean") == null) {
             ob = "usuario";
             if (!op.equals("inicio") && !op.equals("login02") && !op.equals("al·um·no") 
-                    && !op.equals("empresa") && !op.equals("of)er·ta") && !op.equals("cookies")){
+                    && !op.equals("em·pre·sa") && !op.equals("of)er·ta") && !op.equals("cookies")
+                     && !op.equals("empleopub$") && !op.equals("0rilab·oral") && !op.equals("terminos")){
                 op = "login01";
                 mode = "wrappered";
             }

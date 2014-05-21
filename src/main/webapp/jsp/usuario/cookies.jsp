@@ -1,3 +1,9 @@
+<!-- Estás en... -->
+<ul class="breadcrumb">
+    Estás en:
+    <li><a href="jsp">CIPFP Ausiàs March</a><span class="divider">/</span></li>
+    <li class="active">Política de cookies</li>
+</ul>           <!-- // Estás en... -->
 <h3>Política de cookies</h3>
 <p>
     Le informamos que este sitio web instala cookies y de terceros al visitar sus páginas. 
@@ -44,11 +50,12 @@ su ordenador tendrán acceso a ellas.
     configurar su navegador para no aceptarlas o para que el navegador le avise cuando un 
     servicio quiera guardar una cookier. Puede hacerlo consultando:
 <ul>
-    <li>Para más información sobre <strong>Internet Explorer</strong> pulse <a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies">aquí</a>.</li>
-    <li>Para más información sobre <strong>Chrome</strong> pulse <a href="https://support.google.com/chrome/answer/95647?hl=es">aquí</a>.</li>
-    <li>Para más información sobre <strong>Firefox</strong> pulse <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we">aquí</a>.</li>
-    <li>Para más información sobre <strong>Safari</strong> pulse <a href="http://support.apple.com/kb/ph5042">aquí</a>.</li>
-    <li>Para más información sobre <strong>iOS(Safari)</strong> pulse <a href="http://support.apple.com/kb/ht1677?viewlocale=es_ES">aquí</a>.</li>
-    <li>Para más información sobre <strong>Android</strong> pulse <a href="https://support.google.com/accounts/answer/61416?hl=es">aquí</a>.</li>
+    <li>Para más información sobre <strong>Internet Explorer</strong> pulse <a target="_blank"  href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies">aquí</a>.</li>
+    <li>Para más información sobre <strong>Chrome</strong> pulse <a target="_blank"  href="https://support.google.com/chrome/answer/95647?hl=es">aquí</a>.</li>
+    <li>Para más información sobre <strong>Firefox</strong> pulse <a target="_blank"  href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we">aquí</a>.</li>
+    <li>Para más información sobre <strong>Safari</strong> pulse <a target="_blank"  href="http://support.apple.com/kb/ph5042">aquí</a>.</li>
+    <li>Para más información sobre <strong>iOS(Safari)</strong> pulse <a target="_blank"  href="http://support.apple.com/kb/ht1677?viewlocale=es_ES">aquí</a>.</li>
+    <li>Para más información sobre <strong>Android</strong> pulse <a target="_blank"  href="https://support.google.com/accounts/answer/61416?hl=es">aquí</a>.</li>
 </ul>
 </p>
+<a href=javascript:window.print();>Imprimir esta página</a>.
