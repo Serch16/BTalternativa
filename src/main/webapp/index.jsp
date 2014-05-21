@@ -50,7 +50,7 @@
                                     <div class="nav-collapse collapse">
                                         <ul class="nav">
                                             <li><a class="navbar-link" href="jsp">Inicio</a></li>
-                                            <li><a id="lnkOferta" href="jsp?ob=oferta&amp;op=list">Ofertas de trabajo</a></li>
+                                            <li><a href="jsp?ob=usuario&amp;op=of)er·ta">Ofertas de trabajo</a></li>
                                             <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
                                             <li><a href="#about">Orientación laboral</a></li>
                                         </ul>
@@ -95,25 +95,26 @@
             </div>
         </div>
 
-        <div id="footer">
+        <div id="footer" class="hidden-phone">
             <div class="container">
                 <div class="row-fluid">
                     <div class="row-fluid">
-                    <ul class="inline">
-                        <li>CIPFP Ausiàs March</li>
-                        <li>C/Angel de Villena s/n, 46013 (Valencia)</li>
-                        <li>Teléfono: 961205930</li>
-                        <li>Fax: 961205931</li>
-                        <li>Correo: info@ausiasmarch.net</li>
-                        <li>Código: 46021711</li>
-                    </ul>
-                </div>
-                    <ul class="inline">
-                        <li>&copy; Sergio Martín (2014)</li>
-                        <li><a>Términos y condiciones de uso de la página web</a></li>
-                        <li><a>Política de cookies</a></li>
-                        <li><a>Ayuda</a></li>
-                    </ul>
+                        <ul class="inline">
+                            <li>CIPFP Ausiàs March</li>
+                            <li>C/Angel de Villena s/n, 46013 (Valencia)</li>
+                            <li>Teléfono: 961205930</li>
+                            <li>Fax: 961205931</li>
+                            <li>Correo: info@ausiasmarch.net</li>
+                            <li>Código: 46021711</li>
+                        </ul>
+                    </div>
+                    <div class="row-fluid">
+                        <ul class="inline">
+                            <li>&copy; Sergio Martín (2014)</li>
+                            <li><a>Términos y condiciones de uso de la página web</a></li>
+                            <li><a href="jsp?ob=usuario&amp;op=cookies">Política de cookies</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -250,6 +251,6 @@
                 cookie1.style.display = 'none'; // Esconde la política de cookies
             }
         </script>
-        
+
     </body>
 </html>

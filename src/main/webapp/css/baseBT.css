@@ -10,11 +10,24 @@ body{
 #solologo{
     width: 20px;
 }
+/* Tablas de horarios */
+.celdaroja{
+    background-color: #F62231 !important;
+    color: #FFF;
+}
+.celdagris{
+    background-color: #EFEDED;
+}
 .descanso{
-    background-color: #F62231;
+    background-color: #555252;
+    color: #FFF;
 }
 tr > td, th {
     text-align: center !important;
+}
+/* Subrayado */
+.subra {
+    text-decoration: underline;
 }
 /* CIPFP Ausiàs March */
 .muted{
@@ -54,10 +67,28 @@ tr > td, th {
 .filtro{
     background-color: #DDDADA;
 }
-img#center-block{
+.center-block{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.nologueado{
+    height: 200px;
+}
+#footer{
+    background-color: #282828;
+}
+#wrap{
+    background-color: #FFF;
+    height: 1700px;
+}
+#footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color: #FFF;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 /* CSS para la animación y localización de los DIV de cookies */
@@ -107,8 +138,8 @@ img#center-block{
     position:fixed;
     left: 0px;
     background-color: #DE0E1D;
-    opacity:0.7;
-    filter:alpha(opacity=70); /* For IE8 and earlier */
+   // opacity:0.7;
+    //filter:alpha(opacity=70); /* For IE8 and earlier */
     transition: bottom 1s;
     -webkit-transition:bottom 1s; /* Safari */
     -webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
@@ -126,8 +157,8 @@ img#center-block{
 .cookies2{
     background-color: #DE0E1D;
     display:inline;
-    opacity:0.95;
-    filter:alpha(opacity=95);
+    //opacity:0.95;
+    //filter:alpha(opacity=95);
     position:absolute; 
     left:1%; 
     top:-30px;

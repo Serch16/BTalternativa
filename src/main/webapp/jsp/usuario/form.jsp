@@ -1,10 +1,12 @@
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
+    <!--
     <div class="control-group">
         <label class="control-label" for="inputId">ID:</label>
         <div class="controls">
             <input type="text" id="id" name="id" placeholder=""/>
         </div>
     </div>
+    -->
     <div class="control-group">
         <label class="control-label"  for="inputLogin">Usuario:</label>
         <div class="controls">

@@ -48,7 +48,8 @@ public class ControlJsp extends HttpServlet {
         //security check
         if (request.getSession().getAttribute("usuarioBean") == null) {
             ob = "usuario";
-            if (!op.equals("inicio") && !op.equals("login02") && !op.equals("al·um·no") && !op.equals("empresa")) {
+            if (!op.equals("inicio") && !op.equals("login02") && !op.equals("al·um·no") 
+                    && !op.equals("empresa") && !op.equals("of)er·ta") && !op.equals("cookies")){
                 op = "login01";
                 mode = "wrappered";
             }

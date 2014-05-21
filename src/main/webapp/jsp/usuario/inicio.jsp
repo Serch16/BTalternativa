@@ -20,7 +20,7 @@
                     <div class="span12">
                         <div class="row-fluid">
                             <div class="span12">
-                                <img id="logolargo center-block" src="img/logolargo.png" alt="CIPFP AUSIÀS MARCH">
+                                <img id="logolargo" class=" center-block" src="img/logolargo.png" alt="CIPFP AUSIÀS MARCH">
                             </div>
                         </div>
                         <h3>¿Qué es la Bolsa de Trabajo?</h3>
@@ -85,11 +85,11 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>Lunes</th>
-                                    <th>Martes</th>
-                                    <th>Miércoles</th>
-                                    <th>Jueves</th>
-                                    <th>Viernes</th>
+                                    <th class="celdaroja">Lunes</th>
+                                    <th class="celdaroja">Martes</th>
+                                    <th class="celdaroja">Miércoles</th>
+                                    <th class="celdaroja">Jueves</th>
+                                    <th class="celdaroja">Viernes</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -127,16 +127,16 @@
                                                 <thead>
                                                     <tr>
                                                         <th></th>
-                                                        <th>Lunes</th>
-                                                        <th>Martes</th>
-                                                        <th>Miércoles</th>
-                                                        <th>Jueves</th>
-                                                        <th>Viernes</th>
+                                                        <th class="celdaroja">Lunes</th>
+                                                        <th class="celdaroja">Martes</th>
+                                                        <th class="celdaroja">Miércoles</th>
+                                                        <th class="celdaroja">Jueves</th>
+                                                        <th class="celdaroja">Viernes</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>08:30 - 09:15</td>
+                                                        <td class="celdagris">08:30 - 09:15</td>
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
@@ -144,7 +144,7 @@
                                                         <td></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>09:15 - 10:00</td>
+                                                        <td class="celdagris">09:15 - 10:00</td>
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
@@ -152,7 +152,7 @@
                                                         <td></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>10:00 - 10:45</td>
+                                                        <td class="celdagris">10:00 - 10:45</td>
                                                         <td>Cristina Giner</td>
                                                         <td>María Jesús García</td>
                                                         <td>Mercedes Sanz</td>
@@ -164,7 +164,7 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>11:15 - 12:00</td>
+                                                        <td class="celdagris">11:15 - 12:00</td>
                                                         <td>Carolina Martí</td>
                                                         <td>Asunción González</td>
                                                         <td>Mercedes Sanz</td>
@@ -172,7 +172,7 @@
                                                         <td>Emilio Javalollas</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>12:00 - 12:45</td>
+                                                        <td class="celdagris">12:00 - 12:45</td>
                                                         <td>Carolina Martí</td>
                                                         <td></td>
                                                         <td>María Jesús García</td>
@@ -183,7 +183,7 @@
                                                         <td colspan="6" class="descanso">DESCANSO</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>12:55 - 13:40</td>
+                                                        <td class="celdagris">12:55 - 13:40</td>
                                                         <td>Asunción González</td>
                                                         <td></td>
                                                         <td></td>
@@ -191,7 +191,7 @@
                                                         <td></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>13:40 - 14:25</td>
+                                                        <td class="celdagris">13:40 - 14:25</td>
                                                         <td></td>
                                                         <td></td>
                                                         <td></td>
@@ -220,16 +220,16 @@
                                             <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th>Lunes</th>
-                                                    <th>Martes</th>
-                                                    <th>Miércoles</th>
-                                                    <th>Jueves</th>
-                                                    <th>Viernes</th>
+                                                    <th class="celdaroja">Lunes</th>
+                                                    <th class="celdaroja">Martes</th>
+                                                    <th class="celdaroja">Miércoles</th>
+                                                    <th class="celdaroja">Jueves</th>
+                                                    <th class="celdaroja">Viernes</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>15:00 - 15:45</td>
+                                                    <td class="celdagris">15:00 - 15:45</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -237,7 +237,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>15:45 - 16:30</td>
+                                                    <td class="celdagris">15:45 - 16:30</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -245,7 +245,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>16:30 - 17:15</td>
+                                                    <td class="celdagris">16:30 - 17:15</td>
                                                     <td></td>
                                                     <td>Amparo Llobat</td>
                                                     <td></td>
@@ -256,7 +256,7 @@
                                                     <td colspan="6" class="descanso">DESCANSO</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>17:45 - 18:30</td>
+                                                    <td class="celdagris">17:45 - 18:30</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td>Pepea Falco</td>
@@ -264,7 +264,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>18:30 - 19:15</td>
+                                                    <td class="celdagris">18:30 - 19:15</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -275,7 +275,7 @@
                                                     <td colspan="6" class="descanso">DESCANSO</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>19:25 - 20:10</td>
+                                                    <td class="celdagris">19:25 - 20:10</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -283,7 +283,7 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>20:10 - 20:55</td>
+                                                    <td class="celdagris">20:10 - 20:55</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -304,4 +304,7 @@
     </div>
     </div>
     <div class="span2 hidden-phone"><img src="img/banner1.png" alt="banner publicitario del proyecto"></div>
+</div>
+<div class="row-fluid">
+    <div class="span12 visible-phone"><img src="img/banner1_hor.png" alt="banner publicitario proyecto (móvil)"></div>
 </div>

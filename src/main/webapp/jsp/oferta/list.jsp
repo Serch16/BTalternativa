@@ -13,9 +13,15 @@
 <div id="<%=strNombreMantenimiento%>_list">
     <!-- Estás en... -->
     <ul class="breadcrumb">
-    Estás en:
+        Estás en:
+        <%
+            if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") | (oUsuario.getTipoUsuario().toString() == "Empresa")) {
+        %>
         <li><a href="#">Administración</a><span class="divider">/</span></li>
-        <li class="active">Oferta</li>
+            <%
+                }
+            %>
+        <li class="active">Ofertas de trabajo</li>
     </ul>           <!-- // Estás en... -->
     <div class="row-fluids">
         <!-- Columna información izquierda -->
@@ -37,7 +43,7 @@
             </div>          <!-- // Registros por página -->
             <!-- Creación de oferta -->
             <%
-                if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") |(oUsuario.getTipoUsuario().toString() == "Empresa")) {
+                if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") | (oUsuario.getTipoUsuario().toString() == "Empresa")) {
             %>
             <div class="well sidebar-nav hidden-phone creacion">
                 <button class="btn btn-block" id="crear">Crear <%=strNombreMantenimiento%></button>

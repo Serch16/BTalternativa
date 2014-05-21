@@ -1,11 +1,11 @@
 <!-- Estás en... -->
 <ul class="breadcrumb">
     Estás en:
-    <li><a href="jsp?ob=registro&op=alumno">Registro</a> <span class="divider">/</span></li>
+    <li><a href="jsp?ob=registro&op=alumno">Registro</a><span class="divider">/</span></li>
     <li class="active">Alumnos</li>
 </ul>           <!-- // Estás en... -->
 <div class="row-fluid">
-    <div class="span4"><img src="img/registroalumnos.png"></div>
+    <div class="span4"><img src="img/registroalumnos.png" class="center-block" alt="Registro de alumnos"></div>
     <div class="span5">
         <form class="form-horizontal" action="mailto:sergio_spiky@hotmail.com" method="POST">
             <fieldset>
@@ -174,7 +174,7 @@
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox"> He leído y acepto los
-                            <a>Términos y condiciones de uso de la página web</a> y la <a>Política de privacidad</a>.
+                            <a>Términos y condiciones de uso de la página web</a> y la <a href="jsp?ob=usuario&amp;op=cookies">Política de privacidad</a>.
                         </label>
                         <br/>
                         <button type="submit" class="btn" value="send">Crear mi cuenta</button>
