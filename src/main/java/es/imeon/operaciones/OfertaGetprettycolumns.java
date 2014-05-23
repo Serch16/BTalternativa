@@ -8,7 +8,7 @@ public class OfertaGetprettycolumns implements GenericOperation {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
-            String data = "{\"data\": [\"Id.\", \"Id. Empresa\", \"Fecha publicación\", \"Puesto\", \"Categoría\", "
+            String data = "{\"data\": [\"Id.\", \"Empresa\", \"Fecha publicación\", \"Puesto\", \"Categoría\", "
                     + "\"Vacantes\", \"Descripción\", \"Requisitos\", \"Experiencia\", \"Salario\", \"Población\", \"Provincia\"]}";
             return data;
         } catch (Exception e) {

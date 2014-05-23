@@ -1,12 +1,12 @@
 package es.imeon.bean;
 
-import java.util.Date;
+//import java.util.Date;
 
 public class OfertaBean {
 
     private Integer id = 0;
     private Integer id_empresa = 0;
-    private Date fechapubli;
+    //private Date fechapubli;
     private String puesto = "";
     private String categoria = "";
     private Integer vacantes = 0;
@@ -54,17 +54,17 @@ public class OfertaBean {
 
     /**
      * @return the fechapubli
-     */
+     
     public Date getFechapubli() {
         return fechapubli;
-    }
+    }*/
 
     /**
      * @param fechapubli the fechapubli to set
-     */
+     
     public void setFechapubli(Date fechapubli) {
         this.fechapubli = fechapubli;
-    }
+    }*/
 
     /**
      * @return the puesto
