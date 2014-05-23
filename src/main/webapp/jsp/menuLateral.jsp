@@ -21,8 +21,8 @@
                         <li><a id="lnkAlumno" href="#">Alumno</a></li>
                         <li><a id="lnkEmpresa" href="#">Empresa</a></li>
                         <li><a id="lnkOferta" href="#">Oferta</a></li>
-                        <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
-                        <li><a href="#about">Orientación laboral</a></li>
+                        <li><a href="jsp?ob=usuario&amp;op=empleopub$">Empleo público</a></li>
+                        <li><a href="jsp?ob=usuario&amp;op=0rilab·oral">Orientación laboral</a></li>
                     </ul>
                     <ul class="nav pull-right">
                         <li class="divider-vertical"></li>
@@ -53,8 +53,8 @@
                         <li><a id="lnkAlumno" href="#">Alumno</a></li>
                         <li><a id="lnkEmpresa" href="#">Empresa</a></li>
                         <li><a id="lnkOferta" href="#">Oferta</a></li>
-                        <li><a id="lnkEmpresa" href="#">Empleo público</a></li>
-                        <li><a href="#about">Orientación laboral</a></li>
+                        <li><a href="jsp?ob=usuario&amp;op=empleopub$">Empleo público</a></li>
+                        <li><a href="jsp?ob=usuario&amp;op=0rilab·oral">Orientación laboral</a></li>
                     </ul>
                     <ul class="nav pull-right">
                         <li class="divider-vertical"></li>
