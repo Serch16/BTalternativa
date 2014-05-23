@@ -175,7 +175,7 @@
                     <div class="controls">
                         <label class="checkbox">
                             <input type="checkbox"> He leído y acepto los
-                            <a href="jsp?ob=usuario&amp;op=cookies">Términos y condiciones de uso de la página web</a> y la <a href="jsp?ob=usuario&amp;op=cookies">Política de privacidad</a>.
+                            <a href="jsp?ob=usuario&amp;op=terminos">Términos y condiciones de uso de la página web</a> y la <a href="jsp?ob=usuario&amp;op=cookies">Política de cookies</a>.
                         </label>
                         <br/>
                         <button type="submit" class="btn" value="send">Crear mi cuenta</button>

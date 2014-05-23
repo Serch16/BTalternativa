@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="0; url=jsp?ob=usuario&op=inicio"> 
+<meta http-equiv="refresh" content="0; url=jsp?ob=usuario&amp;op=inicio"> 

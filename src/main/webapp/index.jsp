@@ -111,7 +111,7 @@
                     <div class="row-fluid">
                         <ul class="inline">
                             <li>&copy; Sergio Martín (2014)</li>
-                            <li><a href="jsp?ob=usuario&amp;op=cookies">Términos y condiciones de uso de la página web</a></li>
+                            <li><a href="jsp?ob=usuario&amp;op=terminos">Términos y condiciones de uso de la página web</a></li>
                             <li><a href="jsp?ob=usuario&amp;op=cookies">Política de cookies</a></li>
                         </ul>
                     </div>
@@ -127,7 +127,7 @@
                         publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. 
                         Si continua navegando, consideramos que acepta su uso. Puede cambiar la configuración u 
                         obtener más información 
-                        <a href="url-politica-de-cookies">aquí</a>.
+                        <a href="jsp?ob=usuario&amp;op=cookies">aquí</a>.
                     </p>
                     <div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">
                         Política de cookies
