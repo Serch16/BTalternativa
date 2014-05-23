@@ -9,7 +9,7 @@ public class EmpresaGetprettycolumns implements GenericOperation {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
-            String data = "{\"data\": [\"Id.\",\"Id. Usuario\", \"Empresa\", \"cif\", \"direccion\", \"localidad\", \"provincia\", \"pais\", \"telefono\", \"fax\", \"actividad\", \"nombrecontacto\", \"emailcontacto\", \"validada\"]}";
+            String data = "{\"data\": [\"Id.\",\"Usuario\", \"Empresa\", \"CIF\", \"Direccion\", \"C. Postal\", \"Localidad\", \"Provincia\", \"Web\", \"Teléfono\", \"Telf. Alter.\", \"Sector\", \"Nom. Contacto\"]}";
             return data;
         } catch (Exception e) {
             throw new ServletException("EmpresaGetpagesJson: View Error: " + e.getMessage());

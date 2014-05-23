@@ -58,4 +58,4 @@ su ordenador tendrán acceso a ellas.
     <li>Para más información sobre <strong>Android</strong> pulse <a target="_blank"  href="https://support.google.com/accounts/answer/61416?hl=es">aquí</a>.</li>
 </ul>
 </p>
-<a href=javascript:window.print();>Imprimir esta página</a>.
+<a href=javascript:window.print();><img src="img/imprimir.gif" alt="Imprimir política de cookies">Imprimir esta página</a>.

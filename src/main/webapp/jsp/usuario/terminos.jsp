@@ -85,4 +85,4 @@
     exclusiva de CIPFP Ausiàs March. Estas normas pueden ser modificadas en cualquier momento 
     sin necesidad de previo aviso o notificación.</p>
 
-<a href=javascript:window.print();>Imprimir esta página</a>.
+<a href=javascript:window.print();><img src="img/imprimir.gif" alt="Imprimir política de cookies">Imprimir esta página</a>.
