@@ -9,7 +9,7 @@ public class ProfesorGetprettycolumns implements GenericOperation {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try {
-           String data = "{\"data\": [\"Id.\", \"Id. Usuario\", \"Nombre\", \"Apellido\", \"Email\"]}";
+           String data = "{\"data\": [\"Id.\", \"Id. Usuario\", \"Nombre\", \"Apellido\"]}";
             return data;
         } catch (Exception e) {
             throw new ServletException("ProfesorGetpagesJson: View Error: " + e.getMessage());

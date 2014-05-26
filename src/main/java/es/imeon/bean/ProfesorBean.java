@@ -6,7 +6,6 @@ public class ProfesorBean {
     private Integer id_usuario = 0;
     private String nombre = "";
     private String apellido = "";
-    private String correo = "";
 
     public ProfesorBean() {
     }
@@ -69,19 +68,5 @@ public class ProfesorBean {
      */
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    /**
-     * @return the correo
-     */
-    public String getCorreo() {
-        return correo;
-    }
-
-    /**
-     * @param correo the correo to set
-     */
-    public void setCorreo(String correo) {
-        this.correo = correo;
     }
 }

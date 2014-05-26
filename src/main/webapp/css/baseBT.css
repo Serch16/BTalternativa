@@ -83,7 +83,7 @@ tr > td, th {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto 40px;
+    margin: 0 auto 80px;
 }
 #footer{
     position: fixed;
