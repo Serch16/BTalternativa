@@ -1,53 +1,63 @@
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
-    <h2>Entrada</h2>
     <div class="control-group">
-        <label class="control-label" for="inputId">ID:</label>
-        <div class="controls">
-            <input type="text" id="id" name="id" placeholder="id" />
-        </div>
-    </div>
-    <div class="control-group">
-        <label class="control-label" for="inputId_usuario">ID Usuario:</label>
-        <div class="controls">
-            <input type="text" id="id_usuario" name="id_usuario" placeholder="Id usuario" />
+        <label class="control-label" for="inputId_usuario">Id Usuario:</label>
+        <div class="controls">           
+            <input readonly="true" id="id_usuario" class="input-mini" 
+                   name="id_usuario" type="text" size="5" maxlength="5" />
             <a class="btn btn-mini" id="id_usuario_button" href="#"><i class="icon-search"></i></a>
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputDni">DNI:</label>
         <div class="controls">
-            <input type="text" id="dni" name="dni" size="15" placeholder="Documento identidad" />
+            <span id="id_usuario_desc" class="alert alert-success"></span>                                       
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputNumexpediente">Número Expediente:</label>
+        <label class="control-label"  for="inputDni">DNI o NIE:</label>
         <div class="controls">
-            <input type="text" id="numexpediente" name="numexpediente" size="15" placeholder="Número expediente" />
+            <input type="text" id="dni" name="dni" size="9" placeholder="" />
         </div>
     </div>
-
     <div class="control-group">
         <label class="control-label"  for="inputNombre">Nombre:</label>
         <div class="controls">
-            <input type="text" id="nombre" name="nombre" size="15" placeholder="Nombre" />
+            <input type="text" id="nombre" name="nombre" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputApe1">Primer Apellido:</label>
         <div class="controls">
-            <input type="text" id="ape1" name="ape1" size="15" placeholder="Primer apellido" />
+            <input type="text" id="ape1" name="ape1" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputApe2">Segundo Apellido:</label>
         <div class="controls">
-            <input type="text" id="ape2" name="ape2" size="15" placeholder="Segundo Apellido" />
+            <input type="text" id="ape2" name="ape2" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputSexo">Sexo:</label>
+        <label class="control-label" for="descripcion">Fecha: </label> 
         <div class="controls">
-            <select id="sexo" name="sexo" type="text" autofocus="autofocus">
+            <input id="fecha" name="fecha" type="text" size="10" maxlength="50" value="" /> 
+        </div>
+    </div>
+    <script>$("#fecha").datepicker({
+            showOn: 'both',
+            buttonImageOnly: true,
+            changeYear: true,
+            numberOfMonths: 1});
+    </script>
+    <div class="control-group">
+        <label class="control-label"  for="inputPaisnto">País nacimiento:</label>
+        <div class="controls">
+            <input type="text" id="pais" name="pais" size="15" placeholder="" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label"  for="inputGenero">Género:</label>
+        <div class="controls">
+            <select id="sexo" name="genero" type="text" autofocus="autofocus">
                 <option value="">Seleccione una opción...</option>
                 <option value="Hombre">Hombre</option>
                 <option value="Mujer">Mujer</option>
@@ -57,52 +67,87 @@
     <div class="control-group">
         <label class="control-label"  for="inputDomicilio">Domicilio:</label>
         <div class="controls">
-            <input type="text" id="domicilio" name="domicilio" size="15" placeholder="Domicilio" />
+            <input type="text" id="domicilio" name="domicilio" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputCodpostal">Código Postal:</label>
         <div class="controls">
-            <input type="text" id="codpostal" name="codpostal" size="15" placeholder="Código postal" />
+            <input type="text" id="codpostal" name="codpostal" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputPoblacion">Población:</label>
+        <label class="control-label"  for="inputLocalidad">Localidad:</label>
         <div class="controls">
-            <input type="text" id="poblacion" name="poblacion" size="15" placeholder="Población" />
+            <input type="text" id="localidad" name="localidad" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputProvincia">Provincia:</label>
         <div class="controls">
-            <input type="text" id="provincia" name="provincia" size="15" placeholder="Provincia" />
+            <input type="text" id="provincia" name="provincia" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputTelefono">Teléfono:</label>
         <div class="controls">
-            <input type="text" id="telefono" name="telefono" size="15" placeholder="Móvil o fijo" />
+            <input type="text" id="telefono" name="telefono" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputEmail">Em@il:</label>
+        <label class="control-label"  for="inputTelefono2">Otro teléfono:</label>
         <div class="controls">
-            <input type="text" id="email" name="email" size="15" placeholder="Email" />
+            <input type="text" id="telefono2" name="telefono2" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputValidado">Validado:</label>
+        <label class="control-label"  for="inputNumexpediente">Número Expediente:</label>
         <div class="controls">
-            <select id="validado" name="validado" type="text" autofocus="autofocus">
+            <input type="text" id="numexpediente" name="numexpediente" size="15" placeholder="" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label"  for="inputFamilia">Familia:</label>
+        <div class="controls">
+            <select id="validado" name="familia" type="text" autofocus="autofocus">
                 <option value="">Seleccione una opción...</option>
-                <option value="SI">Si</option>
-                <option value="NO">No</option>
+                <option value="Administración">Administración</option>
+                <option value="Comercio">Comercio</option>
+                <option value="Informática">Informática</option>
+                <option value="Sanidad">Sanidad</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label"  for="inputCiclo">Ciclo</label>
+        <div class="controls">
+            <select id="validado" name="ciclo" type="text" autofocus="autofocus">
+                <option value="">Seleccione una opción...</option>
+                <option value="Gestión Administrativa (GM)">Gestión Administrativa (Grado Medio)</option>
+                <option value="Administración y Finanzas (GS)">Administración y Finanzas (Grado Superior)</option>
+                <option value="Secretariado (GS)">Secretariado (Gradu Superior)</option>
+                <option value="Comercio y Marketing (GM)">Comercio y Marketing (Grado Medio)</option>
+                <option value="Comercio Internacional (GS)">Comercio Internacional (Grado Superior)</option>
+                <option value="Gestión Comercial y Marketing (GS)">Gestión Comercial y Marketing (Grado Superior)</option>
+                <option value="Servicios al Consumidor (GS)">Servicios al Consumidor (Grado Superior)</option>
+                <option value="Sistemas Microinformáticos y Redes (GM)">Sistemas Microinformáticos y Redes (Grado Medio)</option>
+                <option value="Administración de Sistemas Informáticos y Redes (GS)">Administración de Sistemas Informáticos y Redes (Grado Superior)</option>
+                <option value="Desarrollo de Aplicaciones Web (GS)">Desarrollo de Aplicaciones Web (Grado Superior)</option>
+                <option value="Cuidados auxiliares de enfermería (GM)">Cuidados auxiliares de enfermería (Grado Medio)</option>
+                <option value="Farmacia y Parafarmacia (GM)">Farmacia y Parafarmacia (Grado Medio)</option>
+                <option value="Documentación Sanitaria (GS)">Documentación Sanitaria (Grado Superior)</option>
+                <option value="Laboratorio de Diagnóstico Clínico (GS)">Laboratorio de Diagnóstico Clínico (Grado Superior)</option>
+                <option value="Ortoprotésica (GS)">Ortoprotésica (Grado Superior)</option>
+                <option value="Prótesis Dental (GS)">Prótesis Dental (Grado Superior)</option>
+                <option value="Radioterapia (GS)">Radioterapia (Grado Superior)</option>
+                <option value="Higiene Bucodental (GS)">Higiene Bucodental (Grado Superior)</option>
+                <option value="Imagen para el Diagnóstico (GS)">Imagen para el Diagnóstico (Grado Superior)</option>
             </select>
         </div>
     </div>
     <div class="control-group">
         <div class="controls">
-            <button type="submit" id="submitForm" class="btn submitForm">Submit</button>
+            <button type="submit" id="submitForm" class="btn submitForm">Introducir</button>
         </div>
     </div>
 </form>

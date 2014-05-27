@@ -1,11 +1,4 @@
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
-    <h2>Empresa</h2>
-    <div class="control-group">
-        <label class="control-label" for="inputId">Id:</label>
-        <div class="controls">
-            <input type="text" id="id" name="id" placeholder="id" />
-        </div>
-    </div>
     <div class="control-group">
         <label class="control-label" for="inputId_usuario">Id Usuario:</label>
         <div class="controls">           
@@ -14,11 +7,11 @@
             <a class="btn btn-mini" id="id_usuario_button" href="#"><i class="icon-search"></i></a>
         </div>
     </div>
-     <div class="control-group">
-                <div class="controls">
-                    <span id="id_usuario_desc" class="alert alert-success"></span>                                       
-                </div>
-            </div> 
+    <div class="control-group">
+        <div class="controls">
+            <span id="id_usuario_desc" class="alert alert-success"></span>                                       
+        </div>
+    </div> 
     <div class="control-group">
         <label class="control-label" for="inputNombre">Nombre:</label>
         <div class="controls">

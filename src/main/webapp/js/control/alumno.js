@@ -65,7 +65,7 @@ var control_alumno_list = function(path) {
             view.doFillForm(id);
         } else {
             $(prefijo_div + '#id').val('0').attr("disabled", true);
-            //$(prefijo_div + '#nombre').focus();
+            $(prefijo_div + '#nombre').focus();
         }
 
         $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
