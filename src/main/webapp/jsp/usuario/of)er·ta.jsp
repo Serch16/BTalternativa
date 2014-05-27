@@ -18,6 +18,7 @@
             Disculpe las molestias.</p>
         </div>
         <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>  
             <p><strong>Error</strong></p>
             <p>Debes estar registrado para acceder a esta información</p>
         </div>
