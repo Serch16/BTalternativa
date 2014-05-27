@@ -83,7 +83,7 @@
             <div class="span9">
                 <h4 class="subra">Últimas convocatorias de empleo público</h4>
                 <table class="table table-bordered">
-                    <caption>¡Nueva!</caption>
+                    <caption class="nueva">¡Nueva!</caption>
                     <thead>
                         <tr>
                             <th class="celdaroja">Guardía Civil. Escala de Cabos y Guardías</th>
