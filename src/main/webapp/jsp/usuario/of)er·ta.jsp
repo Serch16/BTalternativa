@@ -18,7 +18,8 @@
             Disculpe las molestias.</p>
         </div>
         <div class="alert alert-error">
-            <p><strong>Error</strong> debes estar registrado para acceder a esta información</p>
+            <p><strong>Error</strong></p>
+            <p>Debes estar registrado para acceder a esta información</p>
         </div>
     </div>
     <div class="span3 hidden-phone"><img src="img/banner2.png"></div>
