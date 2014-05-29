@@ -1,7 +1,7 @@
-var control_profesor_list = function(path) {
+var control_estado_list = function(path) {
     //contexto privado
 
-    var prefijo_div = "#profesor_list ";
+    var prefijo_div = "#estado_list ";
 
     function cargaBotoneraMantenimiento() {
         var botonera = [
@@ -91,9 +91,9 @@ var control_profesor_list = function(path) {
             });
 
             var usuarioControl = control_usuario_list(path);
-            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchTipodocumento, null, null, null);
+            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchOferta, null, null, null);
 
-            function callbackSearchTipodocumento(id) {
+            function callbackSearchOferta(id) {
                 $(prefijo_div + '#modal02').modal('hide');
                 $(prefijo_div + '#modal02').data('modal', null);
                 $(prefijo_div + '#id_usuario').val($(this).attr('id'));
@@ -113,21 +113,80 @@ var control_profesor_list = function(path) {
                     maxlength: 6,
                     digits: true
                 },
+                dni: {
+                    required: true,
+                    maxlength: 9,
+                    caracteresespeciales: true,
+                    nifES: true
+
+                },
+                numexpediente: {
+                    required: true,
+                    minlength: 4,
+                    maxlength: 4,
+                    caracteresespeciales: true,
+                    digits: true
+                },
                 nombre: {
                     required: true,
                     minlength: 3,
                     maxlength: 50,
                     caracteresespeciales: true
                 },
-                apellido: {
+                ape1: {
                     required: true,
                     maxlength: 50,
                     caracteresespeciales: true
                 },
-                correo: {
+                ape2: {
+                    maxlength: 50
+                },
+                sexo: {
+                    required: true,
+                    maxlength: 6,
+                    caracteresespeciales: true
+
+                },
+                domicilio: {
+                    required: true,
+                    maxlength: 150,
+                    caracteresespeciales: true
+
+                },
+                codpostal: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 5,
+                    number: true
+                },
+                poblacion: {
+                    required: true,
+                    maxlength: 50,
+                    caracteresespeciales: true
+
+                },
+                provincia: {
+                    required: true,
+                    maxlength: 50,
+                    caracteresespeciales: true
+
+                },
+                telefono: {
+                    caracteresespeciales: true,
+                    required: true,
+                    maxlength: 9,
+                    minlength: 9,
+                    number: true
+                },
+                email: {
                     required: true,
                     maxlength: 150,
                     email: true
+                },
+                validado: {
+                    required: true,
+                    maxlength: 2,
+                    caracteresespeciales: true
                 }
             },
             messages: {
@@ -135,21 +194,66 @@ var control_profesor_list = function(path) {
                     required: "Debes de registrarte con login y password",
                     maxlength: "Máximo 6 dígitos"
                 },
+                numexpediente: {
+                    required: "Introduce un número de expediente",
+                    maxlength: "Máximo 4 digitos",
+                    digits: "Número de expediente incorrecto"
+                },
+                dni: {
+                    required: "Introduce tu nombre"
+                },
                 nombre: {
                     required: "Introduce tu nombre",
                     maxlength: "Máximo 50 letras",
                     minlength: "Cómo mínimo 3 letras"
                 },
-                apellido: {
-                    required: "Introduce tu primer apellido",
+                ape1: {
+                    required: "Introduce tu apellido",
                     maxlength: "Máximo 50 carácteres",
                     minlength: "Cómo mínimo 3 letras"
                 },
-                correo: {
+                ape2: {
+                    maxlength: "Máximo 50 carácteres",
+                    minlength: "Cómo mínimo 3 letras"
+                },
+                sexo: {
+                    required: "Introduce tu sexo",
+                    maxlength: "Hombre o mujer"
+                },
+                domicilio: {
+                    required: "Introduce tu domicilio",
+                    maxlength: "Máximo 150 carácteres"
+                },
+                codpostal: {
+                    required: "Introduce tu código postal",
+                    maxlength: "Máximo 5 dígitos",
+                    minlength: "Cómo mínimo 5 dígitos",
+                    digits: "Introduce un código postal"
+                },
+                poblacion: {
+                    required: "Introduce tu población",
+                    maxlength: "Máximo 50 carácteres"
+                },
+                provincia: {
+                    required: "Introduce tu provincia",
+                    maxlength: "Máximo 50 carácteres"
+                },
+                telefono: {
+                    required: "Introduce tu número de telefono",
+                    maxlength: "Máximo 9 dígitos",
+                    minlength: "Cómo mínimo 9 dígitos",
+                    number: "Por favor, introduce tu número"
+                },
+                email: {
                     required: "Introduce tu correo electrónico",
                     maxlength: "Máximo 150 carácteres",
                     email: "Por favor, introduce un email válido"
+                },
+                validado: {
+                    required: "Introduce tu Si o No",
+                    maxlength: "Máximo 2 carácteres"
                 }
+
             },
             highlight: function(element) {
                 $(element).closest('.control-group').removeClass('success').addClass('error');
@@ -194,7 +298,7 @@ var control_profesor_list = function(path) {
     }
 
     return {
-        inicia: function(view, pag, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue) {
+        inicia: function(view, pag, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, prueba, systemfilter, systemfilteroperator, systemfiltervalue) {
 
             var thisObject = this;
 

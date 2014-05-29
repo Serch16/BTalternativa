@@ -21,6 +21,8 @@
                         <li><a id="lnkAlumno" href="#">Alumno</a></li>
                         <li><a id="lnkEmpresa" href="#">Empresa</a></li>
                         <li><a id="lnkOferta" href="#">Oferta</a></li>
+                        <li><a id="lnkEstado" href="#">Estado oferta</a></li>
+                        <li><a id="lnkInscritos" href="#">Inscritos</a></li>
                         <li><a href="jsp?ob=usuario&amp;op=empleopub$">Empleo público</a></li>
                         <li><a href="jsp?ob=usuario&amp;op=0rilab·oral">Orientación laboral</a></li>
                             <%
@@ -30,12 +32,14 @@
                         <li><a id="lnkAlumno" href="#">Alumno</a></li>
                         <li><a id="lnkEmpresa" href="#">Empresa</a></li>
                         <li><a id="lnkOferta" href="#">Oferta</a></li>
+                        <li><a id="lnkInscritos" href="#">Inscritos</a></li>
                         <li><a href="jsp?ob=usuario&amp;op=empleopub$">Empleo público</a></li>
                         <li><a href="jsp?ob=usuario&amp;op=0rilab·oral">Orientación laboral</a></li>
                             <%
                             } else if ((oUsuario.getTipoUsuario().toString() == "Alumno") || (oUsuario.getTipoUsuario().toString() == "Empresa")) {
                             %>
                         <li><a id="lnkOferta" href="#">Oferta</a></li>
+                        <li><a id="lnkInscritos" href="#">Inscritos</a></li>
                         <li><a href="jsp?ob=usuario&amp;op=empleopub$">Empleo público</a></li>
                         <li><a href="jsp?ob=usuario&amp;op=0rilab·oral">Orientación laboral</a></li>
                             <%

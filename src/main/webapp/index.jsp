@@ -9,7 +9,7 @@
 <html class="no-js" lang="es-ES">
     <!--<![endif]-->
     <head>
-        <meta charset="iso-8859-1">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="author" content="Sergio Martín"/>
         <meta name="description" content="Bolsa de trabajo del CIPFP Ausiàs March es 
@@ -170,6 +170,8 @@
         <script src="js/control/profesor.js" charset="UTF-8"></script>
         <script src="js/control/usuario.js" charset="UTF-8"></script>
         <script src="js/control/oferta.js" charset="UTF-8"></script>
+        <script src="js/control/inscritos.js" charset="UTF-8"></script>
+        <script src="js/control/estado.js" charset="UTF-8"></script>
 
         <script>
             $(document).ready(function() {
@@ -236,6 +238,32 @@
 
                     var ofertaControl = control_oferta_list('<%=request.getContextPath()%>');
                     ofertaControl.inicia(ofertaView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+
+                $('#lnkInscritos').unbind('click');
+                $('#lnkInscritos').click(function() {
+                    var inscritos = objeto('inscritos', '<%=request.getContextPath()%>');
+                    var inscritosView = vista(inscritos, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(inscritosView.getEmptyList());
+
+                    var inscritosControl = control_inscritos_list('<%=request.getContextPath()%>');
+                    inscritosControl.inicia(inscritosView, 1, null, null, 10, null, null, null, null);
+                    return false;
+                });
+
+                $('#lnkEstado').unbind('click');
+                $('#lnkEstado').click(function() {
+                    var estado = objeto('estado', '<%=request.getContextPath()%>');
+                    var estadoView = vista(estado, '<%=request.getContextPath()%>');
+
+                    $('#indexContenidoJsp').empty();
+                    $('#indexContenido').empty().append(estadoView.getEmptyList());
+
+                    var estadoControl = control_estado_list('<%=request.getContextPath()%>');
+                    estadoControl.inicia(estadoView, 1, null, null, 10, null, null, null, null);
                     return false;
                 });
 

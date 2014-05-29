@@ -15,12 +15,12 @@ public class AlumnoBean {
     private String paisnto = "";
     private String genero = "";
     private String domicilio = "";
-    private String codpostal = "";
+    private Integer codpostal = 0;
     private String localidad = "";
     private String provincia = "";
     private String telefono = "";
     private String telefono2 = "";
-    private String expediente = "";
+    private Integer expediente = 0;
     private String famprofe = "";
     private String cicloform = "";
     
@@ -175,14 +175,14 @@ public class AlumnoBean {
     /**
      * @return the codpostal
      */
-    public String getCodpostal() {
+    public Integer getCodpostal() {
         return codpostal;
     }
 
     /**
      * @param codpostal the codpostal to set
      */
-    public void setCodpostal(String codpostal) {
+    public void setCodpostal(Integer codpostal) {
         this.codpostal = codpostal;
     }
 
@@ -245,14 +245,14 @@ public class AlumnoBean {
     /**
      * @return the expediente
      */
-    public String getExpediente() {
+    public Integer getExpediente() {
         return expediente;
     }
 
     /**
      * @param expediente the expediente to set
      */
-    public void setExpediente(String expediente) {
+    public void setExpediente(Integer expediente) {
         this.expediente = expediente;
     }
 

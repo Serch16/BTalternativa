@@ -25,7 +25,7 @@ function getNeighborhood(link, page_number, total_pages, neighborhood) {
     neighborhood = parseInt(neighborhood);
     vector = "<div class=\"pagination\"><ul>";
     if (page_number > 1)
-        vector += ("<li><a class=\"pagination_link\" id=\"" + (page_number - 1) + "\" href=\"" + link + (page_number - 1) + "\">prev</a></li>");
+        vector += ("<li><a class=\"pagination_link\" id=\"" + (page_number - 1) + "\" href=\"" + link + (page_number - 1) + "\"><i class=\"icon-chevron-left\"></i> Ant.</a></li>");
     if (page_number > neighborhood + 1)
         vector += ("<li><a class=\"pagination_link\" id=\"1\" href=\"" + link + "1\">1</a></li>");
     if (page_number > neighborhood + 2)
@@ -44,7 +44,7 @@ function getNeighborhood(link, page_number, total_pages, neighborhood) {
     if (page_number < total_pages - (neighborhood))
         vector += ("<li><a class=\"pagination_link\" id=\"" + total_pages + "\" href=\"" + link + total_pages + "\">" + total_pages + "</a></li>");
     if (page_number < total_pages)
-        vector += ("<li><a class=\"pagination_link\"  id=\"" + (page_number + 1) + "\" href=\"" + link + (page_number + 1) + "\">next</a></li>");
+        vector += ("<li><a class=\"pagination_link\"  id=\"" + (page_number + 1) + "\" href=\"" + link + (page_number + 1) + "\">Sig. <i class=\"icon-chevron-right\"></i></a></li>");
     vector += "</ul></div>";
     return vector;
 }

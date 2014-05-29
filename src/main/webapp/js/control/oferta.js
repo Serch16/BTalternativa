@@ -1,7 +1,7 @@
-var control_alumno_list = function(path) {
+var control_oferta_list = function(path) {
     //contexto privado
 
-    var prefijo_div = "#alumno_list ";
+    var prefijo_div = "#oferta_list ";
 
     function cargaBotoneraMantenimiento() {
         var botonera = [

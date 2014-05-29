@@ -1,19 +1,19 @@
 package es.imeon.bean;
 
-//import java.util.Date;
+import java.util.Date;
 
 public class OfertaBean {
 
     private Integer id = 0;
     private Integer id_empresa = 0;
-    //private Date fechapubli;
+    private Date fechapubli;
     private String puesto = "";
     private String categoria = "";
     private Integer vacantes = 0;
     private String descripcion = "";
     private String requisitos = "";
     private String experiencia = "";
-    private String salario = "";
+    private Integer salario = 0;
     private String poblacion = "";
     private String provincia = "";
 
@@ -54,17 +54,17 @@ public class OfertaBean {
 
     /**
      * @return the fechapubli
-     
+     */
     public Date getFechapubli() {
         return fechapubli;
-    }*/
+    }
 
     /**
      * @param fechapubli the fechapubli to set
-     
+     */
     public void setFechapubli(Date fechapubli) {
         this.fechapubli = fechapubli;
-    }*/
+    }
 
     /**
      * @return the puesto
@@ -153,14 +153,14 @@ public class OfertaBean {
     /**
      * @return the salario
      */
-    public String getSalario() {
+    public Integer getSalario() {
         return salario;
     }
 
     /**
      * @param salario the salario to set
      */
-    public void setSalario(String salario) {
+    public void setSalario(Integer salario) {
         this.salario = salario;
     }
 

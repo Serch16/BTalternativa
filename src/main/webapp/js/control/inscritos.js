@@ -1,7 +1,7 @@
-var control_profesor_list = function(path) {
+var control_inscritos_list = function(path) {
     //contexto privado
 
-    var prefijo_div = "#profesor_list ";
+    var prefijo_div = "#inscritos_list ";
 
     function cargaBotoneraMantenimiento() {
         var botonera = [
@@ -68,7 +68,24 @@ var control_profesor_list = function(path) {
             //$(prefijo_div + '#nombre').focus();
         }
 
-        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
+//        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
+
+        //clave ajena oferta
+        cargaClaveAjena('#id_oferta', '#id_oferta_desc', 'oferta')
+
+        $(prefijo_div + '#id_oferta_button').unbind('click');
+        $(prefijo_div + '#id_oferta_button').click(function() {
+            loadForeign('oferta', '#modal02', control_oferta_list, callbackSearchOferta);
+            function callbackSearchOferta(id) {
+                $(prefijo_div + '#modal02').modal('hide');
+                $(prefijo_div + '#modal02').data('modal', null);
+                $(prefijo_div + '#id_oferta').val($(this).attr('id'));
+                cargaClaveAjena('#id_oferta', '#id_oferta_desc', 'oferta');
+                return false;
+            }
+            return false;
+        });
+
 
         //en desarrollo: tratamiento de las claves ajenas ...
         $(prefijo_div + '#id_usuario_button').unbind('click');
@@ -168,6 +185,14 @@ var control_profesor_list = function(path) {
             }
             return false;
         });
+    }
+
+    function cargaClaveAjena(lugarID, lugarDesc, objetoClaveAjena) {
+        if ($(prefijo_div + lugarID).val() != "") {
+            objInfo = objeto(objetoClaveAjena, path).getOne($(prefijo_div + lugarID).val());
+            props = Object.getOwnPropertyNames(objInfo);
+            $(prefijo_div + lugarDesc).empty().html(objInfo[props[1]]);
+        }
     }
 
     function removeConfirmationModalForm(view, place, id) {
