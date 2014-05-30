@@ -37,21 +37,6 @@ var control_profesor_list = function(path) {
                 "Nada de caracteres especiales, por favor"
                 );
 
-        jQuery.validator.addMethod("nifES",
-                function(value, element) {
-                    "use strict";
-                    value = value.toUpperCase();
-                    if (!value.match('((^[A-Z]{1}[0-9]{7}[A-Z0-9]{1}$|^[T]{1}[A-Z0-9]{8}$)|^[0-9]{8}[A-Z]{1}$)')) {
-                        return false;
-                    }
-                    if (/^[0-9]{8}[A-Z]{1}$/.test(value)) {
-                        return ("TRWAGMYFPDXBNJZSQVHLCKE".charAt(value.substring(8, 0) % 23) === value.charAt(8));
-                    }
-                    return false;
-                },
-                "Por favor, introduce un DNI correcto"
-                );
-
         cabecera = '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         if (action == "edit") {
             cabecera += '<h3 id="myModalLabel">Edición de ' + view.getObject().getName() + "</h3>";
@@ -108,48 +93,30 @@ var control_profesor_list = function(path) {
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
             rules: {
-                id_usuario: {
-                    required: true,
-                    maxlength: 6,
-                    digits: true
-                },
                 nombre: {
                     required: true,
                     minlength: 3,
-                    maxlength: 50,
+                    maxlength: 24,
                     caracteresespeciales: true
                 },
                 apellido: {
                     required: true,
-                    maxlength: 50,
+                    minlength: 3,
+                    maxlength: 24,
                     caracteresespeciales: true
                 },
-                correo: {
-                    required: true,
-                    maxlength: 150,
-                    email: true
-                }
             },
             messages: {
-                id_usuario: {
-                    required: "Debes de registrarte con login y password",
-                    maxlength: "Máximo 6 dígitos"
-                },
                 nombre: {
                     required: "Introduce tu nombre",
-                    maxlength: "Máximo 50 letras",
-                    minlength: "Cómo mínimo 3 letras"
+                    maxlength: "Máximo 24 carácteres",
+                    minlength: "Cómo mínimo 3 carácteres"
                 },
                 apellido: {
                     required: "Introduce tu primer apellido",
-                    maxlength: "Máximo 50 carácteres",
+                    maxlength: "Máximo 24 carácteres",
                     minlength: "Cómo mínimo 3 letras"
                 },
-                correo: {
-                    required: "Introduce tu correo electrónico",
-                    maxlength: "Máximo 150 carácteres",
-                    email: "Por favor, introduce un email válido"
-                }
             },
             highlight: function(element) {
                 $(element).closest('.control-group').removeClass('success').addClass('error');

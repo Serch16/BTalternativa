@@ -19,12 +19,6 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputCorreo">Em@il:</label>
-        <div class="controls">
-            <input type="text" id="correo" name="correo" size="15" placeholder="" />
-        </div>
-    </div>
-    <div class="control-group">
         <div class="controls">
             <button type="submit" id="submitForm" class="btn submitForm">Introducir</button>
         </div>

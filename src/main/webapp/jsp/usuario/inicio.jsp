@@ -69,6 +69,8 @@
                                 tu número de expediente como alumno. Cuando haya sido verificada la información, recibirás en tu 
                                 correo electónico que nos facilitaste tu contraseña (tu usuario será tu correo electrónico).</p>
                         </div>
+                    </div>
+                    <div class="row-fluid">
                         <div class="span12">
                             <p>Para registrarte pincha en la esquina superior derecha en "<strong>Regístrate</strong>"</p>
                             <div class="row-fluid visible-desktop">
@@ -79,6 +81,8 @@
                                 <div class="span2"></div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row-fluid">
                         <div class="span12">
                             <hr/>
                             <p>Por defecto, accederas al registro de alumno. En caso de ser una empresa, pincha en "<strong>Soy una empresa</strong>" 
@@ -91,6 +95,8 @@
                                 <div class="span2"></div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row-fluid">
                         <div class="span12">
                             <hr/>
                             <p>Desde el registro de empresas puedes volver al de alumno pinchando en "<strong>Soy un alumno</strong>":</p>
