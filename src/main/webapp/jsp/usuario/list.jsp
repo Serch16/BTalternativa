@@ -13,7 +13,8 @@
 <div id="<%=strNombreMantenimiento%>_list">
     <!-- Estás en... -->
     <ul class="breadcrumb">
-    Estás en:
+        <li>Estás en:</li>
+        <li><a href="jsp">B.T. CIPFP Ausiàs March</a><span class="divider">/</span></li>
         <li><a href="#">Administración</a><span class="divider">/</span></li>
         <li class="active">Usuario</li>
     </ul>           <!-- // Estás en... -->

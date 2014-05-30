@@ -2,7 +2,7 @@
 <%UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean"); %>
 <!-- Menú navegación interior -->
 <div class="masthead">
-    <h3 class="muted"><img alt="logo instituto" src="img/solologo.png" id="solologo"> CIPFP Ausiàs March</h3>
+    <h3 class="muted"><img alt="logo instituto" src="img/solologo.png" id="solologo"> CIPFP Ausiàs March, bolsa de trabajo</h3>
     <div class="navbar navbar-inverse">
         <div class="navbar-inner">
             <div class="container">

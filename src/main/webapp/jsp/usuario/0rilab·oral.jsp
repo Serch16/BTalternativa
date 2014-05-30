@@ -1,7 +1,7 @@
 <!-- Estás en... -->
 <ul class="breadcrumb">
-    Estás en:
-    <li><a href="jsp">CIPFP Ausiàs March</a><span class="divider">/</span></li>
+    <li>Estás en:</li>
+    <li><a href="jsp">B.T. CIPFP Ausiàs March</a><span class="divider">/</span></li>
     <li class="active">Orientación laboral</li>
 </ul>           <!-- // Estás en... -->
 <div class="row-fluid">
