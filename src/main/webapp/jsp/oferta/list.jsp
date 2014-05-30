@@ -13,11 +13,12 @@
 <div id="<%=strNombreMantenimiento%>_list">
     <!-- Estás en... -->
     <ul class="breadcrumb">
-        Estás en:
-        <%
-            if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") | (oUsuario.getTipoUsuario().toString() == "Empresa")) {
-        %>
-        <li><a href="#">Administración</a><span class="divider">/</span></li>
+        <li>Estás en:</li>
+        <li><a href="jsp">B.T. CIPFP Ausiàs March</a><span class="divider">/</span></li>
+            <%
+                if ((oUsuario.getTipoUsuario().toString() == "Administrador") | (oUsuario.getTipoUsuario().toString() == "Profesor") | (oUsuario.getTipoUsuario().toString() == "Empresa")) {
+            %>
+        <li class="active">Admin.</li>
             <%
                 }
             %>

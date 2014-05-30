@@ -12,8 +12,8 @@
     <!-- Estás en... -->
     <ul class="breadcrumb">
         <li>Estás en:</li>
-        <li><a href="#">Administración</a><span class="divider">/</span></li>
-        <li class="active">Estado oferta</li>
+        <li><a href="jsp">B.T. CIPFP Ausiàs March</a><span class="divider">/</span></li>
+        <li class="active">Admin. Estado oferta</li>
     </ul>           <!-- // Estás en... -->
     <div class="row-fluids">
         <!-- Columna información izquierda -->

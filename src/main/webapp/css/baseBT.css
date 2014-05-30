@@ -41,6 +41,12 @@ tr > td, th {
 .navbar-inverse .nav>li>a{
     color: #fff;
 }
+.navbar-inverse .nav-collapse .nav>li>a:hover{
+    background-color: #EFEDED;
+}
+.navbar-inverse btn-navbar{
+    background-image: linear-gradient(to bottom,#BD0202,#F10000);
+}
 /* Estás en */
 .breadcrumb {
     background-color: #EFEDED;

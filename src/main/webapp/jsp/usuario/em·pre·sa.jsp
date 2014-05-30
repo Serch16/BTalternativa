@@ -1,6 +1,7 @@
 <!-- Estás en... -->
 <ul class="breadcrumb">
-    Estás en:
+    <li>Estás en:</li>
+    <li><a href="jsp">B.T. CIPFP Ausiàs March</a><span class="divider">/</span></li>
     <li><a href="jsp?ob=registro&op=al·um·no">Registro</a><span class="divider">/</span></li>
     <li class="active">Empresas</li>
     <li class="pull-right"><a href="jsp?ob=registro&op=al·um·no">Soy un alumno</a></li>
