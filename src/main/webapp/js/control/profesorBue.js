@@ -8,7 +8,7 @@ var control_profesor_list = function(path) {
             {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
             {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
             {"class": "btn btn-mini action03", "icon": "icon-pencil", "text": ""},
-            {"class": "btn btn-mini action04", "icon": "icon-trash", "text": ""}
+            {"class": "btn btn-mini action04", "icon": "icon-remove", "text": ""}
         ];
         return botonera;
     }
@@ -27,16 +27,28 @@ var control_profesor_list = function(path) {
             $(prefijo_div + place).empty();
         });
     }
+    function loadForeign(strObjetoForeign, strPlace, control, functionCallback) {
+        var objConsulta = objeto(strObjetoForeign, path);
+        var consultaView = vista(objConsulta, path);
 
+        cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel">Elección</h3>';
+        pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
+        listado = consultaView.getEmptyList();
+        loadForm(strPlace, cabecera, listado, pie, true);
+
+        $(prefijo_div + strPlace).css({
+            'right': '20px',
+            'left': '20px',
+            'width': 'auto',
+            'margin': '0',
+            'display': 'block'
+        });
+
+        var consultaControl = control(path);
+        consultaControl.inicia(consultaView, 1, null, null, 10, null, null, null, functionCallback, null, null, null);
+
+    }
     function loadModalForm(view, place, id, action) {
-
-        jQuery.validator.addMethod("caracteresespeciales",
-                function(value, element) {
-                    return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
-                },
-                "Nada de caracteres especiales, por favor"
-                );
-
         cabecera = '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         if (action == "edit") {
             cabecera += '<h3 id="myModalLabel">Edición de ' + view.getObject().getName() + "</h3>";
@@ -50,46 +62,8 @@ var control_profesor_list = function(path) {
             view.doFillForm(id);
         } else {
             $(prefijo_div + '#id').val('0').attr("disabled", true);
-            //$(prefijo_div + '#nombre').focus();
+            $(prefijo_div + '#nombre').focus();
         }
-
-        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
-
-        //en desarrollo: tratamiento de las claves ajenas ...
-        $(prefijo_div + '#id_usuario_button').unbind('click');
-        $(prefijo_div + '#id_usuario_button').click(function() {
-
-            var usuario = objeto('usuario', path);
-            var usuarioView = vista(usuario, path);
-
-            cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Elección</h3>';
-            pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
-            listado = usuarioView.getEmptyList();
-            loadForm('#modal02', cabecera, listado, pie, true);
-
-            $(prefijo_div + '#modal02').css({
-                'right': '20px',
-                'left': '20px',
-                'width': 'auto',
-                'margin': '0',
-                'display': 'block'
-            });
-
-            var usuarioControl = control_usuario_list(path);
-            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchTipodocumento, null, null, null);
-
-            function callbackSearchTipodocumento(id) {
-                $(prefijo_div + '#modal02').modal('hide');
-                $(prefijo_div + '#modal02').data('modal', null);
-                $(prefijo_div + '#id_usuario').val($(this).attr('id'));
-                $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
-                return false;
-            }
-
-            return false;
-
-        });
-
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
             rules: {
@@ -115,7 +89,7 @@ var control_profesor_list = function(path) {
                 apellido: {
                     required: "Introduce tu primer apellido",
                     maxlength: "Máximo 24 carácteres",
-                    minlength: "Cómo mínimo 3 letras"
+                    minlength: "Cómo mínimo 3 carácteres"
                 },
             },
             highlight: function(element) {
@@ -127,7 +101,6 @@ var control_profesor_list = function(path) {
                         .closest('.control-group').removeClass('error').addClass('success');
             }
         });
-
         //clave ajena usuario
         cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
 
@@ -143,16 +116,14 @@ var control_profesor_list = function(path) {
             }
             return false;
         });
-
-        $(prefijo_div + '#submitForm').unbind('click');
-        $(prefijo_div + '#submitForm').click(function() {
-            if ($('#formulario').valid()) {
-                enviarDatosUpdateForm(view, prefijo_div);
-            }
-            return false;
-        });
     }
-
+    function cargaClaveAjena(lugarID, lugarDesc, objetoClaveAjena) {
+        if ($(prefijo_div + lugarID).val() !== "") {
+            objInfo = objeto(objetoClaveAjena, path).getOne($(prefijo_div + lugarID).val());
+            props = Object.getOwnPropertyNames(objInfo);
+            $(prefijo_div + lugarDesc).empty().html(objInfo[props[1]]);
+        }
+    }
     function removeConfirmationModalForm(view, place, id) {
         cabecera = "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>" +
                 "<h3 id=\"myModalLabel\">Borrado de " + view.getObject().getName() + "</h3>";

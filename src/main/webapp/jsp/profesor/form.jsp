@@ -7,15 +7,21 @@
         </div>
     </div>
     <div class="control-group">
+        <label class="control-label">Correo usuario:</label>
+        <div class="controls">
+            <span id="id_usuario_desc" class="alert alert-info"></span>                                       
+        </div>
+    </div>
+    <div class="control-group">
         <label class="control-label"  for="inputNombre">Nombre:</label>
         <div class="controls">
-            <input type="text" id="nombre" name="nombre" size="15" placeholder="" />
+            <input type="text" id="nombre" name="nombre" size="24" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputApellido">Primer Apellido:</label>
         <div class="controls">
-            <input type="text" id="apellido" name="apellido" size="15" placeholder="" />
+            <input type="text" id="apellido" name="apellido" size="24" placeholder="" />
         </div>
     </div>
     <div class="control-group">
