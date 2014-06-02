@@ -5,10 +5,10 @@ var control_estado_list = function(path) {
 
     function cargaBotoneraMantenimiento() {
         var botonera = [
-            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
-            {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
+//            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
+//            {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
             {"class": "btn btn-mini action03", "icon": "icon-pencil", "text": ""},
-            {"class": "btn btn-mini action04", "icon": "icon-trash", "text": ""}
+            {"class": "btn btn-danger btn-mini action04", "icon": "icon-trash icon-white", "text": ""}
         ];
         return botonera;
     }

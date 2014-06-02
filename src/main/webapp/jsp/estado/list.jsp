@@ -6,7 +6,7 @@
     EstadoDao oEstadoDao = new EstadoDao(Conexion.getConection());
     ArrayList<String> alColumnsNames = (ArrayList<String>) oEstadoDao.getColumnsNames();
     Iterator<String> oIterador = alColumnsNames.listIterator();
-    String strNombreMantenimiento = "estado oferta";
+    String strNombreMantenimiento = "estado";
 %>
 <div id="<%=strNombreMantenimiento%>_list">
     <!-- Estás en... -->
@@ -24,8 +24,8 @@
                 <form class="navbar-form" action="Controller" method="post" id="nrrpForm" >
                     <fieldset>
                         <select  id="rpp" name="nrpp" value="select" class="span12">                        
-                            <option>5</option>
-                            <option selected>10</option>
+                            <option selected>5</option>
+                            <option>10</option>
                         </select>               
                     </fieldset>
                 </form>
