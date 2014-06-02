@@ -9,7 +9,7 @@
     </div>
     <div class="control-group">
         <div class="controls">
-            <span id="id_usuario_desc" class="alert alert-success"></span>                                       
+            <span id="id_usuario_desc" class="alert alert-info"></span>                                       
         </div>
     </div>
     <div class="control-group">
