@@ -5,10 +5,10 @@ var control_empresa_list = function(path) {
 
     function cargaBotoneraMantenimiento() {
         var botonera = [
-            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
-            {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
+//            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
+            {"class": "btn btn-success btn-mini action02", "icon": "icon-zoom-in icon-white", "text": ""},
             {"class": "btn btn-mini action03", "icon": "icon-pencil", "text": ""},
-            {"class": "btn btn-mini action04", "icon": "icon-trash", "text": ""}
+            {"class": "btn btn-danger btn-mini action04", "icon": "icon-trash icon-white", "text": ""}
         ];
         return botonera;
     }
@@ -80,21 +80,6 @@ var control_empresa_list = function(path) {
             return false;
         });
 
-//        //clave ajena usuario
-//                cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
-//        $(prefijo_div + '#id_usuario_button').unbind('click');
-//        $(prefijo_div + '#id_usuario_button').click(function() {
-//            loadForeign('usuario', '#modal02', control_usuario_list, callbackSearchHilo);
-//            function callbackSearchHilo(id) {
-//                $(prefijo_div + '#modal02').modal('hide');
-//                $(prefijo_div + '#modal02').data('modal', null);
-//                $(prefijo_div + '#id_usuario').val($(this).attr('id'));
-//                cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario');
-//                return false;
-//            }
-//            return false;
-//        });
-    
         // Validación del formulario.
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
@@ -358,31 +343,6 @@ var control_empresa_list = function(path) {
                 return false;
             });
 
-            // Navegar por la paginación capturando las teclas Re Pág - Av Pág   
-
-//            window.onkeydown = tecla;
-//            function tecla(event) {
-//                event.preventDefault();
-//                num = event.keyCode;
-//                if (num == 112)
-////                    alert("Pulsaste F1");
-//    
-//    
-//
-//                if (num == 123) {
-////                    alert("Pulsaste F12"); 
-//
-//                }
-//            }
-
-
-
-
-
-
-
-
-            //    $(prefijo_div + '.pagination_link').unbind('keypress');
             $(prefijo_div + '.pagination_link').keypress(function(event) {
                 if (event.wich == 100) {
                     var id = $(this).attr('id');
@@ -391,7 +351,6 @@ var control_empresa_list = function(path) {
                     return false;
                 }
             });
-
 
             //boton de crear un nuevo elemento
 

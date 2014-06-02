@@ -8,6 +8,7 @@
         </div>
     </div>
     <div class="control-group">
+        <label class="control-label">Correo usuario:</label>
         <div class="controls">
             <span id="id_usuario_desc" class="alert alert-info"></span>                                       
         </div>
