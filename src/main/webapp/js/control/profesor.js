@@ -5,10 +5,10 @@ var control_profesor_list = function(path) {
 
     function cargaBotoneraMantenimiento() {
         var botonera = [
-            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
-            {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
+//            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
+//            {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
             {"class": "btn btn-mini action03", "icon": "icon-pencil", "text": ""},
-            {"class": "btn btn-mini action04", "icon": "icon-trash", "text": ""}
+            {"class": "btn btn-danger btn-mini action04", "icon": "icon-trash icon-white", "text": ""}
         ];
         return botonera;
     }
@@ -27,16 +27,28 @@ var control_profesor_list = function(path) {
             $(prefijo_div + place).empty();
         });
     }
+    function loadForeign(strObjetoForeign, strPlace, control, functionCallback) {
+        var objConsulta = objeto(strObjetoForeign, path);
+        var consultaView = vista(objConsulta, path);
 
+        cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel">Elección</h3>';
+        pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
+        listado = consultaView.getEmptyList();
+        loadForm(strPlace, cabecera, listado, pie, true);
+
+        $(prefijo_div + strPlace).css({
+            'right': '20px',
+            'left': '20px',
+            'width': 'auto',
+            'margin': '0',
+            'display': 'block'
+        });
+
+        var consultaControl = control(path);
+        consultaControl.inicia(consultaView, 1, null, null, 10, null, null, null, functionCallback, null, null, null);
+
+    }
     function loadModalForm(view, place, id, action) {
-
-        jQuery.validator.addMethod("caracteresespeciales",
-                function(value, element) {
-                    return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
-                },
-                "Nada de caracteres especiales, por favor"
-                );
-
         cabecera = '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         if (action == "edit") {
             cabecera += '<h3 id="myModalLabel">Edición de ' + view.getObject().getName() + "</h3>";
@@ -50,84 +62,8 @@ var control_profesor_list = function(path) {
             view.doFillForm(id);
         } else {
             $(prefijo_div + '#id').val('0').attr("disabled", true);
-            //$(prefijo_div + '#nombre').focus();
+            $(prefijo_div + '#nombre').focus();
         }
-
-        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
-
-        //en desarrollo: tratamiento de las claves ajenas ...
-        $(prefijo_div + '#id_usuario_button').unbind('click');
-        $(prefijo_div + '#id_usuario_button').click(function() {
-
-            var usuario = objeto('usuario', path);
-            var usuarioView = vista(usuario, path);
-
-            cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Elección</h3>';
-            pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
-            listado = usuarioView.getEmptyList();
-            loadForm('#modal02', cabecera, listado, pie, true);
-
-            $(prefijo_div + '#modal02').css({
-                'right': '20px',
-                'left': '20px',
-                'width': 'auto',
-                'margin': '0',
-                'display': 'block'
-            });
-
-            var usuarioControl = control_usuario_list(path);
-            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchTipodocumento, null, null, null);
-
-            function callbackSearchTipodocumento(id) {
-                $(prefijo_div + '#modal02').modal('hide');
-                $(prefijo_div + '#modal02').data('modal', null);
-                $(prefijo_div + '#id_usuario').val($(this).attr('id'));
-                $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
-                return false;
-            }
-
-            return false;
-
-        });
-
-        //http://jqueryvalidation.org/documentation/
-        $('#formulario').validate({
-            rules: {
-                nombre: {
-                    required: true,
-                    minlength: 3,
-                    maxlength: 24,
-                    caracteresespeciales: true
-                },
-                apellido: {
-                    required: true,
-                    minlength: 3,
-                    maxlength: 24,
-                    caracteresespeciales: true
-                },
-            },
-            messages: {
-                nombre: {
-                    required: "Introduce tu nombre",
-                    maxlength: "Máximo 24 carácteres",
-                    minlength: "Cómo mínimo 3 carácteres"
-                },
-                apellido: {
-                    required: "Introduce tu primer apellido",
-                    maxlength: "Máximo 24 carácteres",
-                    minlength: "Cómo mínimo 3 letras"
-                },
-            },
-            highlight: function(element) {
-                $(element).closest('.control-group').removeClass('success').addClass('error');
-            },
-            success: function(element) {
-                element
-                        .text('OK!').addClass('valid')
-                        .closest('.control-group').removeClass('error').addClass('success');
-            }
-        });
-
         //clave ajena usuario
         cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
 
@@ -144,6 +80,143 @@ var control_profesor_list = function(path) {
             return false;
         });
 
+////        //clave ajena usuario
+//        cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
+//        $(prefijo_div + '#id_usuario_button').unbind('click');
+//        $(prefijo_div + '#id_usuario_button').click(function() {
+//            loadForeign('usuario', '#modal02', control_usuario_list, callbackSearchHilo);
+//            function callbackSearchHilo(id) {
+//                $(prefijo_div + '#modal02').modal('hide');
+//                $(prefijo_div + '#modal02').data('modal', null);
+//                $(prefijo_div + '#id_usuario').val($(this).attr('id'));
+//                cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario');
+//                return false;
+//            }
+//            return false;
+//        });
+        // Validación del formulario.
+        //http://jqueryvalidation.org/documentation/
+        $('#formulario').validate({
+            rules: {
+                id_usuario: {
+                    required: true,
+                    // maxlength: 255
+                },
+                nombre: {
+                    required: true,
+                    maxlength: 255
+                },
+                cif: {
+                    required: true,
+                    maxlength: 255
+                },
+                direccion: {
+                    required: true,
+                    maxlength: 255
+                            //       digits: true
+                },
+                localidad: {
+                    required: true,
+                    maxlength: 255
+                },
+                provincia: {
+                    required: true,
+                    maxlength: 255
+                },
+                pais: {
+                    required: true,
+                    maxlength: 255
+                },
+                telefono: {
+                    required: true,
+                    maxlength: 255
+                },
+                fax: {
+                    required: true,
+                    maxlength: 255
+                },
+                actividad: {
+                    required: true,
+                    maxlength: 255
+                },
+                nombrecontacto: {
+                    required: true,
+                    maxlength: 255
+                },
+                emailcontacto: {
+                    required: true,
+                    maxlength: 255,
+                    email: true
+                },
+                validada: {
+                    required: true,
+                    maxlength: 255
+                }
+
+            },
+            messages: {
+                id_usuario: {
+                    required: "Elige un id_usuario.",
+                },
+                nombre: {
+                    required: "Introduce un Nombre."
+                },
+                cif: {
+                    required: "Introduce un Cif.",
+                },
+                direccion: {
+                    required: "Introduce una Direccion.",
+                },
+                localidad: {
+                    required: "Introduce una Localidad",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                provincia: {
+                    required: "Introduce una Provincia",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                pais: {
+                    required: "Introduce un Pais",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                telefono: {
+                    required: "Introduce un Telefono",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                fax: {
+                    required: "Introduce un Fax",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                actividad: {
+                    required: "Introduce una Actividad",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                nombrecontacto: {
+                    required: "Introduce un Nombre de Contacto",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                emailcontacto: {
+                    required: "Introduce un Correo Electrónico",
+                    maxlength: "Tiene que ser menos de 255 caracteres",
+                    email: "Introduzca un correo correcto"
+                },
+                validada: {
+                    required: "Introduzca 1 ó 0",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                }
+
+
+            },
+            highlight: function(element) {
+                $(element).closest('.control-group').removeClass('success').addClass('error');
+            },
+            success: function(element) {
+                element
+                        .text('OK!').addClass('valid')
+                        .closest('.control-group').removeClass('error').addClass('success');
+            }
+        });
+
         $(prefijo_div + '#submitForm').unbind('click');
         $(prefijo_div + '#submitForm').click(function() {
             if ($('#formulario').valid()) {
@@ -152,7 +225,13 @@ var control_profesor_list = function(path) {
             return false;
         });
     }
-
+    function cargaClaveAjena(lugarID, lugarDesc, objetoClaveAjena) {
+        if ($(prefijo_div + lugarID).val() !== "") {
+            objInfo = objeto(objetoClaveAjena, path).getOne($(prefijo_div + lugarID).val());
+            props = Object.getOwnPropertyNames(objInfo);
+            $(prefijo_div + lugarDesc).empty().html(objInfo[props[1]]);
+        }
+    }
     function removeConfirmationModalForm(view, place, id) {
         cabecera = "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>" +
                 "<h3 id=\"myModalLabel\">Borrado de " + view.getObject().getName() + "</h3>";
@@ -277,6 +356,41 @@ var control_profesor_list = function(path) {
                 thisObject.inicia(view, id, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue);
                 return false;
             });
+
+            // Navegar por la paginación capturando las teclas Re Pág - Av Pág   
+
+//            window.onkeydown = tecla;
+//            function tecla(event) {
+//                event.preventDefault();
+//                num = event.keyCode;
+//                if (num == 112)
+////                    alert("Pulsaste F1");
+//    
+//    
+//
+//                if (num == 123) {
+////                    alert("Pulsaste F12"); 
+//
+//                }
+//            }
+
+
+
+
+
+
+
+
+            //    $(prefijo_div + '.pagination_link').unbind('keypress');
+            $(prefijo_div + '.pagination_link').keypress(function(event) {
+                if (event.wich == 100) {
+                    var id = $(this).attr('id');
+                    rpp = $(prefijo_div + "#rpp option:selected").text();
+                    thisObject.inicia(view, id + 1, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue);
+                    return false;
+                }
+            });
+
 
             //boton de crear un nuevo elemento
 
