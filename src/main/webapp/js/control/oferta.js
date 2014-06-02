@@ -3,12 +3,12 @@ var control_oferta_list = function(path) {
 
     var prefijo_div = "#oferta_list ";
 
-    function cargaBotoneraMantenimiento() {
+  function cargaBotoneraMantenimiento() {
         var botonera = [
-            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
-            {"class": "btn btn-mini action02", "icon": "icon-zoom-in", "text": ""},
+//            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
+            {"class": "btn btn-success btn-mini action02", "icon": "icon-zoom-in icon-white", "text": ""},
             {"class": "btn btn-mini action03", "icon": "icon-pencil", "text": ""},
-            {"class": "btn btn-mini action04", "icon": "icon-trash", "text": ""}
+            {"class": "btn btn-danger btn-mini action04", "icon": "icon-trash icon-white", "text": ""}
         ];
         return botonera;
     }
@@ -27,31 +27,28 @@ var control_oferta_list = function(path) {
             $(prefijo_div + place).empty();
         });
     }
+    function loadForeign(strObjetoForeign, strPlace, control, functionCallback) {
+        var objConsulta = objeto(strObjetoForeign, path);
+        var consultaView = vista(objConsulta, path);
 
+        cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel">Elección</h3>';
+        pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
+        listado = consultaView.getEmptyList();
+        loadForm(strPlace, cabecera, listado, pie, true);
+
+        $(prefijo_div + strPlace).css({
+            'right': '20px',
+            'left': '20px',
+            'width': 'auto',
+            'margin': '0',
+            'display': 'block'
+        });
+
+        var consultaControl = control(path);
+        consultaControl.inicia(consultaView, 1, null, null, 10, null, null, null, functionCallback, null, null, null);
+
+    }
     function loadModalForm(view, place, id, action) {
-
-        jQuery.validator.addMethod("caracteresespeciales",
-                function(value, element) {
-                    return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
-                },
-                "Nada de caracteres especiales, por favor"
-                );
-
-        jQuery.validator.addMethod("nifES",
-                function(value, element) {
-                    "use strict";
-                    value = value.toUpperCase();
-                    if (!value.match('((^[A-Z]{1}[0-9]{7}[A-Z0-9]{1}$|^[T]{1}[A-Z0-9]{8}$)|^[0-9]{8}[A-Z]{1}$)')) {
-                        return false;
-                    }
-                    if (/^[0-9]{8}[A-Z]{1}$/.test(value)) {
-                        return ("TRWAGMYFPDXBNJZSQVHLCKE".charAt(value.substring(8, 0) % 23) === value.charAt(8));
-                    }
-                    return false;
-                },
-                "Por favor, introduce un DNI correcto"
-                );
-
         cabecera = '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         if (action == "edit") {
             cabecera += '<h3 id="myModalLabel">Edición de ' + view.getObject().getName() + "</h3>";
@@ -65,194 +62,135 @@ var control_oferta_list = function(path) {
             view.doFillForm(id);
         } else {
             $(prefijo_div + '#id').val('0').attr("disabled", true);
-            //$(prefijo_div + '#nombre').focus();
+            $(prefijo_div + '#nombre').focus();
         }
+        //clave ajena usuario
+        cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
 
-        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
-
-        //en desarrollo: tratamiento de las claves ajenas ...
         $(prefijo_div + '#id_usuario_button').unbind('click');
         $(prefijo_div + '#id_usuario_button').click(function() {
-
-            var usuario = objeto('usuario', path);
-            var usuarioView = vista(usuario, path);
-
-            cabecera = '<button id="full-width" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>' + '<h3 id="myModalLabel">Elección</h3>';
-            pie = '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cerrar</button>';
-            listado = usuarioView.getEmptyList();
-            loadForm('#modal02', cabecera, listado, pie, true);
-
-            $(prefijo_div + '#modal02').css({
-                'right': '20px',
-                'left': '20px',
-                'width': 'auto',
-                'margin': '0',
-                'display': 'block'
-            });
-
-            var usuarioControl = control_usuario_list(path);
-            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchOferta, null, null, null);
-
-            function callbackSearchOferta(id) {
+            loadForeign('usuario', '#modal02', control_usuario_list, callbackSearchUsuario);
+            function callbackSearchUsuario(id) {
                 $(prefijo_div + '#modal02').modal('hide');
                 $(prefijo_div + '#modal02').data('modal', null);
                 $(prefijo_div + '#id_usuario').val($(this).attr('id'));
-                $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
+                cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario');
                 return false;
             }
-
             return false;
-
         });
 
+        // Validación del formulario.
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
             rules: {
                 id_usuario: {
                     required: true,
-                    maxlength: 6,
-                    digits: true
-                },
-                dni: {
-                    required: true,
-                    maxlength: 9,
-                    caracteresespeciales: true,
-                    nifES: true
-
-                },
-                numexpediente: {
-                    required: true,
-                    minlength: 4,
-                    maxlength: 4,
-                    caracteresespeciales: true,
-                    digits: true
+                    // maxlength: 255
                 },
                 nombre: {
                     required: true,
-                    minlength: 3,
-                    maxlength: 50,
-                    caracteresespeciales: true
+                    maxlength: 255
                 },
-                ape1: {
+                cif: {
                     required: true,
-                    maxlength: 50,
-                    caracteresespeciales: true
+                    maxlength: 255
                 },
-                ape2: {
-                    maxlength: 50
-                },
-                sexo: {
+                direccion: {
                     required: true,
-                    maxlength: 6,
-                    caracteresespeciales: true
-
+                    maxlength: 255
+                            //       digits: true
                 },
-                domicilio: {
+                localidad: {
                     required: true,
-                    maxlength: 150,
-                    caracteresespeciales: true
-
-                },
-                codpostal: {
-                    required: true,
-                    minlength: 5,
-                    maxlength: 5,
-                    number: true
-                },
-                poblacion: {
-                    required: true,
-                    maxlength: 50,
-                    caracteresespeciales: true
-
+                    maxlength: 255
                 },
                 provincia: {
                     required: true,
-                    maxlength: 50,
-                    caracteresespeciales: true
-
+                    maxlength: 255
+                },
+                pais: {
+                    required: true,
+                    maxlength: 255
                 },
                 telefono: {
-                    caracteresespeciales: true,
                     required: true,
-                    maxlength: 9,
-                    minlength: 9,
-                    number: true
+                    maxlength: 255
                 },
-                email: {
+                fax: {
                     required: true,
-                    maxlength: 150,
+                    maxlength: 255
+                },
+                actividad: {
+                    required: true,
+                    maxlength: 255
+                },
+                nombrecontacto: {
+                    required: true,
+                    maxlength: 255
+                },
+                emailcontacto: {
+                    required: true,
+                    maxlength: 255,
                     email: true
                 },
-                validado: {
+                validada: {
                     required: true,
-                    maxlength: 2,
-                    caracteresespeciales: true
+                    maxlength: 255
                 }
+
             },
             messages: {
                 id_usuario: {
-                    required: "Debes de registrarte con login y password",
-                    maxlength: "Máximo 6 dígitos"
-                },
-                numexpediente: {
-                    required: "Introduce un número de expediente",
-                    maxlength: "Máximo 4 digitos",
-                    digits: "Número de expediente incorrecto"
-                },
-                dni: {
-                    required: "Introduce tu nombre"
+                    required: "Elige un id_usuario.",
                 },
                 nombre: {
-                    required: "Introduce tu nombre",
-                    maxlength: "Máximo 50 letras",
-                    minlength: "Cómo mínimo 3 letras"
+                    required: "Introduce un Nombre."
                 },
-                ape1: {
-                    required: "Introduce tu apellido",
-                    maxlength: "Máximo 50 carácteres",
-                    minlength: "Cómo mínimo 3 letras"
+                cif: {
+                    required: "Introduce un Cif.",
                 },
-                ape2: {
-                    maxlength: "Máximo 50 carácteres",
-                    minlength: "Cómo mínimo 3 letras"
+                direccion: {
+                    required: "Introduce una Direccion.",
                 },
-                sexo: {
-                    required: "Introduce tu sexo",
-                    maxlength: "Hombre o mujer"
-                },
-                domicilio: {
-                    required: "Introduce tu domicilio",
-                    maxlength: "Máximo 150 carácteres"
-                },
-                codpostal: {
-                    required: "Introduce tu código postal",
-                    maxlength: "Máximo 5 dígitos",
-                    minlength: "Cómo mínimo 5 dígitos",
-                    digits: "Introduce un código postal"
-                },
-                poblacion: {
-                    required: "Introduce tu población",
-                    maxlength: "Máximo 50 carácteres"
+                localidad: {
+                    required: "Introduce una Localidad",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
                 },
                 provincia: {
-                    required: "Introduce tu provincia",
-                    maxlength: "Máximo 50 carácteres"
+                    required: "Introduce una Provincia",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                pais: {
+                    required: "Introduce un Pais",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
                 },
                 telefono: {
-                    required: "Introduce tu número de telefono",
-                    maxlength: "Máximo 9 dígitos",
-                    minlength: "Cómo mínimo 9 dígitos",
-                    number: "Por favor, introduce tu número"
+                    required: "Introduce un Telefono",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
                 },
-                email: {
-                    required: "Introduce tu correo electrónico",
-                    maxlength: "Máximo 150 carácteres",
-                    email: "Por favor, introduce un email válido"
+                fax: {
+                    required: "Introduce un Fax",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
                 },
-                validado: {
-                    required: "Introduce tu Si o No",
-                    maxlength: "Máximo 2 carácteres"
+                actividad: {
+                    required: "Introduce una Actividad",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                nombrecontacto: {
+                    required: "Introduce un Nombre de Contacto",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
+                },
+                emailcontacto: {
+                    required: "Introduce un Correo Electrónico",
+                    maxlength: "Tiene que ser menos de 255 caracteres",
+                    email: "Introduzca un correo correcto"
+                },
+                validada: {
+                    required: "Introduzca 1 ó 0",
+                    maxlength: "Tiene que ser menos de 255 caracteres"
                 }
+
 
             },
             highlight: function(element) {
@@ -273,7 +211,13 @@ var control_oferta_list = function(path) {
             return false;
         });
     }
-
+    function cargaClaveAjena(lugarID, lugarDesc, objetoClaveAjena) {
+        if ($(prefijo_div + lugarID).val() !== "") {
+            objInfo = objeto(objetoClaveAjena, path).getOne($(prefijo_div + lugarID).val());
+            props = Object.getOwnPropertyNames(objInfo);
+            $(prefijo_div + lugarDesc).empty().html(objInfo[props[1]]);
+        }
+    }
     function removeConfirmationModalForm(view, place, id) {
         cabecera = "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>" +
                 "<h3 id=\"myModalLabel\">Borrado de " + view.getObject().getName() + "</h3>";
@@ -298,7 +242,7 @@ var control_oferta_list = function(path) {
     }
 
     return {
-        inicia: function(view, pag, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, prueba, systemfilter, systemfilteroperator, systemfiltervalue) {
+        inicia: function(view, pag, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue) {
 
             var thisObject = this;
 
@@ -397,6 +341,15 @@ var control_oferta_list = function(path) {
                 rpp = $(prefijo_div + "#rpp option:selected").text();
                 thisObject.inicia(view, id, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue);
                 return false;
+            });
+
+            $(prefijo_div + '.pagination_link').keypress(function(event) {
+                if (event.wich == 100) {
+                    var id = $(this).attr('id');
+                    rpp = $(prefijo_div + "#rpp option:selected").text();
+                    thisObject.inicia(view, id + 1, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue);
+                    return false;
+                }
             });
 
             //boton de crear un nuevo elemento
