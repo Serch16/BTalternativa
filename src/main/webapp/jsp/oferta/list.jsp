@@ -54,7 +54,8 @@
             %>          <!-- // Creación de oferta -->
             <!-- Filtro -->
             <div class="filtro well sidebar-nav hidden-phone hidden-tablet">
-                <legend>Filtro</legend> 
+                <legend>Filtro</legend>             
+                <div id="registers"></div>     
                 <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
                     <fieldset>
                         <select id="selectFilter" name="filter"  class="span12">
@@ -86,8 +87,7 @@
                 </form>
                 <!-- Información del filtro -->
                 <div id="order"></div>
-                <div id="filter"></div>            
-                <div id="registers"></div>          <!-- // Información del filtro -->   
+                <div id="filter"></div>     <!-- // Información del filtro -->   
             </div>          <!-- Filtro -->
         </div>          <!-- // Columna información izquierda -->
         <!-- Información específica usuario -->

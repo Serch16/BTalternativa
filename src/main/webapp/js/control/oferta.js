@@ -3,7 +3,7 @@ var control_oferta_list = function(path) {
 
     var prefijo_div = "#oferta_list ";
 
-  function cargaBotoneraMantenimiento() {
+    function cargaBotoneraMantenimiento() {
         var botonera = [
 //            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
             {"class": "btn btn-success btn-mini action02", "icon": "icon-zoom-in icon-white", "text": ""},
@@ -299,6 +299,11 @@ var control_oferta_list = function(path) {
                 $(prefijo_div + '.btn.btn-mini.action04').unbind('click');
                 $(prefijo_div + '.btn.btn-mini.action04').click(function() {
                     removeConfirmationModalForm(view, '#modal01', $(this).attr('id'));
+                });
+
+                $(prefijo_div + '.btn.btn-mini.action05').unbind('click');
+                $(prefijo_div + '.btn.btn-mini.action05').click(function() {
+                    cargaCompras($(this).attr('id'));
                 });
 
             }

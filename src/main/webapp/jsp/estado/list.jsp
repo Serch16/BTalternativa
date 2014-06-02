@@ -38,7 +38,8 @@
             <div class="filtro well sidebar-nav">
                 <legend>Filtro</legend> 
                 <form class="navbar-form pull-right" action="Controller" method="post" id="empresaForm">
-                    <fieldset>
+                    <fieldset>            
+                        <div id="registers"></div>     
                         <select id="selectFilter" name="filter"  class="span12">
                             <%
                                 while (oIterador.hasNext()) {
@@ -68,8 +69,7 @@
                 </form>
                 <!-- Información del filtro -->
                 <div id="order"></div>
-                <div id="filter"></div>            
-                <div id="registers"></div>          <!-- // Información del filtro -->   
+                <div id="filter"></div>     <!-- // Información del filtro -->   
             </div>          <!-- Filtro -->
         </div>          <!-- // Columna información izquierda -->
         <!-- Información específica usuario -->

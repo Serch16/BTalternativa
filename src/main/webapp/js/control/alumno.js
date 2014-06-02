@@ -6,6 +6,7 @@ var control_alumno_list = function(path) {
     function cargaBotoneraMantenimiento() {
         var botonera = [
 //            {"class": "btn btn-mini action01", "icon": "icon-eye-open", "text": ""},
+            {"class": "btn btn-info btn-mini action05", "icon": "icon-info-sign icon-white", "text": ""},
             {"class": "btn btn-success btn-mini action02", "icon": "icon-zoom-in icon-white", "text": ""},
             {"class": "btn btn-mini action03", "icon": "icon-pencil", "text": ""},
             {"class": "btn btn-danger btn-mini action04", "icon": "icon-trash icon-white", "text": ""}
@@ -211,6 +212,21 @@ var control_alumno_list = function(path) {
             return false;
         });
     }
+
+    function cargaOfertas(id) {
+
+        var oferta = objeto('oferta', path);
+        var ofertaView = vista(oferta, path);
+
+        $('#indexContenidoJsp').empty();
+        $('#indexContenido').empty().append(ofertaView.getEmptyList());
+
+        var ofertaControl = control_oferta_list(path);
+        ofertaControl.inicia(ofertaView, 1, null, null, 10, null, null, null, null, "id_usuario", "equals", id);
+        return false;
+
+    }
+
     function cargaClaveAjena(lugarID, lugarDesc, objetoClaveAjena) {
         if ($(prefijo_div + lugarID).val() !== "") {
             objInfo = objeto(objetoClaveAjena, path).getOne($(prefijo_div + lugarID).val());
@@ -300,6 +316,12 @@ var control_alumno_list = function(path) {
                 $(prefijo_div + '.btn.btn-mini.action04').click(function() {
                     removeConfirmationModalForm(view, '#modal01', $(this).attr('id'));
                 });
+
+                $(prefijo_div + '.btn.btn-mini.action05').unbind('click');
+                $(prefijo_div + '.btn.btn-mini.action05').click(function() {
+                    cargaCompras($(this).attr('id'));
+                });
+
 
             }
 

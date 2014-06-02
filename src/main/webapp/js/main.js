@@ -293,7 +293,7 @@ var vista = function(objeto, ContextPath) {
         },
         getRegistersInfo: function(filter, filteroperator, filtervalue, systemfilter, systemfilteroperator, systemfiltervalue) {
             regs = this.getObject().getRegisters(filter, filteroperator, filtervalue, systemfilter, systemfilteroperator, systemfiltervalue);
-            return "<p>Mostrando " + regs + " registros.</p>";
+            return "<p><strong>Mostrando " + regs + " registros.</strong></p>";
         },
         getOrderInfo: function(order, ordervalue) {
             if (order) {
