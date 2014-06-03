@@ -62,7 +62,7 @@ var control_oferta_list = function(path) {
             view.doFillForm(id);
         } else {
             $(prefijo_div + '#id').val('0').attr("disabled", true);
-            $(prefijo_div + '#nombre').focus();
+            //$(prefijo_div + '#nombre').focus();
         }
         //clave ajena usuario
         cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
@@ -348,14 +348,14 @@ var control_oferta_list = function(path) {
                 return false;
             });
 
-            $(prefijo_div + '.pagination_link').keypress(function(event) {
-                if (event.wich == 100) {
-                    var id = $(this).attr('id');
-                    rpp = $(prefijo_div + "#rpp option:selected").text();
-                    thisObject.inicia(view, id + 1, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue);
-                    return false;
-                }
-            });
+//            $(prefijo_div + '.pagination_link').keypress(function(event) {
+//                if (event.wich == 100) {
+//                    var id = $(this).attr('id');
+//                    rpp = $(prefijo_div + "#rpp option:selected").text();
+//                    thisObject.inicia(view, id + 1, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue);
+//                    return false;
+//                }
+//            });
 
             //boton de crear un nuevo elemento
 

@@ -68,7 +68,24 @@ var control_usuario_list = function(path) {
             //$(prefijo_div + '#nombre').focus();
         }
 
-        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
+//        $(prefijo_div + '#id_usuario_desc').empty().html(objeto('usuario', path).getOne($(prefijo_div + '#id_usuario').val()).descripcion);
+
+        //clave ajena oferta
+        cargaClaveAjena('#id_oferta', '#id_oferta_desc', 'oferta')
+
+        $(prefijo_div + '#id_oferta_button').unbind('click');
+        $(prefijo_div + '#id_oferta_button').click(function() {
+            loadForeign('oferta', '#modal02', control_oferta_list, callbackSearchOferta);
+            function callbackSearchOferta(id) {
+                $(prefijo_div + '#modal02').modal('hide');
+                $(prefijo_div + '#modal02').data('modal', null);
+                $(prefijo_div + '#id_oferta').val($(this).attr('id'));
+                cargaClaveAjena('#id_oferta', '#id_oferta_desc', 'oferta');
+                return false;
+            }
+            return false;
+        });
+
 
         //en desarrollo: tratamiento de las claves ajenas ...
         $(prefijo_div + '#id_usuario_button').unbind('click');
@@ -91,9 +108,9 @@ var control_usuario_list = function(path) {
             });
 
             var usuarioControl = control_usuario_list(path);
-            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchOferta, null, null, null);
+            usuarioControl.inicia(usuarioView, 1, null, null, 10, null, null, null, callbackSearchTipodocumento, null, null, null);
 
-            function callbackSearchOferta(id) {
+            function callbackSearchTipodocumento(id) {
                 $(prefijo_div + '#modal02').modal('hide');
                 $(prefijo_div + '#modal02').data('modal', null);
                 $(prefijo_div + '#id_usuario').val($(this).attr('id'));
@@ -108,20 +125,47 @@ var control_usuario_list = function(path) {
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
             rules: {
-                descripcion: {
+                id_usuario: {
                     required: true,
-                    maxlength: 24,
-                    minlength: 4,
-                    digits: false,
+                    maxlength: 6,
+                    digits: true
+                },
+                nombre: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 50,
                     caracteresespeciales: true
+                },
+                apellido: {
+                    required: true,
+                    maxlength: 50,
+                    caracteresespeciales: true
+                },
+                correo: {
+                    required: true,
+                    maxlength: 150,
+                    email: true
                 }
             },
             messages: {
-                descripcion: {
+                id_usuario: {
                     required: "Debes de registrarte con login y password",
-                    maxlength: "Máximo 24 caracteres",
-                    minlength: "Cómo mínimo palabras de 4 letras",
-                    digits: "Sólo palabras",
+                    maxlength: "Máximo 6 dígitos"
+                },
+                nombre: {
+                    required: "Introduce tu nombre",
+                    maxlength: "Máximo 50 letras",
+                    minlength: "Cómo mínimo 3 letras"
+                },
+                apellido: {
+                    required: "Introduce tu primer apellido",
+                    maxlength: "Máximo 50 carácteres",
+                    minlength: "Cómo mínimo 3 letras"
+                },
+                correo: {
+                    required: "Introduce tu correo electrónico",
+                    maxlength: "Máximo 150 carácteres",
+                    email: "Por favor, introduce un email válido"
                 }
             },
             highlight: function(element) {
@@ -141,6 +185,14 @@ var control_usuario_list = function(path) {
             }
             return false;
         });
+    }
+
+    function cargaClaveAjena(lugarID, lugarDesc, objetoClaveAjena) {
+        if ($(prefijo_div + lugarID).val() != "") {
+            objInfo = objeto(objetoClaveAjena, path).getOne($(prefijo_div + lugarID).val());
+            props = Object.getOwnPropertyNames(objInfo);
+            $(prefijo_div + lugarDesc).empty().html(objInfo[props[1]]);
+        }
     }
 
     function removeConfirmationModalForm(view, place, id) {
@@ -167,7 +219,7 @@ var control_usuario_list = function(path) {
     }
 
     return {
-        inicia: function(view, pag, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, prueba, systemfilter, systemfilteroperator, systemfiltervalue) {
+        inicia: function(view, pag, order, ordervalue, rpp, filter, filteroperator, filtervalue, callback, systemfilter, systemfilteroperator, systemfiltervalue) {
 
             var thisObject = this;
 
@@ -193,11 +245,11 @@ var control_usuario_list = function(path) {
 
             $(prefijo_div + "#registers").empty().append(view.getLoading()).html(view.getRegistersInfo(filter, filteroperator, filtervalue, systemfilter, systemfilteroperator, systemfiltervalue));
 
-            //muestra la frase de usuario de la ordenación de la tabla
+            //muestra la frase de estado de la ordenación de la tabla
 
             $(prefijo_div + "#order").empty().append(view.getLoading()).html(view.getOrderInfo(order, ordervalue));
 
-            //muestra la frase de usuario del filtro de la tabla aplicado
+            //muestra la frase de estado del filtro de la tabla aplicado
 
             $(prefijo_div + "#filter").empty().append(view.getLoading()).html(view.getFilterInfo(filter, filteroperator, filtervalue));
 

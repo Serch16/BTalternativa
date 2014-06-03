@@ -31,9 +31,9 @@ public class AlumnoGetpages implements GenericOperation {
                         oFilterBean.setFilterValue(request.getParameter("filtervalue"));
                         oFilterBean.setFilterOrigin("user");
                         alFilter.add(oFilterBean);
-                    } 
-                } 
-            } 
+                    }
+                }
+            }
             if (request.getParameter("systemfilter") != null) {
                 if (request.getParameter("systemfilteroperator") != null) {
                     if (request.getParameter("systemfiltervalue") != null) {

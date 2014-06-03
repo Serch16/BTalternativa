@@ -25,7 +25,7 @@ public class UsuarioGet implements GenericOperation {
             }
             return data;
         } catch (Exception e) {
-            throw new ServletException("LenguajeGetJson: View Error: " + e.getMessage());
+            throw new ServletException("UsuarioGetJson: View Error: " + e.getMessage());
         }
     }
 }

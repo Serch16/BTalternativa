@@ -11,13 +11,14 @@ import es.imeon.dao.AlumnoDao;
 import es.imeon.helper.Conexion;
 
 public class AlumnoRemove implements GenericOperation {
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         try {
             AlumnoDao oAlumnoDAO = new AlumnoDao(Conexion.getConection());
-            AlumnoBean oAlumno = new AlumnoBean();                                           
-            oAlumno.setId(Integer.parseInt(request.getParameter("id")));            
+            AlumnoBean oAlumno = new AlumnoBean();
+            oAlumno.setId(Integer.parseInt(request.getParameter("id")));
             Map<String, String> data = new HashMap<>();
             if (oAlumno != null) {
                 oAlumnoDAO.remove(oAlumno);
@@ -29,7 +30,7 @@ public class AlumnoRemove implements GenericOperation {
             }
             Gson gson = new Gson();
             String resultado = gson.toJson(data);
-            return resultado;        
+            return resultado;
         } catch (Exception e) {
             throw new ServletException("AlumnoRemoveJson: View Error: " + e.getMessage());
         }

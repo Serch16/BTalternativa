@@ -24,9 +24,9 @@ public class AlumnoGetregisters implements GenericOperation {
                         oFilterBean.setFilterValue(request.getParameter("filtervalue"));
                         oFilterBean.setFilterOrigin("user");
                         alFilter.add(oFilterBean);
-                    } 
-                } 
-            } 
+                    }
+                }
+            }
             if (request.getParameter("systemfilter") != null) {
                 if (request.getParameter("systemfilteroperator") != null) {
                     if (request.getParameter("systemfiltervalue") != null) {
@@ -38,7 +38,7 @@ public class AlumnoGetregisters implements GenericOperation {
                         alFilter.add(oFilterBean);
                     }
                 }
-            }       
+            }
             AlumnoDao oAlumnoDAO = new AlumnoDao(Conexion.getConection());
             int pages = oAlumnoDAO.getCount(alFilter);
             data = "{\"data\":\"" + Integer.toString(pages) + "\"}";

@@ -13,8 +13,8 @@ public class AlumnoGet implements GenericOperation {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String data;         
-        try {            
+        String data;
+        try {
             if (request.getParameter("id") == null) {
                 data = "{\"error\":\"id is mandatory\"}";
             } else {
@@ -26,7 +26,6 @@ public class AlumnoGet implements GenericOperation {
                 gsonBuilder.setDateFormat("dd/MM/yyyy");
                 Gson gson = gsonBuilder.create();
                 data = gson.toJson(oAlumno);
-                
             }
             return data;
         } catch (Exception e) {

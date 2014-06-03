@@ -1,11 +1,11 @@
 <%@page import="es.imeon.bean.UsuarioBean"%>
-<% UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean"); %>
+<% UsuarioBean oUsuario = (UsuarioBean) request.getSession().getAttribute("usuarioBean");%>
 <% if (oUsuario == null) { %>
 <h2>Problema de autenticación</h2>
 <h4>"Usuario" o "Contraseña" incorrectos.</h4>
 <% } else {%>
 <h3>¡Bienvenid@, <%=oUsuario.getLogin()%>!</h3>
-<h4>Has accedido a la bolsa de trabajo del CIPFP Ausiàs March. </h4>
+<h4>Has accedido a la bolsa de trabajo del CIPFP Ausiàs March.</h4>
 <%
     if (oUsuario.getTipoUsuario().toString() == "Administrador") {
 %>

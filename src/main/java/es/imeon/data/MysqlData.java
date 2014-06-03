@@ -3,7 +3,7 @@ package es.imeon.data;
 /**
  * Clase Mysql para acceder a bases de datos Mysql. Nivel data.
  *
- * @author rafael aznar
+ * @author rafael aznarn
  */
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -55,7 +55,7 @@ public class MysqlData implements GenericData {
         try {
             oConexionMySQL.setAutoCommit(false);
         } catch (SQLException e) {
-            throw new Exception("Mysql.initTrans: Error al iniciar transacci�n: " + e.getMessage());
+            throw new Exception("Mysql.initTrans: Error al iniciar transacción: " + e.getMessage());
         }
     }
 

@@ -40,9 +40,9 @@ public class UsuarioGetpage implements GenericOperation {
                         oFilterBean.setFilterValue(request.getParameter("filtervalue"));
                         oFilterBean.setFilterOrigin("user");
                         alFilter.add(oFilterBean);
-                    } 
-                } 
-            } 
+                    }
+                }
+            }
             if (request.getParameter("systemfilter") != null) {
                 if (request.getParameter("systemfilteroperator") != null) {
                     if (request.getParameter("systemfiltervalue") != null) {
@@ -58,12 +58,16 @@ public class UsuarioGetpage implements GenericOperation {
             HashMap<String, String> hmOrder = new HashMap<>();
 
             if (request.getParameter("order") != null) {
-                if (request.getParameter("ordervalue") != null) {           
-                    hmOrder.put(request.getParameter("order"), request.getParameter("ordervalue"));                  
-                } else             hmOrder=null;
-            } else             hmOrder=null;
+                if (request.getParameter("ordervalue") != null) {
+                    hmOrder.put(request.getParameter("order"), request.getParameter("ordervalue"));
+                } else {
+                    hmOrder = null;
+                }
+            } else {
+                hmOrder = null;
+            }
             UsuarioDao oUsuarioDAO = new UsuarioDao(Conexion.getConection());
-            List<UsuarioBean> oUsuarios = oUsuarioDAO.getPage( rpp, page, alFilter,hmOrder );
+            List<UsuarioBean> oUsuarios = oUsuarioDAO.getPage(rpp, page, alFilter, hmOrder);
             data = new Gson().toJson(oUsuarios);
             data = "{\"list\":" + data + "}";
             return data;
