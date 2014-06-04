@@ -305,7 +305,7 @@ var vista = function(objeto, ContextPath) {
         },
         getFilterInfo: function(filter, filteroperator, filtervalue) {
             if (filter) {
-                strFilter = "<p>Contenido filtrado (" + filter + " " + filteroperator + " " + filtervalue + ') <a href="#" id="linkQuitarFiltro">(Quitar filtro)</a></p>';
+                strFilter = "<p>Contenido filtrado (" + filter + " " + filteroperator + " " + filtervalue + ') <!--<a href="#" id="linkQuitarFiltro">(Quitar filtro)</a>--></p><button class="btn btn-inverse" type="button" id="linkQuitarFiltro">Quitar filtro</button>';
             } else {
                 strFilter = "<p>Contenido no filtrado</p>";
             }
