@@ -3,7 +3,9 @@ package es.imeon.data;
 /**
  * Clase Mysql para acceder a bases de datos Mysql. Nivel data.
  *
- * @author rafael aznarn
+ * @author Rafael Aznar.
+ * 
+ * @editado por: Sergio Martín Tárraga
  */
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -199,28 +201,28 @@ public class MysqlData implements GenericData {
                 while (iterator.hasNext()) {
                     FilterBean oFilterBean = (FilterBean) iterator.next();
                     switch (oFilterBean.getFilterOperator()) {
-                        case "like":
+                        case "contiene":
                             strSQL += " AND " + oFilterBean.getFilter() + " LIKE '%" + oFilterBean.getFilterValue() + "%'";
                             break;
-                        case "notlike":
+                        case "no contiene":
                             strSQL += " AND " + oFilterBean.getFilter() + " NOT LIKE '%" + oFilterBean.getFilterValue() + "%'";
                             break;
-                        case "equals":
+                        case "igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " = '" + oFilterBean.getFilterValue() + "'";
                             break;
-                        case "notequalto":
+                        case "diferente a":
                             strSQL += " AND " + oFilterBean.getFilter() + " <> '" + oFilterBean.getFilterValue() + "'";
                             break;
-                        case "less":
+                        case "menor a":
                             strSQL += " AND " + oFilterBean.getFilter() + " < " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "lessorequal":
+                        case "menor o igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " <= " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "greater":
+                        case "mayor a":
                             strSQL += " AND " + oFilterBean.getFilter() + " > " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "greaterorequal":
+                        case "mayor o igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " >= " + oFilterBean.getFilterValue() + "";
                             break;
                     }
@@ -261,28 +263,28 @@ public class MysqlData implements GenericData {
                 while (iterator.hasNext()) {
                     FilterBean oFilterBean = (FilterBean) iterator.next();
                     switch (oFilterBean.getFilterOperator()) {
-                        case "like":
+                        case "contiene":
                             strSQL += " AND " + oFilterBean.getFilter() + " LIKE '%" + oFilterBean.getFilterValue() + "%'";
                             break;
-                        case "notlike":
+                        case "no contiene":
                             strSQL += " AND " + oFilterBean.getFilter() + " NOT LIKE '%" + oFilterBean.getFilterValue() + "%'";
                             break;
-                        case "equals":
+                        case "igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " = '" + oFilterBean.getFilterValue() + "'";
                             break;
-                        case "notequalto":
+                        case "diferente a":
                             strSQL += " AND " + oFilterBean.getFilter() + " <> '" + oFilterBean.getFilterValue() + "'";
                             break;
-                        case "less":
+                        case "menor a":
                             strSQL += " AND " + oFilterBean.getFilter() + " < " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "lessorequal":
+                        case "menor o igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " <= " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "greater":
+                        case "mayor a":
                             strSQL += " AND " + oFilterBean.getFilter() + " > " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "greaterorequal":
+                        case "mayor o igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " >= " + oFilterBean.getFilterValue() + "";
                             break;
                     }
@@ -333,28 +335,28 @@ public class MysqlData implements GenericData {
                 while (iterator.hasNext()) {
                     FilterBean oFilterBean = (FilterBean) iterator.next();
                     switch (oFilterBean.getFilterOperator()) {
-                        case "like":
+                        case "contiene":
                             strSQL += " AND " + oFilterBean.getFilter() + " LIKE '%" + oFilterBean.getFilterValue() + "%'";
                             break;
-                        case "notlike":
+                        case "no contiene":
                             strSQL += " AND " + oFilterBean.getFilter() + " NOT LIKE '%" + oFilterBean.getFilterValue() + "%'";
                             break;
-                        case "equals":
+                        case "igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " = '" + oFilterBean.getFilterValue() + "'";
                             break;
-                        case "notequalto":
+                        case "diferente a":
                             strSQL += " AND " + oFilterBean.getFilter() + " <> '" + oFilterBean.getFilterValue() + "'";
                             break;
-                        case "less":
+                        case "menor a":
                             strSQL += " AND " + oFilterBean.getFilter() + " < " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "lessorequal":
+                        case "menor o igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " <= " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "greater":
+                        case "mayor a":
                             strSQL += " AND " + oFilterBean.getFilter() + " > " + oFilterBean.getFilterValue() + "";
                             break;
-                        case "greaterorequal":
+                        case "mayor o igual a":
                             strSQL += " AND " + oFilterBean.getFilter() + " >= " + oFilterBean.getFilterValue() + "";
                             break;
                     }

@@ -69,14 +69,14 @@
                         </select>
                         <span>
                             <select id="selectFilteroperator" name="filteroperator" class="span12">
-                                <option>like</option>
-                                <option>notlike</option>
-                                <option>equals</option>
-                                <option>notequalto</option>
-                                <option>less</option>
-                                <option>lessorequal</option>
-                                <option>greater</option>
-                                <option>greaterorequal</option> 
+                                <option>contiene</option>
+                                <option>no contiene</option>
+                                <option>igual a</option>
+                                <option>diferente a</option>
+                                <option>menor a</option>
+                                <option>menor o igual a</option>
+                                <option>mayor a</option>
+                                <option>mayor o igual a</option>  
                             </select>
                             <input id="inputFiltervalue" name="filtervalue" type="text" size="20" maxlength="50" value="" class="span12"/>
                         </span>
