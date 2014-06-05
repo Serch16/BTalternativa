@@ -6,7 +6,7 @@ public class OfertaBean {
 
     private Integer id = 0;
     private Integer id_empresa = 0;
-    private Date fechapubli;
+    private Date fechapubli = new Date();
     private String puesto = "";
     private String categoria = "";
     private Integer vacantes = 0;

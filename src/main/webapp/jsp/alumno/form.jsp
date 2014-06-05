@@ -26,15 +26,15 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputApe1">Primer Apellido:</label>
+        <label class="control-label"  for="inputApellido1">Primer Apellido:</label>
         <div class="controls">
-            <input type="text" id="ape1" name="ape1" size="15" placeholder="" />
+            <input type="text" id="apellido1" name="apellido1" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputApe2">Segundo Apellido:</label>
+        <label class="control-label"  for="inputApellido2">Segundo Apellido:</label>
         <div class="controls">
-            <input type="text" id="ape2" name="ape2" size="15" placeholder="" />
+            <input type="text" id="apellido2" name="apellido2" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
@@ -52,13 +52,13 @@
     <div class="control-group">
         <label class="control-label"  for="inputPaisnto">País nacimiento:</label>
         <div class="controls">
-            <input type="text" id="pais" name="pais" size="15" placeholder="" />
+            <input type="text" id="paisnto" name="paisnto" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputGenero">Género:</label>
         <div class="controls">
-            <select id="sexo" name="genero" type="text" autofocus="autofocus">
+            <select id="genero" name="genero" type="text" autofocus="autofocus">
                 <option value="">Seleccione una opción...</option>
                 <option value="Hombre">Hombre</option>
                 <option value="Mujer">Mujer</option>
@@ -102,15 +102,15 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputNumexpediente">Número Expediente:</label>
+        <label class="control-label"  for="inputExpediente">Número Expediente:</label>
         <div class="controls">
-            <input type="text" id="numexpediente" name="numexpediente" size="15" placeholder="" />
+            <input type="text" id="expediente" name="expediente" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputFamilia">Familia:</label>
+        <label class="control-label"  for="inputFamprofe">Familia:</label>
         <div class="controls">
-            <select id="validado" name="familia" type="text" autofocus="autofocus">
+            <select id="famprofe" name="famprofe" type="text" autofocus="autofocus">
                 <option value="">Seleccione una opción...</option>
                 <option value="Administración">Administración</option>
                 <option value="Comercio">Comercio</option>
@@ -120,9 +120,9 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputCiclo">Ciclo</label>
+        <label class="control-label"  for="inputCicloform">Ciclo</label>
         <div class="controls">
-            <select id="validado" name="ciclo" type="text" autofocus="autofocus">
+            <select id="cicloform" name="cicloform" type="text" autofocus="autofocus">
                 <option value="">Seleccione una opción...</option>
                 <option value="Gestión Administrativa (GM)">Gestión Administrativa (Grado Medio)</option>
                 <option value="Administración y Finanzas (GS)">Administración y Finanzas (Grado Superior)</option>

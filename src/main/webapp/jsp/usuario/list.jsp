@@ -63,7 +63,7 @@
                                 <option>menor a</option>
                                 <option>menor o igual a</option>
                                 <option>mayor a</option>
-                                <option>mayor o igual a</option> 
+                                <option>mayor o igual a</option>
                             </select>
                             <input id="inputFiltervalue" name="filtervalue" type="text" size="20" maxlength="50" value="" class="span12"/>
                         </span>

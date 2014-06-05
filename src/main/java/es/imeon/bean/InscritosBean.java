@@ -7,7 +7,7 @@ public class InscritosBean {
     private Integer id = 0;
     private Integer id_oferta = 0;
     private Integer id_alumno = 0;
-    private Date fecha;
+    private Date fecha = new Date();
     private Integer id_estado = 0;
 
     public InscritosBean() {

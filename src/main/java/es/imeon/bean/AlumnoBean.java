@@ -11,7 +11,7 @@ public class AlumnoBean {
     private String apellido1 = "";
     private String apellido2 = "";
     private String email = "";
-    private Date fechanto;
+    private Date fechanto = new Date();
     private String paisnto = "";
     private String genero = "";
     private String domicilio = "";
