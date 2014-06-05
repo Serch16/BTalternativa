@@ -65,7 +65,7 @@ var control_profesor_list = function(path) {
             $(prefijo_div + '#nombre').focus();
         }
         //clave ajena usuario
-        cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario')
+        cargaClaveAjena('#id_usuario', '#id_usuario_desc', 'usuario');
 
         $(prefijo_div + '#id_usuario_button').unbind('click');
         $(prefijo_div + '#id_usuario_button').click(function() {
