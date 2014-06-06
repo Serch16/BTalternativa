@@ -118,7 +118,7 @@ var vista = function(objeto, ContextPath) {
             return objeto;
         },
         getLoading: function() {
-            return '<img src="img/ajax-loading.gif" alt="cargando..." />';
+            return '<img src="img/ajax-loading.gif" alt="cargando..." class="center-block" />';
         },
         getPageLinks: function(page_number, rpp, filter, filteroperator, filtervalue, systemfilter, systemfilteroperator, systemfiltervalue) {
             page_number = parseInt(page_number);
@@ -305,7 +305,7 @@ var vista = function(objeto, ContextPath) {
         },
         getFilterInfo: function(filter, filteroperator, filtervalue) {
             if (filter) {
-                strFilter = "<p>Contenido filtrado (" + filter + " " + filteroperator + " " + filtervalue + ') <!--<a href="#" id="linkQuitarFiltro">(Quitar filtro)</a>--></p><button class="btn btn-inverse" type="button" id="linkQuitarFiltro">Quitar filtro</button>';
+                strFilter = "<p>Contenido filtrado (" + filter + " " + filteroperator + " " + filtervalue + ') <!--<a href="#" id="linkQuitarFiltro">(Quitar filtro)</a>--></p><button class="btn btn-inverse center-block" type="button" id="linkQuitarFiltro">Quitar filtro</button>';
             } else {
                 strFilter = "<p>Contenido no filtrado</p>";
             }
