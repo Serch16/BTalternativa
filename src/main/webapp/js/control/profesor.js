@@ -85,113 +85,33 @@ var control_profesor_list = function(path) {
         $('#formulario').validate({
             rules: {
                 id_usuario: {
-                    required: true,
-                    // maxlength: 255
+                    required: true
                 },
                 nombre: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 20,
+                    minlength: 3
                 },
-                cif: {
+                apellido: {
                     required: true,
-                    maxlength: 255
-                },
-                direccion: {
-                    required: true,
-                    maxlength: 255
-                            //       digits: true
-                },
-                localidad: {
-                    required: true,
-                    maxlength: 255
-                },
-                provincia: {
-                    required: true,
-                    maxlength: 255
-                },
-                pais: {
-                    required: true,
-                    maxlength: 255
-                },
-                telefono: {
-                    required: true,
-                    maxlength: 255
-                },
-                fax: {
-                    required: true,
-                    maxlength: 255
-                },
-                actividad: {
-                    required: true,
-                    maxlength: 255
-                },
-                nombrecontacto: {
-                    required: true,
-                    maxlength: 255
-                },
-                emailcontacto: {
-                    required: true,
-                    maxlength: 255,
-                    email: true
-                },
-                validada: {
-                    required: true,
-                    maxlength: 255
+                    maxlength: 20,
+                    minlength: 3
                 }
-
             },
             messages: {
                 id_usuario: {
-                    required: "Elige un id_usuario.",
+                    required: "Elige un Id. Usuario."
                 },
                 nombre: {
-                    required: "Introduce un Nombre."
+                    required: "Introduce un Nombre.",
+                    minlength: "Mínimo 3 caracteres, ej.: Ana",
+                    maxlength: "Máximo 20 caracteres"
                 },
-                cif: {
-                    required: "Introduce un Cif.",
-                },
-                direccion: {
-                    required: "Introduce una Direccion.",
-                },
-                localidad: {
-                    required: "Introduce una Localidad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                provincia: {
-                    required: "Introduce una Provincia",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                pais: {
-                    required: "Introduce un Pais",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                telefono: {
-                    required: "Introduce un Telefono",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                fax: {
-                    required: "Introduce un Fax",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                actividad: {
-                    required: "Introduce una Actividad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                nombrecontacto: {
-                    required: "Introduce un Nombre de Contacto",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                emailcontacto: {
-                    required: "Introduce un Correo Electrónico",
-                    maxlength: "Tiene que ser menos de 255 caracteres",
-                    email: "Introduzca un correo correcto"
-                },
-                validada: {
-                    required: "Introduzca 1 ó 0",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                apellido: {
+                    required: "Introduce un Apellido.",
+                    minlength: "Mínimo 3 caracteres",
+                    maxlength: "Máximo 20 caracteres"
                 }
-
-
             },
             highlight: function(element) {
                 $(element).closest('.control-group').removeClass('success').addClass('error');

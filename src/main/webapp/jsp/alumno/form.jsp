@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label"  for="inputDni">DNI o NIE:</label>
+        <label class="control-label"  for="inputDni">DNI:</label>
         <div class="controls">
             <input type="text" id="dni" name="dni" size="9" placeholder="" />
         </div>
@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label" for="descripcion">Fecha: </label> 
+        <label class="control-label" for="descripcion">Fecha nacimiento: </label> 
         <div class="controls">
             <input id="fecha" name="fecha" type="text" size="10" maxlength="50" value="" /> 
         </div>

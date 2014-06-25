@@ -134,15 +134,17 @@ var control_empresa_list = function(path) {
                     maxlength: 255,
                     email: true
                 },
-                validada: {
+                codpostal: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 5,
+                    minlength: 5,
+                    digits: true
                 }
 
             },
             messages: {
                 id_usuario: {
-                    required: "Elige un id_usuario.",
+                    required: "Elige un Id. Usuario.",
                 },
                 nombre: {
                     required: "Introduce un Nombre."
@@ -186,12 +188,12 @@ var control_empresa_list = function(path) {
                     maxlength: "Tiene que ser menos de 255 caracteres",
                     email: "Introduzca un correo correcto"
                 },
-                validada: {
-                    required: "Introduzca 1 ó 0",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                codpostal: {
+                    required: "Introduce tu código postal",
+                    maxlength: "Máximo 5 dígitos",
+                    minlength: "Cómo mínimo 5 dígitos",
+                    digits: "Introduce un código postal"
                 }
-
-
             },
             highlight: function(element) {
                 $(element).closest('.control-group').removeClass('success').addClass('error');

@@ -49,6 +49,29 @@ var control_alumno_list = function(path) {
 
     }
     function loadModalForm(view, place, id, action) {
+        
+        jQuery.validator.addMethod("caracteresespeciales",
+                function(value, element) {
+                    return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
+                },
+                "Nada de caracteres especiales, por favor"
+                );
+
+        jQuery.validator.addMethod("nifES",
+                function(value, element) {
+                    "use strict";
+                    value = value.toUpperCase();
+                    if (!value.match('((^[A-Z]{1}[0-9]{7}[A-Z0-9]{1}$|^[T]{1}[A-Z0-9]{8}$)|^[0-9]{8}[A-Z]{1}$)')) {
+                        return false;
+                    }
+                    if (/^[0-9]{8}[A-Z]{1}$/.test(value)) {
+                        return ("TRWAGMYFPDXBNJZSQVHLCKE".charAt(value.substring(8, 0) % 23) === value.charAt(8));
+                    }
+                    return false;
+                },
+                "Por favor, introduce un DNI correcto"
+                );
+        
         cabecera = '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         if (action == "edit") {
             cabecera += '<h3 id="myModalLabel">Edición de ' + view.getObject().getName() + "</h3>";
@@ -90,108 +113,150 @@ var control_alumno_list = function(path) {
                 },
                 nombre: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 20,
+                    minlength: 3
                 },
-                cif: {
+                dni: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 9,
+                    caracteresespeciales: true,
+                    nifES: true
                 },
-                direccion: {
+                apellido1: {
                     required: true,
-                    maxlength: 255
-                            //       digits: true
+                    maxlength: 20,
+                    minlength: 3
+                },
+                apellido2: {
+                    required: true,
+                    maxlength: 20,
+                    minlength: 3
+                },
+                domicilio: {
+                    required: true,
+                    maxlength: 150
                 },
                 localidad: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 150
                 },
                 provincia: {
                     required: true,
                     maxlength: 255
                 },
-                pais: {
+                paisnto: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 50,
+                    minlength: 3
                 },
                 telefono: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 9,
+                    minlength: 9
                 },
-                fax: {
+                telefono2: {
+                    maxlength: 9,
+                    minlength: 9
+                },
+                expediente: {
+                    required: true,
+                    maxlength: 4,
+                    minlength: 4,
+                    digits: true
+                },
+                familia: {
                     required: true,
                     maxlength: 255
                 },
-                actividad: {
+                ciclo: {
                     required: true,
                     maxlength: 255
                 },
-                nombrecontacto: {
+                genero: {
                     required: true,
                     maxlength: 255
                 },
-                emailcontacto: {
+                fecha: {
+                    required: true
+                }, 
+                codpostal: {
                     required: true,
-                    maxlength: 255,
-                    email: true
-                },
-                validada: {
-                    required: true,
-                    maxlength: 255
+                    maxlength: 5,
+                    minlength: 5,
+                    digits: true
                 }
-
             },
             messages: {
                 id_usuario: {
-                    required: "Elige un id_usuario.",
+                    required: "Elige un Id. Usuario."
                 },
                 nombre: {
-                    required: "Introduce un Nombre."
+                    required: "Introduce un Nombre.",
+                    minlength: "Mínimo 3 caracteres, ej.: Ana",
+                    maxlength: "Máximo 20 caracteres"
                 },
-                cif: {
-                    required: "Introduce un Cif.",
+                dni: {
+                    required: "Introduce tu DNI"
                 },
-                direccion: {
+                apellido1: {
+                    required: "Introduce un Apellido.",
+                    minlength: "Mínimo 3 caracteres",
+                    maxlength: "Máximo 20 caracteres"
+                },
+                apellido2: {
+                    required: "Introduce un Apellido.",
+                    minlength: "Mínimo 3 caracteres",
+                    maxlength: "Máximo 20 caracteres"
+                },
+                domicilio: {
                     required: "Introduce una Direccion.",
                 },
                 localidad: {
                     required: "Introduce una Localidad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                    maxlength: "Tiene que ser menos de 150 caracteres"
                 },
                 provincia: {
                     required: "Introduce una Provincia",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                    maxlength: "Tiene que ser menos de 150 caracteres"
                 },
-                pais: {
+                paisnto: {
                     required: "Introduce un Pais",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                    maxlength: "Tiene que ser menos de 50 caracteres"
                 },
                 telefono: {
                     required: "Introduce un Telefono",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                    maxlength: "Tiene que ser 9 dígitos",
+                    minlength: "Tiene que ser 9 dígitos",
+                    digits: "Sólo números"
                 },
-                fax: {
-                    required: "Introduce un Fax",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                telefono2: {
+                    maxlength: "Tiene que ser 9 dígitos",
+                    minlength: "Tiene que ser 9 dígitos",
+                    digits: "Sólo números"
                 },
-                actividad: {
-                    required: "Introduce una Actividad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                fecha: {
+                    required: "Introduce una fecha de nacimiento"
                 },
-                nombrecontacto: {
-                    required: "Introduce un Nombre de Contacto",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                genero: {
+                    required: "Introduce el Género"
                 },
-                emailcontacto: {
-                    required: "Introduce un Correo Electrónico",
-                    maxlength: "Tiene que ser menos de 255 caracteres",
-                    email: "Introduzca un correo correcto"
+                codpostal: {
+                    required: "Introduce tu código postal",
+                    maxlength: "Máximo 5 dígitos",
+                    minlength: "Cómo mínimo 5 dígitos",
+                    digits: "Introduce un código postal"
                 },
-                validada: {
-                    required: "Introduzca 1 ó 0",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                expediente: {
+                    required: "Introduce un número de expediente",
+                    maxlength: "Máximo 4 digitos",
+                    digits: "Número de expediente incorrecto"
+                },
+                familia: {
+                    required: "Introduce el Familia"
+                },
+                ciclo: {
+                    required: "Introduce el Género"
                 }
-
-
             },
             highlight: function(element) {
                 $(element).closest('.control-group').removeClass('success').addClass('error');

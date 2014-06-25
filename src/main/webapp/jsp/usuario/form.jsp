@@ -1,8 +1,8 @@
 <form class="form-horizontal" action="#" id="formulario" name="formulario">
     <div class="control-group">
-        <label class="control-label"  for="inputLogin">Usuario:</label>
+        <label class="control-label"  for="inputEmail">Usuario:</label>
         <div class="controls">
-            <input type="text" id="login" name="login" size="15" placeholder="correo electrónico" />
+            <input type="text" id="email" name="email" size="15" placeholder="correo electrónico" />
         </div>
     </div>
     <div class="control-group">

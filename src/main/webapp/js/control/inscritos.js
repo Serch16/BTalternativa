@@ -116,113 +116,26 @@ var control_inscritos_list = function(path) {
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
             rules: {
-                id_usuario: {
+                id_oferta: {
                     required: true,
-                    // maxlength: 255
                 },
-                nombre: {
+                id_alumno: {
                     required: true,
-                    maxlength: 255
                 },
-                cif: {
+                id_estado: {
                     required: true,
-                    maxlength: 255
                 },
-                direccion: {
-                    required: true,
-                    maxlength: 255
-                            //       digits: true
-                },
-                localidad: {
-                    required: true,
-                    maxlength: 255
-                },
-                provincia: {
-                    required: true,
-                    maxlength: 255
-                },
-                pais: {
-                    required: true,
-                    maxlength: 255
-                },
-                telefono: {
-                    required: true,
-                    maxlength: 255
-                },
-                fax: {
-                    required: true,
-                    maxlength: 255
-                },
-                actividad: {
-                    required: true,
-                    maxlength: 255
-                },
-                nombrecontacto: {
-                    required: true,
-                    maxlength: 255
-                },
-                emailcontacto: {
-                    required: true,
-                    maxlength: 255,
-                    email: true
-                },
-                validada: {
-                    required: true,
-                    maxlength: 255
-                }
-
             },
             messages: {
-                id_usuario: {
-                    required: "Elige un id_usuario.",
+                id_oferta: {
+                    required: "Elige un Id. Oferta",
                 },
-                nombre: {
-                    required: "Introduce un Nombre."
+                id_alumno: {
+                    required: "Elige un Id. Alumno",
                 },
-                cif: {
-                    required: "Introduce un Cif.",
+                id_estado: {
+                    required: "Elige un Id. Estado",
                 },
-                direccion: {
-                    required: "Introduce una Direccion.",
-                },
-                localidad: {
-                    required: "Introduce una Localidad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                provincia: {
-                    required: "Introduce una Provincia",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                pais: {
-                    required: "Introduce un Pais",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                telefono: {
-                    required: "Introduce un Telefono",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                fax: {
-                    required: "Introduce un Fax",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                actividad: {
-                    required: "Introduce una Actividad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                nombrecontacto: {
-                    required: "Introduce un Nombre de Contacto",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                emailcontacto: {
-                    required: "Introduce un Correo Electrónico",
-                    maxlength: "Tiene que ser menos de 255 caracteres",
-                    email: "Introduzca un correo correcto"
-                },
-                validada: {
-                    required: "Introduzca 1 ó 0",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                }
-
 
             },
             highlight: function(element) {

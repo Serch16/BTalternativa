@@ -30,28 +30,6 @@ var control_usuario_list = function(path) {
 
     function loadModalForm(view, place, id, action) {
 
-        jQuery.validator.addMethod("caracteresespeciales",
-                function(value, element) {
-                    return /^[A-Za-z\d=#$%@_ -]+$/.test(value);
-                },
-                "Nada de caracteres especiales, por favor"
-                );
-
-        jQuery.validator.addMethod("nifES",
-                function(value, element) {
-                    "use strict";
-                    value = value.toUpperCase();
-                    if (!value.match('((^[A-Z]{1}[0-9]{7}[A-Z0-9]{1}$|^[T]{1}[A-Z0-9]{8}$)|^[0-9]{8}[A-Z]{1}$)')) {
-                        return false;
-                    }
-                    if (/^[0-9]{8}[A-Z]{1}$/.test(value)) {
-                        return ("TRWAGMYFPDXBNJZSQVHLCKE".charAt(value.substring(8, 0) % 23) === value.charAt(8));
-                    }
-                    return false;
-                },
-                "Por favor, introduce un DNI correcto"
-                );
-
         cabecera = '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         if (action == "edit") {
             cabecera += '<h3 id="myModalLabel">Edición de ' + view.getObject().getName() + "</h3>";
@@ -108,20 +86,37 @@ var control_usuario_list = function(path) {
         //http://jqueryvalidation.org/documentation/
         $('#formulario').validate({
             rules: {
-                descripcion: {
+                email: {
                     required: true,
-                    maxlength: 24,
-                    minlength: 4,
-                    digits: false,
-                    caracteresespeciales: true
+                    maxlength: 150,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    maxlength: 20,
+                    minlength: 8
+                },
+                passwordRepite: {
+                    required: true,
+                    maxlength: 20,
+                    equalTo: "#password"
                 }
             },
             messages: {
-                descripcion: {
-                    required: "Debes de registrarte con login y password",
-                    maxlength: "Máximo 24 caracteres",
-                    minlength: "Cómo mínimo palabras de 4 letras",
-                    digits: "Sólo palabras",
+                email: {
+                    required: "Introduce tu correo electrónico",
+                    maxlength: "Máximo 150 carácteres",
+                    email: "Por favor, introduce un email válido"
+                },
+                password: {
+                    required: "Debe registrrse una contraseña",
+                    maxlength: "Máximo 20 caracteres",
+                    minlength: "Mínimo 8 caracteres"
+                },
+                passwordRepite: {
+                    required: "Repite la contraseña",
+                    date: "Tiene que ser menos de 8 caracteres",
+                    equalTo: "Las contraseñas no concuerdan"
                 }
             },
             highlight: function(element) {

@@ -63,13 +63,13 @@
     <div class="control-group">
         <label class="control-label"  for="inputPoblacion">Población:</label>
         <div class="controls">
-            <input type="text" id="poblacion" name="poblacion" size="15" placeholder="Población" />
+            <input type="text" id="poblacion" name="poblacion" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label"  for="inputProvincia">Provincia:</label>
         <div class="controls">
-            <input type="text" id="provincia" name="provincia" size="15" placeholder="Provincia" />
+            <input type="text" id="provincia" name="provincia" size="15" placeholder="" />
         </div>
     </div>
     <div class="control-group">

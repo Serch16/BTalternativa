@@ -88,110 +88,80 @@ var control_oferta_list = function(path) {
                     required: true,
                     // maxlength: 255
                 },
-                nombre: {
-                    required: true,
-                    maxlength: 255
-                },
-                cif: {
-                    required: true,
-                    maxlength: 255
-                },
-                direccion: {
-                    required: true,
-                    maxlength: 255
-                            //       digits: true
-                },
-                localidad: {
-                    required: true,
-                    maxlength: 255
-                },
                 provincia: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 150
                 },
-                pais: {
+                puesto: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 500,
+                    minlength: 10
                 },
-                telefono: {
+                categoria: {
                     required: true,
-                    maxlength: 255
                 },
-                fax: {
+                vacentes: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 5,
+                    minlength: 1,
+                    digits: true
                 },
-                actividad: {
+                descripcion: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 500,
+                    minlength: 10
                 },
-                nombrecontacto: {
+                salario: {
                     required: true,
-                    maxlength: 255
+                    maxlength: 6,
+                    minlength: 3,
+                    digits: true
                 },
-                emailcontacto: {
+                poblacion: {
                     required: true,
-                    maxlength: 255,
-                    email: true
+                    maxlength: 150
                 },
-                validada: {
-                    required: true,
-                    maxlength: 255
-                }
-
             },
             messages: {
                 id_usuario: {
-                    required: "Elige un id_usuario.",
+                    required: "Elige un Id. Usuario.",
                 },
                 nombre: {
                     required: "Introduce un Nombre."
                 },
-                cif: {
-                    required: "Introduce un Cif.",
-                },
-                direccion: {
-                    required: "Introduce una Direccion.",
-                },
-                localidad: {
+                poblacion: {
                     required: "Introduce una Localidad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                    maxlength: "Tiene que ser menos de 150 caracteres"
                 },
                 provincia: {
                     required: "Introduce una Provincia",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                    maxlength: "Tiene que ser menos de 150 caracteres"
                 },
-                pais: {
-                    required: "Introduce un Pais",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                puesto: {
+                    required: "Introduce un Puesto de trabajo",
+                    maxlength: "Tiene que ser menos de 500 caracteres",
+                    minlength: "Tiene que ser mínimo de 10 caracteres"
                 },
-                telefono: {
-                    required: "Introduce un Telefono",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                descripcion: {
+                    required: "Introduce una descripcion",
+                    maxlength: "Tiene que ser menos de 500 caracteres",
+                    minlength: "Tiene que ser mínimo de 10 caracteres"
                 },
-                fax: {
-                    required: "Introduce un Fax",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                salario: {
+                    required: "Introduce un salario",
+                    maxlength: "Tiene que ser menos de 6 cifras",
+                    minlength: "Tiene que ser mínimo de 3 cifras",
+                    digits: "Salario no válido"
                 },
-                actividad: {
-                    required: "Introduce una Actividad",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                nombrecontacto: {
-                    required: "Introduce un Nombre de Contacto",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
-                },
-                emailcontacto: {
-                    required: "Introduce un Correo Electrónico",
-                    maxlength: "Tiene que ser menos de 255 caracteres",
-                    email: "Introduzca un correo correcto"
-                },
-                validada: {
-                    required: "Introduzca 1 ó 0",
-                    maxlength: "Tiene que ser menos de 255 caracteres"
+                vacantes: {
+                    required: "Introduce Vacantes",
+                    maxlength: "Tiene que ser menos de 5 cifras",
+                    minlength: "Tiene que ser mínimo de 1 cifra",
+                    digits: "Vacante no válida"
+                }, 
+                categoria: {
+                    required: "Introduce Categoria"
                 }
-
-
             },
             highlight: function(element) {
                 $(element).closest('.control-group').removeClass('success').addClass('error');
